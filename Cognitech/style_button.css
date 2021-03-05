@@ -1,0 +1,133 @@
+body {
+    background: #00abb7;
+}
+
+button {
+    width: 200px;
+    margin: 50px;
+    padding: 20px;
+    background-color: transparent;
+    border: 4px solid white;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+}
+
+button::after {
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+button::after {
+    transition: all 0.3s;
+}
+
+button:hover {
+    color: #29f2e4;
+}
+
+.button3 {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 4px dashed white;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    cursor: pointer;
+    margin: 50px;
+}
+
+/*Bouton 4*/
+.bouton4::after {
+    border-radius: 10px;
+    height: 0;
+    left: 0;
+    top: 0;
+    width: 50%;
+}
+.bouton4:hover:after {
+    height: 100%;
+}
+
+/*Bouton 5*/
+.bouton5::after {
+    border-radius: 10px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0;
+}
+.bouton5:hover:after {
+    width: 100%;
+}
+
+/*Bouton 6*/
+.bouton6::after {
+    border-radius: 10px;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+}
+.bouton6:hover:after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.bouton7 {
+    box-shadow: 20px 0 20px 20px black;
+    border-radius: 40px;
+}
+
+.bouton8 {
+    box-shadow: 10px 20px 5px black;
+    border-radius: 0;
+}
+
+.bouton9 {
+    box-shadow: -10px 20px 5px red;
+}
+
+.bouton10:hover {
+    background: red;
+}
+
+.bouton11:hover {
+
+    box-shadow: 20px 0 20px 20px black;
+    border-radius: 40px;
+}
+.bouton12:hover {
+    transform: scale(1.25);
+}
+
+.bouton13:hover {
+    transform: rotate(80deg);
+}
+
+.bouton14:active {
+    background: red;
+}
+
+.bouton15:focus {
+    background: red;
+}
+
+
+/*
+.container1 {
+    background: lightgreen;
+}
+
+ */

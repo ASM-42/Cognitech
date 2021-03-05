@@ -1,0 +1,70 @@
+body {
+    font-family: "Roboto";
+    width: 100%;
+    margin: 0;
+    background-image: url("images/infinite_blue.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 700px 700px;
+
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.colorJaune {
+    background: #FBF778;
+}
+
+.colorBleu {
+    color: #5172DF;
+}
+
+.container {
+    margin: 60px;
+}
+
+.titre {
+    margin-top: 60px;
+}
+
+.active {
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.resume {
+    width: 550px;
+    margin-bottom: 50px;
+}
+
+.bouton {
+    border: 0;
+    padding: 20px 20px;
+    margin-right: 20px;
+    font-size: 15px;
+    text-align: center;
+    color: #5172DF;
+    border-radius: 30px;
+    box-shadow: 0 7px 35px #00000016;
+
+}
+
+.bouton:hover {
+    background-color: #E7E36D;
+}
+
+/*html {
+    overflow: hidden;   !* enlever la barre de défilement *!
+}*/
