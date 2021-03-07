@@ -50,7 +50,7 @@ h1 {
     font-size: 20px;
     position: absolute;
     top: 530px; left: 30px;
-    color: #FBF778;
+    color: #FFFFFF;
 }
 
 .CGU {
@@ -74,9 +74,10 @@ h1 {
     color: #FFFFFF;
 }
 
-.a.hover{
+.colorActif{
     color: #FBF778;
 }
+
 .resume {
     width: 550px;
     margin-bottom: 50px;
