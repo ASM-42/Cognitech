@@ -1,0 +1,20 @@
+Base {
+    id:Rectangle_12;
+    data-name:Rectangle 12;
+    width:384px;
+    height:1078px;
+    viewBox:0 0 384 1078;
+
+    width:384px;
+    height:1078px;
+    fill:#5172df;
+
+}
+
+#rectangle{
+    position: absolute;
+    top: 0px; left: 0px;
+    width:384px;
+    height:660px;
+    background:#5172df;
+}
