@@ -1,20 +1,99 @@
-Base {
-    id:Rectangle_12;
-    data-name:Rectangle 12;
-    width:384px;
-    height:1078px;
-    viewBox:0 0 384 1078;
+Body{
+    font-family: "Roboto";
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.ttf");
+}
 
-    width:384px;
-    height:1078px;
-    fill:#5172df;
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px; left: 300px;
+    color:#5172DF;
 
 }
 
-#rectangle{
+.colorBlanc {
+    color: #FFFFFF;
+}
+
+.container {
     position: absolute;
-    top: 0px; left: 0px;
-    width:384px;
-    height:660px;
-    background:#5172df;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 660px;
+    background: #5172DF;
+}
+
+.recherche {
+    font-size: 20px;
+    position: absolute;
+    top: 50px; left: 30px;
+    color: #FFFFFF;
+}
+
+.compte {
+    font-size: 20px;
+    position: absolute;
+    top: 80px; left: 30px;
+    color: #FFFFFF;
+}
+
+.FAQ {
+    font-size: 20px;
+    position: absolute;
+    top: 530px; left: 30px;
+    color: #FBF778;
+}
+
+.CGU {
+    font-size: 20px;
+    position: absolute;
+    top: 560px; left: 30px;
+    color: #FFFFFF;
+}
+
+.support {
+    font-size: 20px;
+    position: absolute;
+    top: 590px; left: 30px;
+    color: #FFFFFF;
+}
+
+.deconnecter{
+    font-size: 20px;
+    position: absolute;
+    top: 620px; left: 30px;
+    color: #FFFFFF;
+}
+
+.a.hover{
+    color: #FBF778;
+}
+.resume {
+    width: 550px;
+    margin-bottom: 50px;
+}
+
+.bouton {
+    border: 0;
+    padding: 20px 20px;
+    margin-right: 20px;
+    font-size: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: 0 7px 35px #00000016;
+
+}
+
+.bouton:hover {
+    background-color: #FBF778;
 }
