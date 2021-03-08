@@ -1,0 +1,174 @@
+h2{
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 35px;
+    color: #5172DF;
+}
+
+h3{
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #5172DF;
+    text-align: center;
+}
+
+h4{
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #5172DF;
+    text-align: center;
+    line-height: 115px;
+}
+
+.main{
+    width: 1278px;
+    height: 716px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25vh;
+    background-color: transparent;
+    border-color: #5172DF;
+    border-style: solid;
+    border-width:5px;
+    border-radius: 30px;
+
+}
+
+.bordereau{
+    width: 20%;
+    height: 100%;
+    background-color: #5172DF;
+    position: absolute;
+    top: 0px;
+    border-radius: 24px;
+    margin: 0;
+}
+
+.navPerso{
+    width: 80%;
+    height: 10%;
+    position: absolute;
+    top: 10px;
+    color: white;
+    list-style-type: none;
+    padding-left: 20%;
+    padding-top: 15% ;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.liste{
+    padding-bottom: 10px;
+}
+
+.liste:hover{
+    color: #FBF778;
+    cursor: pointer;
+}
+
+.navSite{
+    width: 80%;
+    height: 10%;
+    position: absolute;
+    bottom: 70px;
+    color: white;
+    list-style-type: none;
+    padding-left: 20%;
+    padding-top: 15% ;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.space{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+
+}
+
+.formulaire{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 7%;
+
+}
+
+.prenom{
+    width: 31%;
+    height: 8%;
+    background-color: #FBF778;
+    position: absolute;
+    top: 25%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
+}
+
+.nom{
+    width: 31%;
+    height: 8%;
+    background-color: #FBF778;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
+
+
+}
+
+.email{
+    width: 31%;
+    height: 8%;
+    background-color: #FBF778;
+    position: absolute;
+    top: 40%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
+
+
+}
+
+.telephone{
+    width: 31%;
+    height: 8%;
+    background-color: #FBF778;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
+
+
+}
+
+.objet{
+    width: 71%;
+    height: 8%;
+    background-color: #FBF778;
+    position: absolute;
+    top: 55%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
+
+
+}
+
+.message{
+    width: 71%;
+    height: 25%;
+    background-color: #FBF778;
+    position: absolute;
+    top: 70%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
+
+
+}
