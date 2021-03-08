@@ -27,50 +27,50 @@ h1 {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 250px;
-    height: 660px;
+    width: 17%;
+    height: 100%;
     background: #5172DF;
 }
 
 .recherche {
     font-size: 20px;
     position: absolute;
-    top: 50px; left: 30px;
+    top: 5%; left: 13%;
     color: #FFFFFF;
 }
 
 .compte {
     font-size: 20px;
     position: absolute;
-    top: 80px; left: 30px;
+    top: 10%; left: 13%;
     color: #FFFFFF;
 }
 
 .FAQ {
     font-size: 20px;
     position: absolute;
-    top: 530px; left: 30px;
+    bottom: 20%; left: 13%;
     color: #FFFFFF;
 }
 
 .CGU {
     font-size: 20px;
     position: absolute;
-    top: 560px; left: 30px;
+    bottom: 15%; left: 13%;
     color: #FFFFFF;
 }
 
 .support {
     font-size: 20px;
     position: absolute;
-    top: 590px; left: 30px;
+    bottom: 10%; left: 13%;
     color: #FFFFFF;
 }
 
 .deconnecter{
     font-size: 20px;
     position: absolute;
-    top: 620px; left: 30px;
+    bottom: 5%; left: 13%;
     color: #FFFFFF;
 }
 
