@@ -24,9 +24,9 @@ h1 {
 }
 
 .container {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 17%;
     height: 100%;
     background: #5172DF;
