@@ -1,16 +1,12 @@
+body {
+    height: auto;
+}
+
 h2{
     font-family: Roboto;
     font-weight: bold;
     font-size: 35px;
     color: #5172DF;
-}
-
-h3{
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 20px;
-    color: #5172DF;
-    text-align: center;
 }
 
 h4{
@@ -42,7 +38,7 @@ h4{
     height: 100%;
     background-color: #5172DF;
     position: absolute;
-    top: 0px;
+    top: 0;
     border-radius: 24px;
     margin: 0;
 }
@@ -89,16 +85,23 @@ h4{
     width: 80%;
     height: 100%;
     position: absolute;
-    right: 0px;
+    right: 0;
 
 }
 
 .formulaire{
     width: 80%;
-    height: 80%;
+    height: 100%;
     margin: 0 auto;
     margin-top: 7%;
+}
 
+::placeholder {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #5172DF;
+    text-align: center;
 }
 
 .prenom{
@@ -108,7 +111,8 @@ h4{
     position: absolute;
     top: 25%;
     border-radius: 50px;
-    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: none;
 }
 
 .nom{
@@ -119,8 +123,8 @@ h4{
     top: 25%;
     left: 50%;
     border-radius: 50px;
-    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
-
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: none;
 
 }
 
@@ -131,8 +135,8 @@ h4{
     position: absolute;
     top: 40%;
     border-radius: 50px;
-    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
-
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: none;
 
 }
 
@@ -144,8 +148,8 @@ h4{
     top: 40%;
     left: 50%;
     border-radius: 50px;
-    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
-
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: none;
 
 }
 
@@ -156,9 +160,8 @@ h4{
     position: absolute;
     top: 55%;
     border-radius: 50px;
-    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
-
-
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: none;
 }
 
 .message{
@@ -168,7 +171,25 @@ h4{
     position: absolute;
     top: 70%;
     border-radius: 50px;
-    box-shadow: 0px 0px 23px 0px rgba(119, 119, 119, 0.34);
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: none;
+}
 
+.envoyer{
+    width: 31%;
+    height: 8%;
+    background-color: #FBF778;
+    position: absolute;
+    top: 100%;
+    border-radius: 50px;
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: none;
+}
 
+input {
+    text-align: center;
+}
+
+textarea {
+    text-align: center;
 }
