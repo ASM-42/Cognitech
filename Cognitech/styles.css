@@ -5,9 +5,8 @@ body {
     background-image: url("images/infinite_blue.png");
     background-repeat: no-repeat;
     background-position: right center;
-    background-position-x: 765px;
+    background-position-x: 80%;
     background-size: 700px 690px;
-
 }
 
 @font-face {
@@ -20,7 +19,7 @@ a {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 400%;
     font-weight: bold;
 }
 
