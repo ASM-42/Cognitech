@@ -1,0 +1,84 @@
+* {
+    font-size: 30px;
+    font-family: "Courier New";
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.navbar a {
+    display: block;
+    float: left;
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+}
+
+.navbar a:hover {
+    background: teal;
+}
+
+.main {
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+th {
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    text-align: left;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+table {
+    border: 1px solid black;
+    width: 900px;
+}
+
+.margin-bottom {
+    margin-bottom: 300px;
+}
+
+
+@media screen and (max-width: 800px) {
+    * {
+        font-size: 15px;
+    }
+
+    .navbar {
+        width: 200px;
+    }
+
+    .main {
+
+        margin-left: 100px;
+    }
+
+    table {
+        width:500px;
+    }
+
+
+}
