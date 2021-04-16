@@ -5,7 +5,7 @@ include("../models/connect.php");
 $connexion = mysqli_connect (SERVEUR, LOGIN, MDP);
 mysqli_select_db ($connexion,BDD) or exit(mysqli_error($connexion)) ;
 
-$result = mysqli_query($connexion, "
+$requete = mysqli_query($connexion, "
 SELECT auteur, tweet FROM tweets
 WHERE tweet LIKE '%merde%'
 ") or exit(mysqli_error($connexion)) ;
@@ -16,7 +16,7 @@ WHERE tweet LIKE '%merde%'
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Utilisateurs</title>
     <meta name="robots" content="noindex, nofollow">
-    <link href="style.css" rel="stylesheet"/>
+    <link href="../style.css" rel="stylesheet"/>
 </head>
 <body>
 <main class="main">
@@ -30,14 +30,14 @@ WHERE tweet LIKE '%merde%'
     echo 'Tweet';
     echo "</th>";
     echo "</tr>";
-    while($row = mysqli_fetch_array($result))
+    while($row = mysqli_fetch_array($requete))
     {
         echo "<tr>";
         echo "<td>";
-        echo "<span class='pseudo'>" .$row['auteur'] . "</span>\n";
+        echo "<span>" .$row['auteur'] . "</span>\n";
         echo "</td>";
         echo "<td>";
-        echo "<span class='pseudo'>" .$row['tweet'] . "</span>\n";
+        echo "<span>" .$row['tweet'] . "</span>\n";
         echo "</td>";
         echo "</tr>";
 

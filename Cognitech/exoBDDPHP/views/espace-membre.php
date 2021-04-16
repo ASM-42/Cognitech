@@ -6,7 +6,7 @@ if (!isset($_SESSION['login'])) {header ('Location: index.php');exit();}
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Espace membre</title>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="../style.css" rel="stylesheet"/>
 </head>
 <body>
 <main class="main">

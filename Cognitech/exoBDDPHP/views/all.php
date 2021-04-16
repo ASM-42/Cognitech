@@ -5,14 +5,14 @@ include("../models/connect.php");
 $connexion = mysqli_connect (SERVEUR, LOGIN, MDP);
 mysqli_select_db ($connexion,BDD) or exit(mysqli_error($connexion)) ;
 
-$result = mysqli_query($connexion, "SELECT prenom, nom FROM membres") or exit(mysqli_error($connexion)) ;
+$requete = mysqli_query($connexion, "SELECT prenom, nom FROM membres") or exit(mysqli_error($connexion)) ;
 ?>
 
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Utilisateurs</title>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="../style.css" rel="stylesheet"/>
 </head>
 <body>
 <main class="main">
@@ -26,15 +26,15 @@ $result = mysqli_query($connexion, "SELECT prenom, nom FROM membres") or exit(my
     echo 'Tweet';
     echo "</th>";
     echo "</tr>";
-    while($row = mysqli_fetch_array($result))
+    while($row = mysqli_fetch_array($requete))
     {
 
         echo "<tr>";
         echo "<td>";
-        echo "<span class='pseudo'>" .$row['prenom'] . "</span>\n";
+        echo "<span>" .$row['prenom'] . "</span>\n";
         echo "</td>";
         echo "<td>";
-        echo "<span class='pseudo'>" .$row['nom'] . "</span>\n";
+        echo "<span>" .$row['nom'] . "</span>\n";
         echo "</td>";
         echo "</tr>";
 

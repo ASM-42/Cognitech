@@ -8,7 +8,7 @@ mysqli_select_db ($connexion,BDD) or exit(mysqli_error($connexion)) ;
 /*echo "<script language=javascript>
 const name = prompt('Qui ?');
 </script>";*/
-$result = mysqli_query($connexion, "
+$requete = mysqli_query($connexion, "
 SELECT auteur, tweet FROM tweets
 WHERE auteur = 'Xavier Derville' 
 AND dateEcriture >= '2021-04-05 00:00:00'
@@ -20,7 +20,7 @@ AND dateEcriture < '2021-04-11 00:00:00'
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Utilisateurs</title>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="../style.css" rel="stylesheet"/>
 </head>
 <body>
 <main class="main">
@@ -34,14 +34,14 @@ AND dateEcriture < '2021-04-11 00:00:00'
     echo 'Tweet';
     echo "</th>";
     echo "</tr>";
-    while($row = mysqli_fetch_array($result))
+    while($row = mysqli_fetch_array($requete))
     {
         echo "<tr>";
         echo "<td>";
-        echo "<span class='pseudo'>" .$row['auteur'] . "</span>\n";
+        echo "<span>" .$row['auteur'] . "</span>\n";
         echo "</td>";
         echo "<td>";
-        echo "<span class='pseudo'>" .$row['tweet'] . "</span>\n";
+        echo "<span>" .$row['tweet'] . "</span>\n";
         echo "</td>";
         echo "</tr>";
 

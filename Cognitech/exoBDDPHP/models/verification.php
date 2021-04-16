@@ -18,6 +18,7 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
             $connexion = mysqli_connect (SERVEUR, LOGIN, MDP);
 
             if (!$connexion) {echo "La connexion à la bdd a échoué\n"; exit();}
+
             mysqli_select_db ($connexion, BDD); print "Connexion à la bdd réussie puis";echo "<br/>";
 
             // On parcourt la bdd et on range les éventuels login identiques existants dans un tableau
@@ -41,14 +42,14 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
 
             //Sinon on n'inscrit pas l'utilisateur
             else {
-                $erreur = 'Echec de l\'inscription !<br/>Un membre possede deja ce login !';
+                $erreur = 'Echec de l\'inscription !<br/>Login déjà utilisé';
                 echo $erreur;
                 echo"<br/><a href=\"accueil.php\">Accueil</a>";exit();
             }}}
 
     //Si au moins un des champs est vide --> erreur
     else {
-        $erreur = 'Echec de l\'inscription !<br/>Au moins un des champs est vide !';
+        $erreur = 'Echec de l\'inscription !<br/>Au moins un des champs est vide';
         echo $erreur;
         echo"<br/><a href=\"accueil.php\">Accueil</a>";exit();
     }}
