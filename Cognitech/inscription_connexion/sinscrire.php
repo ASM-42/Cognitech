@@ -20,7 +20,9 @@
                 <input type="password" class="container" name="mdp1" placeholder="Mot de passe" required><br>
                 <input type="password" class="container" name="mdp2" placeholder="Confirmer le mot de passe" required><br>
 
-                <input type="checkbox" name="checkbox" class="checkbox" value="check" id="agree" /> J'accepte les CGU
+                <input type="checkbox" name="checkbox" class="checkbox" value="check" id="agree"/>
+                <p class="CGU">J'accepte les CGU</p>
+            </br>
                 <button type="submit" name='inscription' class="envoyer" value="Inscription">S'inscrire</button>
             </form>
             <a href="se_connecter.php" class="inscription">Vous avez déjà un compte ? Connectez-vous <b>ici</b></a>
