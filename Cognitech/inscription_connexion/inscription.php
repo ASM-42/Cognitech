@@ -35,7 +35,10 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
                 "'.mysqli_escape_string($connexion, $_POST['nom']).'", 
                 "'.mysqli_escape_string($connexion, $_POST['email']).'",
                 "'.mysqli_escape_string($connexion, $_POST['dateDeNaissance']).'", 
-                "'.mysqli_escape_string($connexion, $_POST['ecurie']).'"
+                "'.mysqli_escape_string($connexion, $_POST['ecurie']).'",
+                NULL,
+                NULL,
+                NULL
                 )';
                 mysqli_query($connexion, $sql) or die('Erreur SQL !'.$sql.'<br />'.mysqli_error($connexion));
                 $erreur = 'inscription reussie !';
