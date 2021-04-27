@@ -24,9 +24,9 @@
                 <form method="post">
                     <input type="text" class="prenom" name="prenom" placeholder="Prénom" required><br>
                     <input type="text" class="nom" name="nom" placeholder="Nom" required><br>
-                    <input type="email" class="email" name="email" placeholder="Email" required><br>
-                    <input type="tel" class="telephone" name="telephone" placeholder="Téléphone"><br>
-                    <input type="text" class="objet" name="objet" placeholder="Objet"><br>
+                    <input type="email" class="email" name="mail" placeholder="Email" required><br>
+                    <input type="tel" class="telephone" name="numero" placeholder="Téléphone"><br>
+                    <input type="text" class="objet" name="Objet" placeholder="Objet"><br>
                     <textarea name="message" class="message" placeholder="Message" required></textarea><br>
                     <button type="submit" class="envoyer"></button>
                 </form>
