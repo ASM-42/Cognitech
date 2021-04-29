@@ -114,5 +114,6 @@ input {
 }
 
 textarea {
+    resize: none;
     text-align: center;
 }
