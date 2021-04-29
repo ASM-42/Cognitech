@@ -96,7 +96,12 @@ body {
 .envoyer{
     width: 31%;
     height: 8%;
+    margin-left: 20%;
     background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
+    font-weight: bold;
+    font-size: 20px;
     position: absolute;
     top: 100%;
     border-radius: 50px;

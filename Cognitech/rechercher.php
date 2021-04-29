@@ -27,9 +27,9 @@ $sql = $connexion->query(
 
 <body>
 <div class="container">
-    <a class="recherche" href="">Rechercher</a>
+    <a class="recherche colorActif" href="">Rechercher</a>
     <a class="compte" href="profil.php">Mon Compte</a>
-    <a class="FAQ colorActif" href="FAQ.html">FAQ</a>
+    <a class="FAQ" href="FAQ.html">FAQ</a>
     <a class="CGU" href="#CGU">CGU</a>
     <a class="support" href="contact.php">Support</a>
     <a class="deconnecter" href="index.html">Se Deconnecter</a>
@@ -44,6 +44,7 @@ $sql = $connexion->query(
 
 
             <?php
+            echo "<a href='profil.php'>";
             echo "<ul>\n";
             while( $r = mysqli_fetch_array($sql)) {
                 echo "<li>";

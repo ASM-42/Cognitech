@@ -10,8 +10,8 @@
 
     <body>
         <div class="container">
-            <a class="recherche" href="#recherche">Rechercher</a>
-            <a class="compte" href="#compte">Mon Compte</a>
+            <a class="recherche" href="rechercher.php">Rechercher</a>
+            <a class="compte" href="profil.php">Mon Compte</a>
             <a class="FAQ " href="FAQ.html">FAQ</a>
             <a class="CGU" href="#CGU">CGU</a>
             <a class="support colorActif" href="">Support</a>
@@ -28,7 +28,7 @@
                     <input type="tel" class="telephone" name="numero" placeholder="Téléphone"><br>
                     <input type="text" class="objet" name="Objet" placeholder="Objet"><br>
                     <textarea name="message" class="message" placeholder="Message" required></textarea><br>
-                    <button type="submit" class="envoyer"></button>
+                    <button type="submit" class="envoyer">Envoyer</button>
                 </form>
 
                 <?php
