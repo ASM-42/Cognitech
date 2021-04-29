@@ -19,11 +19,11 @@ $result = $sql -> fetch();
 ?>
 
 <div class="container">
-    <a class="recherche" href="#recherche">Rechercher</a>
-    <a class="compte" href="#compte">Mon Compte</a>
-    <a class="FAQ colorActif" href="FAQinvite.html">FAQ</a>
+    <a class="recherche" href="rechercher.php">Rechercher</a>
+    <a class="compte" href="">Mon Compte</a>
+    <a class="FAQ colorActif" href="FAQ.html">FAQ</a>
     <a class="CGU" href="#CGU">CGU</a>
-    <a class="support" href="NousContacter.html">Support</a>
+    <a class="support" href="contact.php">Support</a>
     <a class="deconnecter" href="index.html">Se Deconnecter</a>
 </div>
 <div class="pageProfil">
