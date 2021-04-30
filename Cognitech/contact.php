@@ -16,6 +16,16 @@
             <a class="CGU" href="#CGU">CGU</a>
             <a class="support colorActif" href="">Support</a>
             <a class="deconnecter" href="index.html">Se Deconnecter</a>
+
+            <div id="google_translate_element"></div>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+                }
+            </script>
+
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
         </div>
 
         <div class="space">
@@ -44,7 +54,7 @@
                     $Message=htmlentities($_POST['message'],ENT_QUOTES,"UTF-8");
                     // mise en page du format
                     $message='
-                <html>
+                <html lang="fr">
                     <body>
                         <div align="center">
                         <u>Nom de l\'expéditeur :</u>'.$_POST['nom'].'<br />
