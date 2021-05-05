@@ -1,5 +1,6 @@
 body {
     height: auto;
+    overflow: hidden;
 }
 
 .space{
@@ -13,7 +14,6 @@ body {
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    margin-top: 7%;
 }
 
 ::placeholder {
@@ -27,70 +27,75 @@ body {
 .prenom{
     width: 31%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 25%;
-    border-radius: 50px;
+    top: 22%;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
+    border: 5px solid #5172DF;
 }
 
 .nom{
     width: 31%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 25%;
+    top: 22%;
     left: 50%;
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
+    border: 5px solid #5172DF;
 }
 
 .email{
     width: 31%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 40%;
-    border-radius: 50px;
+    top: 33%;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
+    border: 5px solid #5172DF;
 }
 
 .telephone{
     width: 31%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 40%;
+    top: 33%;
     left: 50%;
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
-
+    border: 5px solid #5172DF;
 }
 
 .objet{
     width: 71%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 55%;
-    border-radius: 50px;
+    top: 44%;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
+    border: 5px solid #5172DF;
 }
 
 .message{
     width: 71%;
     height: 25%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 70%;
-    border-radius: 50px;
+    top: 55%;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
+    border: 5px solid #5172DF;
 }
 
 .envoyer{
@@ -103,13 +108,17 @@ body {
     font-weight: bold;
     font-size: 20px;
     position: absolute;
-    top: 100%;
+    top: 85%;
     border-radius: 50px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
     border: none;
 }
 
 input {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #5172DF;
     text-align: center;
 }
 
