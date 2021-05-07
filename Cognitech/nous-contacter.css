@@ -1,84 +1,6 @@
 body {
     height: auto;
-}
-
-h2{
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 35px;
-    color: #5172DF;
-}
-
-h4{
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 20px;
-    color: #5172DF;
-    text-align: center;
-    line-height: 115px;
-}
-
-.main{
-    width: 1278px;
-    height: 716px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25vh;
-    background-color: transparent;
-    border-color: #5172DF;
-    border-style: solid;
-    border-width:5px;
-    border-radius: 30px;
-
-}
-
-.bordereau{
-    width: 20%;
-    height: 100%;
-    background-color: #5172DF;
-    position: absolute;
-    top: 0;
-    border-radius: 24px;
-    margin: 0;
-}
-
-.navPerso{
-    width: 80%;
-    height: 10%;
-    position: absolute;
-    top: 10px;
-    color: white;
-    list-style-type: none;
-    padding-left: 20%;
-    padding-top: 15% ;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 20px;
     overflow: hidden;
-}
-
-.liste{
-    padding-bottom: 10px;
-}
-
-.liste:hover{
-    color: #FBF778;
-    cursor: pointer;
-}
-
-.navSite{
-    width: 80%;
-    height: 10%;
-    position: absolute;
-    bottom: 70px;
-    color: white;
-    list-style-type: none;
-    padding-left: 20%;
-    padding-top: 15% ;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .space{
@@ -86,14 +8,12 @@ h4{
     height: 100%;
     position: absolute;
     right: 0;
-
 }
 
 .formulaire{
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    margin-top: 7%;
 }
 
 ::placeholder {
@@ -107,89 +27,102 @@ h4{
 .prenom{
     width: 31%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 25%;
-    border-radius: 50px;
+    top: 22%;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
+    border: 5px solid #5172DF;
 }
 
 .nom{
     width: 31%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 25%;
+    top: 22%;
     left: 50%;
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
-
+    border: 5px solid #5172DF;
 }
 
 .email{
     width: 31%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 40%;
-    border-radius: 50px;
+    top: 33%;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
-
+    border: 5px solid #5172DF;
 }
 
 .telephone{
     width: 31%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 40%;
+    top: 33%;
     left: 50%;
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
-
+    border: 5px solid #5172DF;
 }
 
 .objet{
     width: 71%;
     height: 8%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 55%;
-    border-radius: 50px;
+    top: 44%;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
+    border: 5px solid #5172DF;
 }
 
 .message{
     width: 71%;
     height: 25%;
-    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
     position: absolute;
-    top: 70%;
-    border-radius: 50px;
+    top: 55%;
+    border-radius: 20px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
-    border: none;
+    border: 5px solid #5172DF;
 }
 
 .envoyer{
     width: 31%;
     height: 8%;
+    margin-left: 20%;
     background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
+    font-weight: bold;
+    font-size: 20px;
     position: absolute;
-    top: 100%;
+    top: 85%;
     border-radius: 50px;
     box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
     border: none;
 }
 
 input {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #5172DF;
     text-align: center;
 }
 
 textarea {
+    resize: none;
     text-align: center;
 }

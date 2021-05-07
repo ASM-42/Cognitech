@@ -19,15 +19,14 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 
         $req = mysqli_query($connexion, $sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysqli_error($connexion));
         $data = mysqli_fetch_array($req);
-        mysqli_free_result($req);
-        mysqli_close($connexion);
+
 
         // Si on obtient une réponse, alors l'utilisateur fait partie de la bdd
         // On démarre une session pour cet utilisateur et on le connecte à l'espace membre
         if ($data[0] == 1){
             session_start();
-            $_SESSION['email'] = $_POST['email'];
-            header('Location: ../contact.html');
+            $_SESSION['email']=$_POST['email'];
+            header('Location:../profil.php');
             exit();}
 
         // Si le visiteur a saisi un mauvais login ou mot de passe --> erreur

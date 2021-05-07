@@ -1,6 +1,5 @@
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Accueil</title>
     <meta name="robots" content="noindex, nofollow">
 </head>
