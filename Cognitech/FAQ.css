@@ -57,9 +57,15 @@ Body{
     background-color: #FBF778;
 }
 
-.boutonQuestion1:active{
-    height: 100px;
-    color: #5172DF;
+.boutonQuestion1:hover{
+    background-color: #5172DF;
+    color : #FBF778;
+}
+
+
+.boutonQuestions:hover{
+    background-color: #5172DF;
+    color : #FBF778;
 }
 
 .resume {
@@ -92,15 +98,17 @@ Body{
 .popup{
     margin: 10% auto;
     width : 70%;
-    background-color: rgb(243, 243, 243);
+    color: #5172DF;
+    background-color: #FBF778;
     padding: 1em;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+    border-radius: 50px;
+    box-shadow: 0 7px 35px #00000016;
+
 }
 
 .btnClose {
     float: right;
     font-size:16pt;
     cursor: pointer;
-    color: rgb(26, 26, 26);
+    color: #5172DF;
 }
