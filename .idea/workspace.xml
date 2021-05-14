@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9e9221-8e68-47d2-9688-446d0d2c8d97" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/FAQ.css" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/FAQ.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/FAQ.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/FAQ.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +83,8 @@
       <workItem from="1620312793629" duration="650000" />
       <workItem from="1620400374716" duration="1694000" />
       <workItem from="1620471304331" duration="9785000" />
-      <workItem from="1620643380426" duration="5194000" />
+      <workItem from="1620643380426" duration="5209000" />
+      <workItem from="1620984253266" duration="975000" />
     </task>
     <task id="LOCAL-00001" summary="page_profil">
       <created>1615555402926</created>
@@ -132,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620665295068</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="FAQ">
+      <created>1620680324932</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620680324932</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
