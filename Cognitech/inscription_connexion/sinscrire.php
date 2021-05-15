@@ -9,7 +9,7 @@
 <body>
 <main class="main">
     <div>
-        <i class="material-icons colorBleu" style="font-size: 10em;">person_outline</i>
+        <i class="material-icons colorBleu" style="font-size: 900%; margin: -5% 0 -2.5% 0">person_outline</i>
         <div class="formulaire">
             <form action="inscription.php" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Veuillez accepter les CGU'); return false; }">
                 <input type="text" class="container" name="prenom" placeholder="Prénom" required><br>
