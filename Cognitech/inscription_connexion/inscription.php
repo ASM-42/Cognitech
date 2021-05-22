@@ -21,7 +21,8 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
 
             if (!$connexion) {echo "La connexion à la bdd a échoué\n"; exit();}
 
-            mysqli_select_db ($connexion, BDD); print "Connexion à la bdd réussie puis";echo "<br/>";
+            mysqli_select_db ($connexion, BDD);
+//            print "Connexion à la bdd réussie puis";echo "<br/>";
 
             // On parcourt la bdd et on range les éventuels login identiques existants dans un tableau
             $sql = 'SELECT count(*) FROM users WHERE email="'.mysqli_escape_string($connexion, $_POST['email']).'"';
@@ -30,20 +31,21 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
 
             // Si le login n'est pas déjà utilisé, on inscrit l'utilisateur
             if ($data[0] == 0) {
-                $sql = 'INSERT INTO users VALUES(NULL,"'.mysqli_escape_string($connexion, md5($_POST['mdp1'])).'", 
+                $sql = 'INSERT INTO users (md5, prenom, nom, email, dateDeNaissance, ecurie ) VALUES("'.mysqli_escape_string($connexion, md5($_POST['mdp1'])).'", 
                 "'.mysqli_escape_string($connexion, $_POST['prenom']).'", 
                 "'.mysqli_escape_string($connexion, $_POST['nom']).'", 
                 "'.mysqli_escape_string($connexion, $_POST['email']).'",
                 "'.mysqli_escape_string($connexion, $_POST['dateDeNaissance']).'", 
-                "'.mysqli_escape_string($connexion, $_POST['ecurie']).'",
-                NULL,
-                NULL,
-                NULL
+                "'.mysqli_escape_string($connexion, $_POST['ecurie']).'"
                 )';
                 mysqli_query($connexion, $sql) or die('Erreur SQL !'.$sql.'<br />'.mysqli_error($connexion));
-                $erreur = 'inscription reussie !';
+
+                $erreur = 'Votre inscription a été prise en compte ! </br> Le gestionnaire de votre écurie doit valider votre compte avant que vous puissiez vous connecter';
                 echo $erreur;
-                echo"<br/><a href=\"se_connecter.php\">Accueil</a>";exit();}
+                echo"<br/><a href=\"se_connecter.php\">Accueil</a>";exit();
+
+
+            }
 
             //Sinon on n'inscrit pas l'utilisateur
             else {

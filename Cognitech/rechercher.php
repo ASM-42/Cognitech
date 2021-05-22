@@ -1,4 +1,6 @@
 <?php
+session_start();
+if (!isset($_SESSION['email'])) {header ('Location: inscription_connexion/se_connecter.php');exit();}
 
 include("inscription_connexion/connect.php");
 
@@ -8,8 +10,9 @@ $recherche = isset($_POST['recherche']) ? $_POST['recherche'] : '';
 
 // la requete mysql
 $sql = $connexion->query(
-    "SELECT prenom, nom FROM users
+    "SELECT id, prenom, nom FROM users
       WHERE prenom LIKE '%$recherche%'
+      AND role = 'pilote'
       OR nom LIKE '%$recherche%'
       LIMIT 10");
 
@@ -55,9 +58,10 @@ $sql = $connexion->query(
 
 
             <?php
-            echo "<a href='profil.php'>";
             echo "<ul>\n";
             while( $r = mysqli_fetch_array($sql)) {
+                $user_id = $r['id'];
+                echo "<a href='profil_search.php?id=$user_id'>";
                 echo "<li>";
                 echo "<div class=\"cont\">";
                 echo "<div class=\"cont1\">";

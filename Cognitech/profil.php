@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['email'])) {header ('Location: index.php');exit();}
+if (!isset($_SESSION['email'])) {header ('Location: inscription_connexion/se_connecter.php');exit();}
 ?>
 <html lang="fr">
 <head>
@@ -20,14 +20,36 @@ $result = $sql -> fetch();
 ?>
 
 <div class="container">
-    <a class="recherche" href="rechercher.php">Rechercher</a>
+    <?php if ($result['role'] == 'pilote'): ?>
+        <a class="recherche" href="#">Mes statistiques</a>
+    <?php elseif ($result['role'] == 'admin'): ?>
+        <a class="recherche" href="accueil_admin.php">Accueil</a>
+    <?php else: ?>
+        <a class="recherche" href="rechercher.php">Rechercher</a>
+    <?php endif; ?>
     <a class="compte colorActif" href="">Mon Compte</a>
     <a class="FAQ" href="FAQ.html">FAQ</a>
     <a class="CGU" href="#CGU">CGU</a>
     <a class="support" href="contact.php">Support</a>
-    <a class="deconnecter" href="index.html">Se Deconnecter</a>
+    <script>
+        $('#LogoutButton').click(function() {
+            var request = $.ajax({
+                url: "/inscription_connexion/logout.php",
+                type: "GET"
+            });
 
-    <!--<div id="google_translate_element"></div>
+            request.done(function(msg) {
+                alert("Logged Out");
+            });
+
+            request.fail(function(jqXHR, textStatus) {
+                alert("Error on Logging Out");
+            });
+        });
+    </script>
+    <a class="deconnecter" href="inscription_connexion/logout.php">Se Deconnecter</a>
+
+   <!-- <div id="google_translate_element"></div>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');

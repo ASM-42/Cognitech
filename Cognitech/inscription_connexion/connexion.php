@@ -9,7 +9,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
         $connexion = mysqli_connect (SERVEUR, LOGIN, MDP);
 
         if (!$connexion) {echo "La connexion a échoué\n"; exit;}
-        mysqli_select_db ($connexion,BDD); print "Connexion BDD reussie puis";echo "<br/>";
+        mysqli_select_db ($connexion,BDD);
 
         //on parcourt la bdd pour chercher l'existence du login mot et du mot de passe saisis par l'internaute
         //et on range le résultat dans le tableau $data
@@ -26,7 +26,25 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
         if ($data[0] == 1){
             session_start();
             $_SESSION['email']=$_POST['email'];
-            header('Location:../profil.php');
+
+            $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
+            $email = $_SESSION['email'];
+            $sql = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
+            $result = $sql -> fetch();
+            $_SESSION['user_id'] = $result['id'];
+            $user_id = $_SESSION['user_id'];
+
+
+            if ($result['role'] == 'pilote' || $result['role'] == 'gestionnaire') {
+                header('Location:../profil.php');
+            } elseif ($result['role'] == 'admin') {
+                header("Location:../profil.php?id=".$user_id);
+            }
+            else {
+                $erreur = "Votre inscription n'a pas encore été validée";echo $erreur;
+                echo"<br/><a href=\"se_connecter.php\">Retourner à l'accueil</a>";exit();
+            }
+
             exit();}
 
         // Si le visiteur a saisi un mauvais login ou mot de passe --> erreur
