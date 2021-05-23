@@ -1,21 +1,24 @@
 <?php
 session_start();
-//if ($_SESSION['role'] == 'admin') {header ('Location: inscription_connexion/se_connecter.php');exit();}
 
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
 
-
 $email = $_SESSION['email'];
+
 $sql = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
 $result = $sql -> fetch();
-$role_utilisateur = $result['role'];
-if ($role_utilisateur != 'admin') {header ('Location: erreur404.html');exit();}
+$ecurie = $result['ecurie'];
 
+$role_utilisateur = $result['role'];
+
+if ($role_utilisateur != 'gestionnaire') {header ('Location: erreur404.html');exit();}
 
 $membres = $bdd->query("
 SELECT * FROM users
 WHERE role != 'admin'
-ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
+AND role != 'gestionnaire'
+AND ecurie = '$ecurie'
+ORDER BY FIELD (role, 'inconnu', 'pilote')
 ");
 
 ?>
@@ -23,7 +26,7 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Accueil Admin</title>
+    <title>Accueil Gestionnaire</title>
     <link href="Borderau_Bleu.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="rechercher.css">
     <link rel="stylesheet" type="text/css" href="administration.css">
@@ -32,9 +35,10 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
 
 <body>
 <div class="container">
-    <h1 class="colorBleu titre">Panneau&nbsp;d'administration</h1>
+    <h1 class="colorBleu titre">Mes&nbsp;pilotes</h1>
     <a class="recherche colorActif" href="">Accueil</a>
-    <a class="compte" href="profil.php">Mon Compte</a>
+    <a class="compte" href="rechercher.php">Rechercher</a>
+    <a class="troisieme" href="profil.php">Mon Compte</a>
     <a class="FAQ" href="FAQ.html">FAQ</a>
     <a class="CGU" href="#CGU">CGU</a>
     <a class="support" href="contact.php">Support</a>
@@ -61,7 +65,6 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
                           <th>ID utilisateur</th>
                           <th>Prénom</th>
                           <th>Nom</th>
-                          <th>Ecurie</th>
                           <th>Status</th>
                           <th>Rôle</th>
                           <th>Editer</th> 
@@ -73,7 +76,6 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
             $prenom = $dbRow['prenom'];
             $nom = $dbRow['nom'];
             $role = $dbRow['role'];
-            $ecurie = $dbRow['ecurie'];
             $status = 'En attente de validation';
             $confirmer = 'Confirmer le rôle';
             $check_inconnu = '';
@@ -102,16 +104,13 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
 
 
 
-
             { echo "<tr>
-<form action='admin_validate.php?id=".$id."' method='post'>
+<form action='gestionnaire_validate.php?id=".$id."' method='post'>
                         <td>$id</td>
                         <td>$prenom</td>
                         <td>$nom</td>
-                        <td>$ecurie</td>
                         <td class='$couleur'>$status</td>
                         <td><input type='radio' name='role' value='inconnu' $check_inconnu/>Inconnu
-                        <input type='radio' name='role' value='gestionnaire' $check_gestionnaire/>Gestionnaire
                         <input type='radio' name='role' value='pilote' $check_pilote/>Pilote
                         </td>
 <td>
@@ -119,7 +118,7 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
 </td>
 
 <td>
-<input type='submit' value='&#10006;' class='center' name='delete'>
+<input type='submit' value='Supprimer' name='delete'>
 </td>
 </form>
                       </tr>";}

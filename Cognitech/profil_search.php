@@ -14,31 +14,21 @@ if (!isset($_SESSION['email'])) {header ('Location: inscription_connexion/se_con
 <?php
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
 $email = $_SESSION['email'];
+$id = $_GET['id'];
 
-$sql = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
+$sql = $bdd -> query('SELECT * FROM users WHERE id="'.$id.'"');
 $result = $sql -> fetch();
 ?>
 
 <div class="container">
     <?php if ($result['role'] == 'pilote'): ?>
-        <a class="recherche" href="#">Mes statistiques</a>
+        <a class="recherche colorActif" href="#">Mes statistiques</a>
     <?php elseif ($result['role'] == 'admin'): ?>
         <a class="recherche" href="accueil_admin.php">Accueil</a>
     <?php else: ?>
-        <a class="recherche" href="accueil_gestionnaire.php">Accueil</a>
+        <a class="recherche" href="rechercher.php">Rechercher</a>
     <?php endif; ?>
-    <?php if ($result['role'] == 'admin'): ?>
-    <?php elseif ($result['role'] == 'pilote'): ?>
-    <?php else: ?>
-        <a class="compte" href="rechercher.php">Rechercher</a>
-    <?php endif; ?>
-    <?php if ($result['role'] == 'admin'): ?>
-        <a class="compte colorActif" href="">Mon Compte</a>
-    <?php elseif ($result['role'] == 'pilote'): ?>
-        <a class="compte colorActif" href="">Mon Compte</a>
-    <?php else: ?>
-        <a class="troisieme colorActif" href="">Mon Compte</a>
-    <?php endif; ?>
+    <a class="compte" href="">Mon Compte</a>
     <a class="FAQ" href="FAQ.html">FAQ</a>
     <a class="CGU" href="#CGU">CGU</a>
     <a class="support" href="contact.php">Support</a>
@@ -59,16 +49,6 @@ $result = $sql -> fetch();
         });
     </script>
     <a class="deconnecter" href="inscription_connexion/logout.php">Se Deconnecter</a>
-
-    <!-- <div id="google_translate_element"></div>
-     <script type="text/javascript">
-         function googleTranslateElementInit() {
-             new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-         }
-     </script>
-
-     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- -->
 </div>
 <div class="pageProfil">
     <div class = "profil">
@@ -82,17 +62,9 @@ $result = $sql -> fetch();
             <!--        <button class="boutonSexe">--><?php //echo $result['sexe']; ?><!--</button>-->
             <input type="text" class="boutonTelephone" name="phone" value="0<?php echo $result['phone']; ?>">
             <!--        <button class="boutonTelephone">0--><?php //echo $result['phone']; ?><!--</button>-->
-
-            <?php if ($result['role'] != 'admin'): ?>
-                <input type="text" class="boutonEcurie" name="ecurie" value="<?php echo $result['ecurie']; ?>">
-            <?php else: ?>
-            <?php endif; ?>
-
-            <?php if ($result['role'] == 'gestionnaire'): ?>
-            <?php else: ?>
-                <input type="text" class="boutonDocteur" name="medecin" value="<?php echo $result['medecin']; ?>">
-            <?php endif; ?>
-
+            <input type="text" class="boutonEcurie" name="ecurie" value="<?php echo $result['ecurie']; ?>">
+            <!--        <button class="boutonEcurie">--><?php //echo $result['ecurie']; ?><!--</button>-->
+            <input type="text" class="boutonDocteur" name="medecin" value="<?php echo $result['medecin']; ?>">
             <!--        <button class="boutonDocteur">Dr.--><?php //echo $result['medecin']; ?><!--</button>-->
             <input type="text" class="boutonAnniversaire" name="dateDeNaissance" value="<?php echo $result['dateDeNaissance']; ?>">
             <!--        <button class="boutonAnniversaire">--><?php //echo $result['dateDeNaissance']; ?><!--</button>-->

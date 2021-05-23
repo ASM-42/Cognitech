@@ -37,3 +37,15 @@ Body{
     background-color: #5172DF;
     color: white;
 }
+
+.rouge {
+    color: red;
+}
+
+.vert {
+    color: green;
+}
+
+#users td {
+    text-align: center;
+}
