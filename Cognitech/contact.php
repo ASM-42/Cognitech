@@ -76,7 +76,7 @@
                         echo "Une erreur est survenue, le mail n'a pas été envoyé";
                     }
                 } else{
-                    echo 'Tout les champs ne sont pas remplis!';
+                    echo 'Tous les champs ne sont pas remplis!';
                 }
 
                 ?>
