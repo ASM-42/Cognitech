@@ -14,7 +14,7 @@ $email = $_SESSION['email'];
 
 $sql = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
 $result = $sql -> fetch();
-
+$_SESSION['role'] = $result['role'];
 $sql = $connexion->query(
     "SELECT id, prenom, nom FROM users
       WHERE role = 'pilote'
