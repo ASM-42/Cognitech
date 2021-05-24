@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a9e9221-8e68-47d2-9688-446d0d2c8d97" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3a9e9221-8e68-47d2-9688-446d0d2c8d97" name="Default Changelist" comment="statistique gestio page">
       <change beforePath="$PROJECT_DIR$/Cognitech/rechercher.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/rechercher.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +96,7 @@
       <workItem from="1621764452122" duration="1282000" />
       <workItem from="1621790156044" duration="2834000" />
       <workItem from="1621843540763" duration="11000" />
-      <workItem from="1621846019557" duration="6371000" />
+      <workItem from="1621846019557" duration="6464000" />
     </task>
     <task id="LOCAL-00001" summary="page_profil">
       <created>1615555402926</created>
@@ -155,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620680324932</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="statistique gestio page">
+      <created>1621862110690</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1621862110690</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +182,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="page_profil" />
     <MESSAGE value="FAQ" />
-    <option name="LAST_COMMIT_MESSAGE" value="FAQ" />
+    <MESSAGE value="statistique gestio page" />
+    <option name="LAST_COMMIT_MESSAGE" value="statistique gestio page" />
   </component>
 </project>

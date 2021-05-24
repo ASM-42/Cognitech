@@ -70,7 +70,7 @@ $sql = $connexion->query(
         echo "<ul>\n";
         while( $r = mysqli_fetch_array($sql)) {
             $user_id = $r['id'];
-            echo "<a href='profil_search.php?id=$user_id'>";
+            echo "<a href='StatistiqueGestio.php?id=$user_id'>";
             echo "<li>";
             echo "<div class=\"cont\">";
             echo "<div class=\"cont1\">";
