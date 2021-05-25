@@ -1,0 +1,132 @@
+body {
+    font-family: "Roboto";
+}
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    top: 20px; left: 300px;
+    color:#5172DF;
+
+}
+
+.colorBlanc {
+    color: #FFFFFF;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 17%;
+    height: 100%;
+    background: #5172DF;
+}
+
+.recherche {
+    font-size: 20px;
+    position: absolute;
+    top: 5%; left: 13%;
+    color: #FFFFFF;
+}
+
+.compte {
+    font-size: 20px;
+    position: absolute;
+    top: 10%; left: 13%;
+    color: #FFFFFF;
+}
+
+.FAQ {
+    font-size: 20px;
+    position: absolute;
+    bottom: 25%; left: 13%;
+    color: #FFFFFF;
+}
+
+.CGU {
+    font-size: 20px;
+    position: absolute;
+    bottom: 20%; left: 13%;
+    color: #FFFFFF;
+}
+
+.MentionLégales {
+    font-size: 20px;
+    position: absolute;
+    bottom: 15%; left: 13%;
+    color: #FFFFFF;
+}
+
+.support {
+    font-size: 20px;
+    position: absolute;
+    bottom: 10%; left: 13%;
+    color: #FFFFFF;
+}
+
+.deconnecter{
+    font-size: 20px;
+    position: absolute;
+    bottom: 5%; left: 13%;
+    color: #FFFFFF;
+}
+
+.colorActif{
+    color: #FBF778;
+}
+a:hover{
+    text-decoration: underline;
+    color: #FBF778;
+}
+.center {
+    /*position: absolute;
+    left: 400px; bottom: 100px;*/
+    margin-top: 40px;
+    margin-left: 290px;
+    width: 1000px;
+    height: 50px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 25px;
+}
+
+p{
+    line-height:18.0pt;
+    font-size:12.0pt;
+    line-height:18.0pt;
+    font-family:Times New Roman;
+    color:#000000;
+    text-align:Left
+}
+
+ul {
+    line-height:18.0pt;
+    font-size:12.0pt;
+    line-height:18.0pt;
+    font-family:Times New Roman;
+    color:#000000;
+    text-align:Left
+
+}
+
+li{
+    line-height:18.0pt;
+    font-size:12.0pt;
+    line-height:18.0pt;
+    font-family:Times New Roman;
+    color:#000000;
+    text-align:Left
+
+}
+
