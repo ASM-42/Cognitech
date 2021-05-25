@@ -25,6 +25,10 @@ Body{
     border-radius: 50px;
     box-shadow: 0 7px 35px #00000016;
 }
+
+.marginHaut {
+    margin-top: 200px;
+}
 /*
 .boutonChevronD{
     background-image: url("images/cheveron_down.png");
