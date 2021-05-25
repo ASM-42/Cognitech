@@ -48,26 +48,26 @@ $sql = $connexion->query('SELECT * FROM faq');
 $numb = 0;
 echo "<div class='marginHaut'>";
 
-        while( $r = mysqli_fetch_array($sql)) {
-            $question = $r['question'];
-            $reponse = $r['reponse'];
-            $numb++;
+while( $r = mysqli_fetch_array($sql)) {
+    $question = $r['question'];
+    $reponse = $r['reponse'];
+    $numb++;
 
 
-            echo "<button class='boutonQuestions' onclick=\"on$numb()\">$question</button>";
-            echo "<div id='overlay$numb' class=\"overlay\">";
-            echo "<div class=\"popup\">";
-            echo "<h2>
+    echo "<button class='boutonQuestions' onclick=\"on$numb()\">$question</button>";
+    echo "<div id='overlay$numb' class=\"overlay\">";
+    echo "<div class=\"popup\">";
+    echo "<h2>
             $question
             <span class=\"btnClose\" onclick=\"off$numb()\">&times;</span>
         </h2>";
 
-            echo "<div>$reponse</div>";
-            echo "</div>";
-            echo "</div>";
-        }
+    echo "<div>$reponse</div>";
+    echo "</div>";
+    echo "</div>";
+}
 echo "</div>";
-        ?>
+?>
 
 <!--<button class="boutonQuestion1" onclick="on1()"><?php /*$question*/?></button>
 <div id="overlay1" class="overlay">
