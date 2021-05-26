@@ -11,10 +11,10 @@ $result = $sql -> fetch();
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Nous Contacter</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="nous-contacter.css">
     <link href="Borderau_Bleu.css" rel="stylesheet"/>
-    <title>Nous Contacter</title>
 </head>
 
     <body>
@@ -43,20 +43,10 @@ $result = $sql -> fetch();
             <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
             <a class="support colorActif" href="">Support</a>
             <a class="deconnecter" href="index.html">Se Deconnecter</a>
-
-            <!--<div id="google_translate_element"></div>
-            <script type="text/javascript">
-                function googleTranslateElementInit() {
-                    new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-                }
-            </script>
-
-            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
--->
         </div>
 
+        <h1 class="colorBleu">NOUS CONTACTER</h1>
         <div class="space">
-            <h1 class="colorBleu">NOUS CONTACTER</h1>
             <div class="formulaire">
                 <form method="post">
                     <input type="text" class="prenom" name="prenom" placeholder="Prénom" required><br>

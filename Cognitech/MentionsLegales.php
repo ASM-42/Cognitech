@@ -1,8 +1,18 @@
+<?php
+session_start();
+
+$bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
+$email = $_SESSION['email'];
+$sql = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
+$result = $sql -> fetch();
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mention légales</title>
+    <title>Mentions Légales</title>
     <link href="CGU.css" rel="stylesheet"/>
     <link href="Borderau_Bleu.css" rel="stylesheet"/>
 </head>
@@ -10,10 +20,27 @@
 
 
 <div class="container">
-    <a class="recherche" href="rechercher.php">Rechercher</a>
-    <a class="compte" href="profil.php">Mon Compte</a>
-    <a class="FAQ " href="">FAQ</a>
-    <a class="CGU " href="">CGU</a>
+    <?php if ($result['role'] == 'pilote'): ?>
+        <a class="recherche" href="#">Mes statistiques</a>
+    <?php elseif ($result['role'] == 'admin'): ?>
+        <a class="recherche" href="accueil_admin.php">Accueil</a>
+    <?php else: ?>
+        <a class="recherche" href="accueil_gestionnaire.php">Accueil</a>
+    <?php endif; ?>
+    <?php if ($result['role'] == 'admin'): ?>
+    <?php elseif ($result['role'] == 'pilote'): ?>
+    <?php else: ?>
+        <a class="compte" href="rechercher.php">Rechercher</a>
+    <?php endif; ?>
+    <?php if ($result['role'] == 'admin'): ?>
+        <a class="compte" href="profil.php">Mon Compte</a>
+    <?php elseif ($result['role'] == 'pilote'): ?>
+        <a class="compte" href="profil.php">Mon Compte</a>
+    <?php else: ?>
+        <a class="troisieme" href="profil.php">Mon Compte</a>
+    <?php endif; ?>
+    <a class="FAQ" href="FAQ.php">FAQ</a>
+    <a class="CGU" href="CGU.php">CGU</a>
     <a class="MentionLégales colorActif" href="">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
     <a class="deconnecter" href="index.html">Se Deconnecter</a>
