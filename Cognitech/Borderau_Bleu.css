@@ -55,18 +55,18 @@ h1 {
 .FAQ {
     font-size: 20px;
     position: absolute;
-    bottom: 20%; left: 13%;
+    bottom: 25%; left: 13%;
     color: #FFFFFF;
 }
 
 .CGU {
     font-size: 20px;
     position: absolute;
-    bottom: 15%; left: 13%;
+    bottom: 20%; left: 13%;
     color: #FFFFFF;
 }
 
-.MentionLégales {
+.MentionsLegales {
     font-size: 20px;
     position: absolute;
     bottom: 15%; left: 13%;

@@ -1,5 +1,6 @@
 Body{
     font-family: "Roboto";
+    background-image: url("images/racing.png");
 }
 
 @font-face {
@@ -11,8 +12,13 @@ Body{
     color: #5172DF;
 }
 
+.colorWhite {
+    color: white;
+}
+
 .titre {
     margin-top: 50px;
+    text-shadow: 2px 2px 50px white;
 }
 
 #users {
@@ -26,7 +32,15 @@ Body{
     padding: 8px;
 }
 
-#users tr:nth-child(even){background-color: #f2f2f2;}
+/*#users tr:nth-child(even){background-color: #f2f2f2;}*/
+
+#users tr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f2f2f2;
+    color: #5172DF;
+}
 
 #users tr:hover {background-color: #ddd;}
 

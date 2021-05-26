@@ -39,8 +39,9 @@ ORDER BY FIELD (role, 'inconnu', 'pilote')
     <a class="recherche colorActif" href="">Accueil</a>
     <a class="compte" href="rechercher.php">Rechercher</a>
     <a class="troisieme" href="profil.php">Mon Compte</a>
-    <a class="FAQ" href="FAQ.html">FAQ</a>
-    <a class="CGU" href="#CGU">CGU</a>
+    <a class="FAQ" href="FAQ.php">FAQ</a>
+    <a class="CGU" href="CGU.php">CGU</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
     <a class="deconnecter" href="index.html">Se Deconnecter</a>
 

@@ -7,6 +7,13 @@ $connexion = mysqli_connect(SERVEUR,LOGIN, MDP, BDD);
 
 $sql = $connexion->query('SELECT * FROM faq');
 
+
+$bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
+$email = $_SESSION['email'];
+$sql2 = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
+$result = $sql2 -> fetch();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -24,10 +31,28 @@ $sql = $connexion->query('SELECT * FROM faq');
 <div class="container">
 
     <h1 class="colorBleu titre">FAQ</h1>
-    <a class="recherche" href="rechercher.php">Rechercher</a>
-    <a class="compte" href="profil.php">Mon Compte</a>
+    <?php if ($result['role'] == 'pilote'): ?>
+        <a class="recherche" href="#">Mes statistiques</a>
+    <?php elseif ($result['role'] == 'admin'): ?>
+        <a class="recherche" href="accueil_admin.php">Accueil</a>
+    <?php else: ?>
+        <a class="recherche" href="accueil_gestionnaire.php">Accueil</a>
+    <?php endif; ?>
+    <?php if ($result['role'] == 'admin'): ?>
+    <?php elseif ($result['role'] == 'pilote'): ?>
+    <?php else: ?>
+        <a class="compte" href="rechercher.php">Rechercher</a>
+    <?php endif; ?>
+    <?php if ($result['role'] == 'admin'): ?>
+        <a class="compte" href="profil.php">Mon Compte</a>
+    <?php elseif ($result['role'] == 'pilote'): ?>
+        <a class="compte" href="profil.php">Mon Compte</a>
+    <?php else: ?>
+        <a class="troisieme" href="profil.php">Mon Compte</a>
+    <?php endif; ?>
     <a class="FAQ colorActif" href="">FAQ</a>
-    <a class="CGU" href="#CGU">CGU</a>
+    <a class="CGU" href="CGU.php">CGU</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
     <a class="deconnecter" href="index.html">Se Deconnecter</a>
 

@@ -2,13 +2,14 @@
 session_start();
 if (!isset($_SESSION['email'])) {header ('Location: inscription_connexion/se_connecter.php');exit();}
 ?>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>page_profil</title>
+    <title>Mon profil</title>
     <link href="Borderau_Bleu.css" rel="stylesheet"/>
     <link href="pageProfil.css" rel="stylesheet"/>
-
 </head>
 <body>
 <?php
@@ -39,8 +40,9 @@ $result = $sql -> fetch();
     <?php else: ?>
         <a class="troisieme colorActif" href="">Mon Compte</a>
     <?php endif; ?>
-    <a class="FAQ" href="FAQ.html">FAQ</a>
-    <a class="CGU" href="#CGU">CGU</a>
+    <a class="FAQ" href="FAQ.php">FAQ</a>
+    <a class="CGU" href="CGU.php">CGU</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
     <script>
         $('#LogoutButton').click(function() {
