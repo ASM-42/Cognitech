@@ -31,8 +31,8 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
 </head>
 
 <body>
-<div class="container">
-    <h1 class="colorWhite titre">Panneau&nbsp;d'administration</h1>
+<div class="navbarBleue">
+
     <a class="recherche colorActif" href="">Accueil</a>
     <a class="compte" href="profil.php">Mon Compte</a>
     <a class="FAQ" href="FAQ_admin.php">FAQ</a>
@@ -42,8 +42,8 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
     <a class="deconnecter" href="../index.html">Se Deconnecter</a>
 
 </div>
-
-<div class="space">
+<h1 class="colorWhite">Panneau&nbsp;d'administration</h1>
+<div class="espace">
     <ul>
         <?php /*while($m = $membres->fetch()) { */?><!--
         <form action='admin_validate.php?userId=".$userId."' method="post">
@@ -58,6 +58,28 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
 
         <?php
         echo "<table id='users'>
+            <tr>
+                          <th colspan='7'>Ajouter un utilisateur</th>
+                          
+                          </tr>";
+
+        echo "<tr>
+<form action='../transition/admin_validate.php' method='post'>
+                        <td><input class='zone' type='text' name='prenom' placeholder='Prénom' required/></td>
+                        <td><input class='zone' type='text' name='nom' placeholder='Nom' required/></td>
+                        <td><input type='text' name='email' placeholder='Email' required/></td>
+                        <td><input class='zone' type='password' name='mdp1' placeholder='Mot de passe' required/></td>
+                        <td><input class='zone' type='text' name='ecurie' placeholder='Ecurie' required/></td>
+                        <td><input class='zone' type='text' name='role' placeholder='Rôle' required/></td>
+                       
+                        
+<td>
+<input type='submit' value='Ajouter' name='add'>
+</td>
+</form>
+                      </tr>";
+
+        echo "<table id='users'>
                           <tr>
                           <th>ID utilisateur</th>
                           <th>Prénom</th>
@@ -68,6 +90,7 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
                           <th>Editer</th> 
                           <th>Supprimer</th>
                           </tr>";
+
 
         while ($dbRow = $membres->fetch(PDO::FETCH_ASSOC)) {
             $id = $dbRow['id'];

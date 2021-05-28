@@ -34,7 +34,7 @@ ORDER BY FIELD (role, 'inconnu', 'pilote')
 </head>
 
 <body>
-<div class="container">
+<div class="navbarBleue">
     <h1 class="colorBleu titre">Mes&nbsp;pilotes</h1>
     <a class="recherche colorActif" href="">Accueil</a>
     <a class="compte" href="rechercher.php">Rechercher</a>

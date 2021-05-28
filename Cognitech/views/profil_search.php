@@ -20,7 +20,7 @@ $sql = $bdd -> query('SELECT * FROM users WHERE id="'.$id.'"');
 $result = $sql -> fetch();
 ?>
 
-<div class="container">
+<div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
         <a class="recherche colorActif" href="#">Mes statistiques</a>
     <?php elseif ($result['role'] == 'admin'): ?>

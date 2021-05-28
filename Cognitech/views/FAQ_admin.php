@@ -24,7 +24,7 @@ $sql = $bdd->query('SELECT * FROM faq');
 <body>
 
 
-<div class="container">
+<div class="navbarBleue">
 
     <h1 class="colorBleu titre">FAQ</h1>
     <?php if ($result['role'] == 'pilote'): ?>
@@ -67,7 +67,7 @@ echo "<table id='users'>
 
 $id = '';
 echo "<tr>
-<form action='../FAQ_validate.php?id=".$id."' method='post'>
+<form action='../transition/FAQ_validate.php?id=".$id."' method='post'>
                         <td><input type='text' name='question' placeholder='Ajouter une question'/></td>
                         <td><input type='text' name='reponse' placeholder='Ajouter une réponse'/></td>
 <td>

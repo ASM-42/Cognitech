@@ -33,7 +33,7 @@ $sql = $connexion->query(
 </head>
 
 <body>
-<div class="container">
+<div class="navbarBleue">
     <?php if ($result['role'] == 'admin'): ?>
         <a class="recherche" href="accueil_admin.php">Accueil</a>
     <?php elseif ($result['role'] == 'gestionnaire'): ?>

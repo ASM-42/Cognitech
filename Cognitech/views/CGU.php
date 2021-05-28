@@ -19,7 +19,7 @@ $result = $sql -> fetch();
 <body>
 
 
-<div class="container">
+<div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
         <a class="recherche" href="#">Mes statistiques</a>
     <?php elseif ($result['role'] == 'admin'): ?>
@@ -51,7 +51,7 @@ $result = $sql -> fetch();
 
 </div>
 
-<div class = "center">
+<div class="center">
     <h2>Conditions Générales d'Utilisation</h2>
     <p>
         Les présentes conditions générales régissent l'utilisation de ce site www.infinite-measures.fr
@@ -134,8 +134,7 @@ $result = $sql -> fetch();
     </p>
     <p style="text-align:Right;">
         <span style="font-style:italic;font-weight:normal;">Date d'entrée en vigueur : </span>
-        le 27 juin 2021.
+        le 27 juin 2021.</p>
 
 </div>
-</p>
 </body>

@@ -29,6 +29,17 @@ if (isset($_POST['delete'])) {
     WHERE id="'.$id.'"';
 }
 
+if (isset($_POST['add'])) {
+    $sql = 'INSERT INTO users (md5, prenom, nom, email, role, ecurie) VALUES("'.mysqli_escape_string($connexion, md5($_POST['mdp1'])).'", 
+                "'.mysqli_escape_string($conn, $_POST['prenom']).'", 
+                "'.mysqli_escape_string($conn, $_POST['nom']).'", 
+                "'.mysqli_escape_string($conn, $_POST['email']).'",
+                "'.mysqli_escape_string($conn, $_POST['role']).'", 
+                "'.mysqli_escape_string($conn, $_POST['ecurie']).'"
+                )';
+}
+
+
 /*if (isset($_POST['delete'])) {
     $sql = 'DELETE FROM users
     WHERE id="'.$m['id'].'"';

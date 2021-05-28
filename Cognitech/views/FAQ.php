@@ -28,9 +28,7 @@ $result = $sql2 -> fetch();
 <body>
 
 
-<div class="container">
-
-    <h1 class="colorBleu titre">FAQ</h1>
+<div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
         <a class="recherche" href="#">Mes statistiques</a>
     <?php elseif ($result['role'] == 'admin'): ?>
@@ -56,19 +54,11 @@ $result = $sql2 -> fetch();
     <a class="support" href="contact.php">Support</a>
     <a class="deconnecter" href="../index.html">Se Deconnecter</a>
 
-    <!-- <div id="google_translate_element"></div>
-     <script type="text/javascript">
-         function googleTranslateElementInit() {
-             new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-         }
-     </script>
-
-     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- -->
 </div>
 
 
-
+<div class="center">
+    <h2>Conditions Générales d'Utilisation</h2>
 <?php
 $numb = 0;
 echo "<div class='marginHaut'>";
@@ -119,69 +109,8 @@ echo "</div>";
         </div>
     </div>
 </div>
-
-<button class="boutonQuestions" onclick="on3()">Troisième Question ?</button>
-<div id="overlay3" class="overlay">
-    <div class="popup">
-        <h2>
-            Exemple simple de popup
-            <span class="btnClose" onclick="off3()">&times;</span>
-        </h2>
-        <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a nulla
-            a massa interdum imperdiet sed nec nibh. Proin porttitor euismod nulla ut
-            interdum. Cras elementum placerat aliquam.
-        </div>
-    </div>
-</div>
-
-<button class="boutonQuestions" onclick="on4()">Quatrième Question ?</button>
-<div id="overlay4" class="overlay">
-    <div class="popup">
-        <h2>
-            Exemple simple de popup
-            <span class="btnClose" onclick="off4()">&times;</span>
-        </h2>
-        <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a nulla
-            a massa interdum imperdiet sed nec nibh. Proin porttitor euismod nulla ut
-            interdum. Cras elementum placerat aliquam.
-        </div>
-    </div>
-</div>
-
-<button class="boutonQuestions" onclick="on5()">Cinquième Question ?</button>
-<div id="overlay5" class="overlay">
-    <div class="popup">
-        <h2>
-            Exemple simple de popup
-            <span class="btnClose" onclick="off5()">&times;</span>
-        </h2>
-        <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a nulla
-            a massa interdum imperdiet sed nec nibh. Proin porttitor euismod nulla ut
-            interdum. Cras elementum placerat aliquam.
-        </div>
-    </div>
-</div>-->
-
-<!--<button class="boutonChevronD"></button>-->
-<!--
-    <button id="btnPopup" class="btnPopup" onclick="on()">Afficher Popup</button>
-    <div id="overlay" class="overlay">
-        <div id="popup" class="popup">
-            <h2>
-                Exemple simple de popup
-                <span id="btnClose" class="btnClose" onclick="off()">&times;</span>
-            </h2>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a nulla
-                a massa interdum imperdiet sed nec nibh. Proin porttitor euismod nulla ut
-                interdum. Cras elementum placerat aliquam.
-            </div>
-        </div>
-    </div>
 -->
 
+</div>
 </body>
 </html>

@@ -20,7 +20,7 @@ $sql = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
 $result = $sql -> fetch();
 ?>
 
-<div class="container">
+<div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
         <a class="recherche" href="#">Mes statistiques</a>
     <?php elseif ($result['role'] == 'admin'): ?>
