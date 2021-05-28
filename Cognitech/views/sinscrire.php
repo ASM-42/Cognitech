@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="../inscription_connexion/connexion.css">
+    <link rel="stylesheet" type="text/css" href="../css/connexion.css">
     <title>Inscription</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div>
         <i class="material-icons colorBleu" style="font-size: 900%; margin: -5.7% 0 -2.5% 0">person_outline</i>
         <div class="formulaire">
-            <form action="../inscription_connexion/inscription.php" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Veuillez accepter les CGU'); return false; }">
+            <form action="../transition/inscription.php" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Veuillez accepter les CGU'); return false; }">
                 <input type="text" class="container" name="prenom" placeholder="Prénom" required><br>
                 <input type="text" class="container" name="nom" placeholder="Nom" required><br>
                 <input type="date" class="container" name="dateDeNaissance" placeholder="Date de Naissance" required><br>

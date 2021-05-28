@@ -60,7 +60,7 @@ $result = $sql -> fetch();
             });
         });
     </script>
-    <a class="deconnecter" href="../inscription_connexion/logout.php">Se Deconnecter</a>
+    <a class="deconnecter" href="../transition/logout.php">Se Deconnecter</a>
 
     <!-- <div id="google_translate_element"></div>
      <script type="text/javascript">

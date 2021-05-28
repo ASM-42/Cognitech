@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("../inscription_connexion/connect.php");
+include("../transition/connect.php");
 
 $connexion = mysqli_connect(SERVEUR,LOGIN, MDP, BDD);
 

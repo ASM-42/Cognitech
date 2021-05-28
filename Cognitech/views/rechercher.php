@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['email'])) {header ('Location: ../inscription_connexion/se_connecter.php');exit();}
 
-include("../inscription_connexion/connect.php");
+include("../transition/connect.php");
 
 $connexion = mysqli_connect(SERVEUR,LOGIN, MDP, BDD);
 

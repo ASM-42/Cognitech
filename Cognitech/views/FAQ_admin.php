@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("../inscription_connexion/connect.php");
+include("../transition/connect.php");
 
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
 $email = $_SESSION['email'];
