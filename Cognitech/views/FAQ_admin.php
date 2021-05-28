@@ -56,7 +56,7 @@ $sql = $bdd->query('SELECT * FROM faq');
 <div class="space">
     <ul>
 <?php
-echo "<table id='users' class='table table-bordered'>
+echo "<table id='users'>
                           <tr>
                           <th>Question</th>
                           <th>Réponse</th>
@@ -68,8 +68,8 @@ echo "<table id='users' class='table table-bordered'>
 $id = '';
 echo "<tr>
 <form action='../FAQ_validate.php?id=".$id."' method='post'>
-                        <td><input type='text' name='question' placeholder='Question'/></td>
-                        <td><input type='text' name='reponse' placeholder='Réponse'/></td>
+                        <td><input type='text' name='question' placeholder='Ajouter une question'/></td>
+                        <td><input type='text' name='reponse' placeholder='Ajouter une réponse'/></td>
 <td>
 <input type='submit' value='Ajouter' name='add'>
 </td>
@@ -85,8 +85,8 @@ while ($dbRow = $sql->fetch(PDO::FETCH_ASSOC)) {
 
     { echo "<tr>
 <form action='../FAQ_validate.php?id=".$id."' method='post'>
-                        <td><input type='text' name='question' value='$question'/></td>
-                        <td><input type='text' name='reponse' value='$reponse'/></td>
+                        <td><input type='textarea' name='question' value='$question'/></td>
+                        <td><input type='textarea' name='reponse' value='$reponse'/></td>
 <td>
 <input type='submit' value='$confirmer' name='edit'>
 </td>
