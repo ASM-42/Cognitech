@@ -9,7 +9,7 @@
 <body>
 <main class="main">
 <div>
-    <i class="material-icons colorBleu" style="font-size: 10em;">person_outline</i>
+    <i class="material-icons colorWhite" style="font-size: 10em;">person_outline</i>
     <div class="formulaire">
         <form action='../inscription_connexion/connexion.php' method="post">
             <input type="email" class="container" name="email" placeholder="Email" required><br>
@@ -22,7 +22,7 @@
 </div>
 </main>
 <div class="topleft">
-    <a href="../index.html"><i class="material-icons colorBleu" style="font-size: 3em;">home</i></a>
+    <a href="../index.html"><i class="material-icons colorYellow" style="font-size: 3em;">home</i></a>
 </div>
 
 <!--<div id="google_translate_element"></div>

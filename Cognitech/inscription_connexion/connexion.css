@@ -1,5 +1,18 @@
+Body{
+    font-family: "Roboto";
+    background-image: url("../images/formula.png");
+}
+
 .colorBleu {
     color: #5172DF;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.colorYellow {
+    color: #FBF778;
 }
 
 .formulaire{
@@ -39,7 +52,7 @@
     margin-top: 40px;
     text-decoration: none;
     font-family: Roboto;
-    color: #5172DF;
+    color: white;
 }
 
 .CGU {

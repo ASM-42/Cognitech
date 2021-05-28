@@ -39,7 +39,11 @@ $result = $sql -> fetch();
     <?php else: ?>
         <a class="troisieme" href="profil.php">Mon Compte</a>
     <?php endif; ?>
-    <a class="FAQ " href="FAQ.php">FAQ</a>
+    <?php if ($result['role'] == 'admin'): ?>
+        <a class="FAQ " href="FAQ_admin.php">FAQ</a>
+    <?php else: ?>
+        <a class="FAQ " href="FAQ.php">FAQ</a>
+    <?php endif; ?>
     <a class="CGU colorActif" href="">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>

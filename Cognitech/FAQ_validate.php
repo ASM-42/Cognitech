@@ -1,13 +1,12 @@
 <?php
 include("inscription_connexion/connect.php");
 
-$role=$_POST['role'];
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
 
-$membres = $bdd->query('
-SELECT * FROM users
+$faq = $bdd->query('
+SELECT * FROM faq
 ');
-$m = $membres->fetch();
+$m = $faq->fetch();
 
 // Create connection
 $conn = mysqli_connect(SERVEUR, LOGIN, MDP, BDD);
@@ -19,25 +18,21 @@ if (!$conn) {
 $id = $_GET['id'];
 
 if (isset($_POST['edit'])) {
-    $sql = 'UPDATE users SET 
-    role = "'.mysqli_escape_string($conn, $_POST['role']).'"
+    $sql = 'UPDATE faq SET 
+    question = "'.mysqli_escape_string($conn, $_POST['question']).'",
+    reponse = "'.mysqli_escape_string($conn, $_POST['reponse']).'"
     WHERE id="'.$id.'"';
 }
 
 if (isset($_POST['delete'])) {
-    $sql = 'DELETE FROM users
+    $sql = 'DELETE FROM faq
     WHERE id="'.$id.'"';
 }
-
-/*if (isset($_POST['delete'])) {
-    $sql = 'DELETE FROM users
-    WHERE id="'.$m['id'].'"';
-}*/
 
 
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";
-    header('Location:../views/accueil_admin.php');
+    header('Location:views/FAQ_admin.php');
 } else {
     echo "Error updating record: " . mysqli_error($conn);
 }

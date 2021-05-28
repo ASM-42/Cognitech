@@ -1,8 +1,8 @@
 <?php
 session_start();
-if (!isset($_SESSION['email'])) {header ('Location: inscription_connexion/se_connecter.php');exit();}
+if (!isset($_SESSION['email'])) {header ('Location: ../inscription_connexion/se_connecter.php');exit();}
 
-include("inscription_connexion/connect.php");
+include("../inscription_connexion/connect.php");
 
 $connexion = mysqli_connect(SERVEUR,LOGIN, MDP, BDD);
 
@@ -75,7 +75,7 @@ $sql = $connexion->query(
             echo "<li>";
             echo "<div class=\"cont\">";
             echo "<div class=\"cont1\">";
-            echo "<img src=\"images/imagePageProfil/icons8-utilisateur-96.png\" class=\"userimg\">";
+            echo "<img src='../images/imagePageProfil/icons8-utilisateur-96.png' class=\"userimg\">";
             echo "</div>";
             echo "<div class=\"sidebox\">";
             echo "<span>" .$r['prenom'] . ' ' . '<b>' . $r['nom'] ."</span>\n";

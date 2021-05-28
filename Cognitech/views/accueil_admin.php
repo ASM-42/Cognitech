@@ -35,7 +35,7 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
     <h1 class="colorWhite titre">Panneau&nbsp;d'administration</h1>
     <a class="recherche colorActif" href="">Accueil</a>
     <a class="compte" href="profil.php">Mon Compte</a>
-    <a class="FAQ" href="FAQ.php">FAQ</a>
+    <a class="FAQ" href="FAQ_admin.php">FAQ</a>
     <a class="CGU" href="CGU.php">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
