@@ -3,7 +3,7 @@ Body{
 }
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Roboto-Regular.ttf");
+    src: url("../fonts/Roboto-Regular.ttf");
 }
 
 a {

@@ -1,11 +1,11 @@
 Body{
     font-family: "Roboto";
-    background-image: url("images/racing.png");
+    background-image: url("../images/racing.png");
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Roboto-Regular.ttf");
+    src: url("../fonts/Roboto-Regular.ttf");
 }
 
 .colorBleu {

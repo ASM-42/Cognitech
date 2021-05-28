@@ -4,7 +4,7 @@ Body{
 }
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Roboto-Regular.ttf");
+    src: url("../fonts/Roboto-Regular.ttf");
 }
 
 .boutonQuestion1 {
@@ -19,7 +19,7 @@ Body{
     font-size: 25px;
     color: #5172DF;
     background-color: #FBF778;
-    background-image: url("images/cheveron_down.png");
+    background-image: url("../images/cheveron_down.png");
     background-position-x: 990px;
     border: 0px;
     border-radius: 50px;

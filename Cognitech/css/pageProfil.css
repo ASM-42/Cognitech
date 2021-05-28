@@ -15,7 +15,7 @@
 }
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Roboto-Regular.ttf");
+    src: url("../fonts/Roboto-Regular.ttf");
 }
 
 .headerProfil {
@@ -44,7 +44,7 @@
     font-size: 25px;
     color: #5172DF;
     background-color: #FBF778;
-    background-image: url("images/imagePageProfil/icons8-contacts-256.png") ;
+    background-image: url("../images/imagePageProfil/icons8-contacts-256.png") ;
     background-size: 60%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -67,7 +67,7 @@
     font-size: 25px;
     color: #5172DF;
     background-color: #FBF778;
-    background-image: url("images/imagePageProfil/icons8-mot-de-passe-100.png") ;
+    background-image: url("../images/imagePageProfil/icons8-mot-de-passe-100.png") ;
     background-size: 40%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -88,7 +88,7 @@
     font-size: 25px;
     color: #5172DF;
     background-color: #FBF778;
-    background-image: url("images/imagePageProfil/icons8-mâle-100.png") ;
+    background-image: url("../images/imagePageProfil/icons8-mâle-100.png") ;
     background-size: 40%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -108,7 +108,7 @@
     font-size: 25px;
     color: #5172DF;
     background-color: #FBF778;
-    background-image: url("images/imagePageProfil/icons8-téléphone-96.png") ;
+    background-image: url("../images/imagePageProfil/icons8-téléphone-96.png") ;
     background-size: 40%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -130,7 +130,7 @@
     font-size: 25px;
     color: #5172DF;
     background-color: #FBF778;
-    background-image: url("images/imagePageProfil/icons8-voiture-96.png") ;
+    background-image: url("../images/imagePageProfil/icons8-voiture-96.png") ;
     background-size: 40%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -151,7 +151,7 @@
     font-size: 25px;
     color: #5172DF;
     background-color: #FBF778;
-    background-image: url("images/imagePageProfil/icons8-docteur-homme-96.png") ;
+    background-image: url("../images/imagePageProfil/icons8-docteur-homme-96.png") ;
     background-size: 35%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -172,7 +172,7 @@
     font-size: 25px;
     color: #5172DF;
     background-color: #FBF778;
-    background-image: url("images/imagePageProfil/icons8-anniversaire-96.png") ;
+    background-image: url("../images/imagePageProfil/icons8-anniversaire-96.png") ;
     background-size: 40%;
     background-repeat: no-repeat;
     background-position-x: center;

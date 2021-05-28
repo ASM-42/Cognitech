@@ -13,8 +13,8 @@ $result = $sql -> fetch();
 <head>
     <meta charset="UTF-8">
     <title>Conditions Générales d'Utilisation</title>
-    <link href="CGU.css" rel="stylesheet"/>
-    <link href="Borderau_Bleu.css" rel="stylesheet"/>
+    <link href="../css/CGU.css" rel="stylesheet"/>
+    <link href="../css/Borderau_Bleu.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -43,7 +43,7 @@ $result = $sql -> fetch();
     <a class="CGU colorActif" href="">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
-    <a class="deconnecter" href="index.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../index.html">Se Deconnecter</a>
 
 </div>
 

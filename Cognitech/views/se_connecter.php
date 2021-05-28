@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="connexion.css">
+    <link rel="stylesheet" type="text/css" href="../inscription_connexion/connexion.css">
     <title>Connexion</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
 <div>
     <i class="material-icons colorBleu" style="font-size: 10em;">person_outline</i>
     <div class="formulaire">
-        <form action='connexion.php' method="post">
+        <form action='../inscription_connexion/connexion.php' method="post">
             <input type="email" class="container" name="email" placeholder="Email" required><br>
             <input type="password" class="container" name="pwd" placeholder="Mot de passe" required><br>
             <a class="mdpOublie inscription" href="#">Mot de passe oublié ?</a></br>

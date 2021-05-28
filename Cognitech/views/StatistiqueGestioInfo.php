@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Statistiques</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="Borderau_Bleu.css" rel="stylesheet"/>
-    <link href="StatStyle.css" rel="stylesheet"/>
+    <link href="../css/Borderau_Bleu.css" rel="stylesheet"/>
+    <link href="../css/StatStyle.css" rel="stylesheet"/>
 </head>
 
 <?php
@@ -50,7 +50,7 @@ $size = count($tableaudate);
     <a class="FAQ " href="FAQinvite.html">FAQ</a>
     <a class="CGU" href="#CGU">CGU</a>
     <a class="support" href="contact.html">Support</a>
-    <a class="deconnecter" href="index.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../index.html">Se Deconnecter</a>
 </div>
 
 <div class="main" >

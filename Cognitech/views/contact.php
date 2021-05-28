@@ -13,8 +13,8 @@ $result = $sql -> fetch();
     <meta charset="UTF-8">
     <title>Nous Contacter</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="nous-contacter.css">
-    <link href="Borderau_Bleu.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/nous-contacter.css">
+    <link href="../css/Borderau_Bleu.css" rel="stylesheet"/>
 </head>
 
     <body>
@@ -42,7 +42,7 @@ $result = $sql -> fetch();
             <a class="CGU" href="CGU.php">CGU</a>
             <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
             <a class="support colorActif" href="">Support</a>
-            <a class="deconnecter" href="index.html">Se Deconnecter</a>
+            <a class="deconnecter" href="../index.html">Se Deconnecter</a>
         </div>
 
         <h1 class="colorBleu">NOUS CONTACTER</h1>

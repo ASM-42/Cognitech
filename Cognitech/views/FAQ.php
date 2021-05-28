@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("inscription_connexion/connect.php");
+include("../inscription_connexion/connect.php");
 
 $connexion = mysqli_connect(SERVEUR,LOGIN, MDP, BDD);
 
@@ -21,9 +21,9 @@ $result = $sql2 -> fetch();
 <head>
     <meta charset="UTF-8">
     <title>FAQ</title>
-    <link href="Borderau_Bleu.css" rel="stylesheet"/>
-    <link href="FAQ.css" rel="stylesheet"/>
-    <script type="text/javascript" src="FAQ.js" defer></script>
+    <link href="../css/Borderau_Bleu.css" rel="stylesheet"/>
+    <link href="../css/FAQ.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../javascript/FAQ.js" defer></script>
 </head>
 <body>
 
@@ -54,7 +54,7 @@ $result = $sql2 -> fetch();
     <a class="CGU" href="CGU.php">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
-    <a class="deconnecter" href="index.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../index.html">Se Deconnecter</a>
 
     <!-- <div id="google_translate_element"></div>
      <script type="text/javascript">

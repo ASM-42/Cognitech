@@ -36,16 +36,16 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 
 
             if ($result['role'] == 'pilote') {
-                header('Location:../profil.php?id='.$user_id);
+                header('Location:../views/profil.php?id='.$user_id);
             } else if  ($result['role'] == 'gestionnaire'){
-                header('Location:../accueil_gestionnaire.php');
+                header('Location:../views/accueil_gestionnaire.php');
             }
             elseif ($result['role'] == 'admin') {
-                header('Location:../accueil_admin.php');
+                header('Location:../views/accueil_admin.php');
             }
             else {
                 $erreur = "Votre inscription n'a pas encore été validée";echo $erreur;
-                echo"<br/><a href=\"se_connecter.php\">Retourner à l'accueil</a>";exit();
+                echo ">Retourner à l'accueil</a>";exit();
             }
 
             exit();}
@@ -53,17 +53,17 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
         // Si le visiteur a saisi un mauvais login ou mot de passe --> erreur
         elseif ($data[0] == 0) {
             $erreur = 'Login ou mot de passe erroné';echo $erreur;
-            echo"<br/><a href=\"se_connecter.php\">Accueil</a>";exit();}
+            echo ">Accueil</a>";exit();}
 
         // Sinon --> autre problème
         else {
             $erreur = 'Plusieurs membres ont<br/>les memes login et mot de passe';echo $erreur;
-            echo"<br/><a href=\"se_connecter.php\">Accueil</a>";exit();}}
+            echo ">Accueil</a>";exit();}}
 
 
     // Si l'un des champs est vide --> erreur
     else {
         $erreur = 'Errreur de saisie !<br/>Au moins un des champs est vide'; echo $erreur;
-        echo"<br/><a href=\"se_connecter.php\">Accueil</a>";exit();}}
+        echo ">Accueil</a>";exit();}}
 ?>
 

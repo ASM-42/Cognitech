@@ -27,8 +27,8 @@ $sql = $connexion->query(
 <head>
     <meta charset="UTF-8">
     <title>Rechercher</title>
-    <link href="Borderau_Bleu.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="rechercher.css">
+    <link href="../css/Borderau_Bleu.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/rechercher.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -45,7 +45,7 @@ $sql = $connexion->query(
     <a class="CGU" href="CGU.php">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
-    <a class="deconnecter" href="index.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../index.html">Se Deconnecter</a>
 
     <!-- <div id="google_translate_element"></div>
      <script type="text/javascript">

@@ -13,7 +13,7 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
         // On regarde si les 2 mdp sont similaires
         if ($_POST['mdp1'] != $_POST['mdp2']) {
             $erreur = 'Les 2 mdp sont differents.';echo $erreur;
-            echo"<br/><a href=\"se_connecter.php\">Accueil</a>";exit();}
+            echo ">Accueil</a>";exit();}
 
         else {
             // Si les mdp correspondent, connexion à la BDD
@@ -42,7 +42,7 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
 
                 $erreur = 'Votre inscription a été prise en compte ! </br> Le gestionnaire de votre écurie doit valider votre compte avant que vous puissiez vous connecter';
                 echo $erreur;
-                echo"<br/><a href=\"se_connecter.php\">Accueil</a>";exit();
+                echo ">Accueil</a>";exit();
 
 
             }
@@ -51,14 +51,14 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
             else {
                 $erreur = 'Echec de l\'inscription !<br/>Login déjà utilisé';
                 echo $erreur;
-                echo"<br/><a href=\"se_connecter.php\">Accueil</a>";exit();
+                echo ">Accueil</a>";exit();
             }}}
 
     //Si au moins un des champs est vide --> erreur
     else {
         $erreur = 'Echec de l\'inscription !<br/>Au moins un des champs est vide<br/>OU<br/>Le mot de passe doit contenir au minimum 7 caractères, dont un spécial';
         echo $erreur;
-        echo"<br/><a href=\"se_connecter.php\">Accueil</a>";exit();
+        echo ">Accueil</a>";exit();
     }}
 ?>
 
