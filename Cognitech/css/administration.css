@@ -12,6 +12,10 @@ Body{
     color: #5172DF;
 }
 
+.tableau {
+    border-radius: 30px;
+}
+
 .colorWhite {
     color: white;
 }
@@ -24,10 +28,12 @@ Body{
 #users {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
+    border-radius: 2em;
+    overflow: hidden;
     width: 90%;
 }
 
-#users td, #users th {
+#users td {
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -45,11 +51,14 @@ Body{
 #users tr:hover {background-color: #ddd;}
 
 #users th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
     background-color: #5172DF;
     color: white;
+    border: none;
 }
 
 .rouge {

@@ -119,7 +119,7 @@ ORDER BY FIELD (role, 'inconnu', 'pilote')
 </td>
 
 <td>
-<input type='submit' value='Supprimer' name='delete'>
+<input type='submit' value='&#10006;' class='center' name='delete'>
 </td>
 </form>
                       </tr>";}

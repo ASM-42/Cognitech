@@ -41,7 +41,7 @@ $result = $sql -> fetch();
     <?php endif; ?>
     <a class="FAQ" href="FAQ.php">FAQ</a>
     <a class="CGU" href="CGU.php">CGU</a>
-    <a class="MentionLégales colorActif" href="">Mentions Légales</a>
+    <a class="MentionsLegales colorActif" href="">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
     <a class="deconnecter" href="../index.html">Se Deconnecter</a>
 

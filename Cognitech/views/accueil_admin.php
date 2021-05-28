@@ -57,7 +57,7 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
 
 
         <?php
-        echo "<table id='users' class='table table-bordered'>
+        echo "<table id='users'>
                           <tr>
                           <th>ID utilisateur</th>
                           <th>Prénom</th>

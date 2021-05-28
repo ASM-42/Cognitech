@@ -64,6 +64,18 @@ echo "<table id='users' class='table table-bordered'>
                           <th>Supprimer</th>
                           </tr>";
 
+
+$id = '';
+echo "<tr>
+<form action='../FAQ_validate.php?id=".$id."' method='post'>
+                        <td><input type='text' name='question' placeholder='Question'/></td>
+                        <td><input type='text' name='reponse' placeholder='Réponse'/></td>
+<td>
+<input type='submit' value='Ajouter' name='add'>
+</td>
+</form>
+                      </tr>";
+
 while ($dbRow = $sql->fetch(PDO::FETCH_ASSOC)) {
     $id = $dbRow['id'];
     $question = $dbRow['question'];

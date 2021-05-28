@@ -29,6 +29,13 @@ if (isset($_POST['delete'])) {
     WHERE id="'.$id.'"';
 }
 
+if (isset($_POST['add'])) {
+    $sql = 'INSERT INTO faq (question, reponse)
+    VALUES 
+    ("'.mysqli_escape_string($conn, $_POST['question']).'",
+    "'.mysqli_escape_string($conn, $_POST['reponse']).'")';
+}
+
 
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";
