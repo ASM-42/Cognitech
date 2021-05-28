@@ -17,7 +17,6 @@ h2 {
     font-weight: bold;
     top: 20px; left: 300px;
     color:#5172DF;
-
 }
 
 .colorBlanc {
@@ -90,8 +89,6 @@ a:hover{
     color: #FBF778;
 }
 .center {
-    /*position: absolute;
-    left: 400px; bottom: 100px;*/
     margin-top: 40px;
     margin-left: 290px;
     width: 1000px;
@@ -117,7 +114,6 @@ ul {
     font-family:Roboto;
     color:#000000;
     text-align:Left
-
 }
 
 li{
@@ -127,6 +123,5 @@ li{
     font-family:Roboto;
     color:#000000;
     text-align:Left
-
 }
 
