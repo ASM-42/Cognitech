@@ -106,7 +106,7 @@ ORDER BY FIELD (role, 'inconnu', 'pilote')
 
 
             { echo "<tr>
-<form action='gestionnaire_validate.php?id=".$id."' method='post'>
+<form action='../transition/gestionnaire_validate.php?id=".$id."' method='post'>
                         <td>$id</td>
                         <td>$prenom</td>
                         <td>$nom</td>

@@ -16,8 +16,6 @@ td {
     text-align: left;
 }
 
-
-
 h2{
     font-family: Roboto;
     font-weight: bold;
@@ -120,9 +118,6 @@ h4{
     border: 5px solid #5172DF;
 }
 
-
-
-
 .envoyer{
     width: 20%;
     height: 8%;
@@ -205,7 +200,3 @@ span {
     color: #5172DF;
     text-align: center;
 }
-
-
-
-

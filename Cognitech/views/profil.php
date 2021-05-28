@@ -76,7 +76,7 @@ $result = $sql -> fetch();
     <div class = "profil">
         <div class="headerProfil"><img src="../images/imagePageProfil/icons8-utilisateur-96.png" id="imagecontact"> <?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div>
 
-        <form action="../profile_update.php" method="post">
+        <form action="../transition/profile_update.php" method="post">
             <input type="email" class="boutonProfil" name="email" value="<?php echo htmlentities(trim($_SESSION['email'])); ?>">
             <!--        <button class="boutonProfil">--><?php //echo htmlentities(trim($_SESSION['email'])); ?><!--</button>-->
             <button class="boutonMDP">password</button>

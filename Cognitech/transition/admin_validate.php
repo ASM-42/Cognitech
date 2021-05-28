@@ -1,5 +1,5 @@
 <?php
-include("inscription_connexion/connect.php");
+include("../inscription_connexion/connect.php");
 
 $role=$_POST['role'];
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
