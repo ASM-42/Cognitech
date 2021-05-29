@@ -40,6 +40,16 @@ while($result2 = $sql2 -> fetch()) {
 
 $size = count($tableaudate);
 
+function vidertableau($input)
+{
+    $size = count($input);
+    for($i = 0; $i < $size; $i++) {
+        unset($input[$i]);
+    }
+    return $input;
+}
+
+
 
 ?>
 <body>
@@ -106,6 +116,50 @@ $size = count($tableaudate);
             <img src="images/poubelle.png">
         </div> -->
     </div>
+    <form action="StatistiquePilote.php" method="post" >
+        <label for="debut">Date de début</label>
+        <input type="date" min = "<?php echo end($tableaudate)?>" max="<?php echo $tableaudate[0]?>" name="debut" value="<?php if(!isset($_POST['debut'])){echo end($tableaudate);} else { echo $_POST['debut']; }?>" >
+
+        <label for = "fin">Date de fin</label>
+        <input type="date" min = "<?php echo end($tableaudate)?>" max="<?php echo $tableaudate[0]?>" name="fin"  value="<?php if( !isset($_POST['fin'])){echo $tableaudate[0] ;} else { echo $_POST['fin']; }?>">
+
+        <input type="submit" value = "valider" >
+    </form>
+
+
+
+    <?php
+    if(isset($_POST['debut']) && isset($_POST['fin'])) {
+
+
+        $sql3 = $bdd -> query('SELECT date , freq, refl, temperature, testnumber FROM statistique   WHERE email="'.$email.'" AND date >= "'.$_POST['debut'].'"  AND date <= "'.$_POST['fin'].'" ORDER BY testnumber DESC');
+
+        $i=0;
+        $tableaudate = vidertableau($tableaudate);
+        $tableaurefl = vidertableau($tableaurefl);
+        $tableaufreq = vidertableau($tableaufreq);
+        $tableaunombre = vidertableau($tableaunombre);
+        $tableautemp = vidertableau($tableautemp);
+
+
+        while($result3 = $sql3 -> fetch()) {
+            $tableaudate[$i] = $result3['date'];
+            $tableaufreq[$i] = $result3['freq'];
+            $tableaurefl[$i] = $result3['refl'];
+            $tableautemp[$i] = $result3['temperature'];
+            $tableaunombre[$i] = $result3['testnumber'];
+            $i++;
+
+        }
+
+        $size = count($tableaudate);
+
+
+    }
+
+
+
+    ?>
 
 
     <div id="graph"  >
