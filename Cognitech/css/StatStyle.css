@@ -1,3 +1,7 @@
+body
+{
+    overflow: hidden;
+}
 #graph
 {
     position: relative;
@@ -198,3 +202,9 @@ image
 
 }
 
+form
+{
+    position: relative;
+    left:35%;
+
+}
