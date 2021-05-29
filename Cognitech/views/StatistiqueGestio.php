@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Statistiques</title>
@@ -13,12 +13,20 @@ session_start();
 
 <?php
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
-$id = $_GET['$id'];
+$id = $_GET['id'];
 
-$sql = $bdd -> query('SELECT email FROM users WHERE id ="'.$id.'"');
+$email = $_SESSION['email'];
+$sql8 = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
+$result8 = $sql8 -> fetch();
+$role_utilisateur = $result8['role'];
+if ($role_utilisateur != 'gestionnaire') {header ('Location: erreur404.html');exit();}
+
+
+$sql = $bdd -> query('SELECT * FROM users WHERE id ="'.$id.'"');
 $result = $sql -> fetch();
+$mail = $result['email'];
 
-$sql2 = $bdd -> query('SELECT date, freq, refl, temperature, testnumber FROM statistique   WHERE email="'.$result.'"  ORDER BY testnumber DESC');
+$sql2 = $bdd -> query('SELECT date, freq, refl, temperature, testnumber FROM statistique   WHERE email="'.$mail.'"  ORDER BY testnumber DESC');
 $tableaudate = array();
 $tableaufreq = array();
 $tableaurefl = array();
@@ -47,31 +55,34 @@ $size = count($tableaudate);
     <?php elseif ($_SESSION['role'] == 'gestionnaire'): ?>
         <a class="recherche" href="accueil_gestionnaire.php">Accueil</a>
     <?php endif; ?>
-    <a class="recherche" href="#recherche">Rechercher</a>
-    <a class="compte" href="#compte">Mon Compte</a>
+    <a class="compte colorActif" href="rechercher.php">Rechercher</a>
+    <a class="troisieme" href="profil.php">Mon Compte</a>
     <!--<a class="statistique colorActif" href="Statistique.php">Statistique</a>-->
-    <a class="FAQ " href="FAQinvite.html">FAQ</a>
-    <a class="CGU" href="#CGU">CGU</a>
-    <a class="support" href="contact.html">Support</a>
+    <a class="FAQ" href="FAQ.php">FAQ</a>
+    <a class="CGU" href="CGU.php">CGU</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
+    <a class="support" href="contact.php">Support</a>
     <a class="deconnecter" href="../index.html">Se Deconnecter</a>
 </div>
 
-<div class="main" >
+<div class="centrer" >
     <div class="header">
-        <div class="headerProfil"><img src="images/imagePageProfil/icons8-utilisateur-96.png" id="imagecontact"> <?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div>
+        <div class="headerProfil"><img src="../images/imagePageProfil/icons8-contacts-256.png" id="imagecontact"> <?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div>
 
         <!-- <div class="supprimer">
 
             <img src="images/poubelle.png">
         </div> -->
     </div>
+
     <div class="menu" >
-        <a href="Statistique.php" class="stat bouton colorJaune">Statistiques</a>
-        <a href="StatistiqueProfil.php" class="info bouton " >Informations</a>
+        <a href="StatistiqueGestio.php?id=<?php echo $_GET['id']?>" class="stat bouton colorJaune">Statistiques</a>
+        <a href="StatistiqueGestioInfo.php?id=<?php echo $_GET['id']?>" class="info bouton " >Informations</a>
+
     </div>
 
 
-    <div id="graph"  >
+    <div id="graph">
         <canvas id="myChart" style="width: 80%"></canvas>
     </div>
 
@@ -130,6 +141,9 @@ $size = count($tableaudate);
 
 
     </script>
+
+
+
 
     <div class="PartieDroite">
         <table>

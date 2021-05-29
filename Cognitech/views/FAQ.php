@@ -31,7 +31,7 @@ $result = $sql2 -> fetch();
 
 <div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
-        <a class="recherche" href="#">Mes statistiques</a>
+        <a class="recherche" href="StatistiquePilote.php">Mes statistiques</a>
     <?php elseif ($result['role'] == 'admin'): ?>
         <a class="recherche" href="accueil_admin.php">Accueil</a>
     <?php else: ?>

@@ -1,5 +1,9 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Statistiques</title>
@@ -10,12 +14,13 @@
 
 <?php
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
-$id = $_GET['$id'];
+$id = $_GET['id'];
 
-$sql = $bdd -> query('SELECT email FROM users WHERE id ="'.$id.'"');
+$sql = $bdd -> query('SELECT * FROM users WHERE id ="'.$id.'"');
 $result = $sql -> fetch();
+$mail = $result['email'];
 
-$sql2 = $bdd -> query('SELECT date, freq, refl, temperature, testnumber FROM statistique   WHERE email="'.$result.'"  ORDER BY testnumber DESC');
+$sql2 = $bdd -> query('SELECT date, freq, refl, temperature, testnumber FROM statistique   WHERE email="'.$mail.'"  ORDER BY testnumber DESC');
 $tableaudate = array();
 $tableaufreq = array();
 $tableaurefl = array();
@@ -39,23 +44,24 @@ $size = count($tableaudate);
 <body>
 
 <div class="container">
-    <?php if ($result['role'] == 'admin'): ?>
+    <?php if ($_SESSION['role'] == 'admin'): ?>
         <a class="recherche" href="accueil_admin.php">Accueil</a>
-    <?php elseif ($result['role'] == 'gestionnaire'): ?>
+    <?php elseif ($_SESSION['role'] == 'gestionnaire'): ?>
         <a class="recherche" href="accueil_gestionnaire.php">Accueil</a>
     <?php endif; ?>
-    <a class="recherche" href="#recherche">Rechercher</a>
-    <a class="compte" href="#compte">Mon Compte</a>
+    <a class="compte colorActif" href="rechercher.php">Rechercher</a>
+    <a class="troisieme" href="profil.php">Mon Compte</a>
     <!--<a class="statistique colorActif" href="Statistique.php">Statistique</a>-->
-    <a class="FAQ " href="FAQinvite.html">FAQ</a>
-    <a class="CGU" href="#CGU">CGU</a>
-    <a class="support" href="contact.html">Support</a>
+    <a class="FAQ " href="FAQ.php">FAQ</a>
+    <a class="CGU" href="CGU.php">CGU</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
+    <a class="support" href="contact.php">Support</a>
     <a class="deconnecter" href="../index.html">Se Deconnecter</a>
 </div>
 
 <div class="main" >
     <div class="header">
-        <div class="headerProfil"><img src="images/imagePageProfil/icons8-utilisateur-96.png" id="imagecontact"> <?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div>
+        <div class="headerProfil"><img src="../images/imagePageProfil/icons8-contacts-256.png" id="imagecontact"> <?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div>
 
         <!-- <div class="supprimer">
 
@@ -63,28 +69,17 @@ $size = count($tableaudate);
         </div> -->
     </div>
     <div class="menu" >
-        <a href="Statistique.php" class="stat bouton ">Statistiques</a>
-        <a href="StatistiqueProfil.php" class="info bouton colorJaune" >Informations</a>
+        <a href="StatistiqueGestio.php?id=<?php echo $_GET['id']?>" class="stat bouton ">Statistiques</a>
+        <a href="StatistiqueGestioInfo.php?id=<?php echo $_GET['id']?>" class="info bouton colorJaune" >Informations</a>
     </div>
 
     <div class="Data">
-        <div class="ligne1">
-            <span class="mail"><?php echo $result['email']?></span>
-            <span class="sexe"><?php echo $result['sexe']?></span>
-            <span class="phone"><?php echo $result['phone']?></span>
-        </div>
-        <div class="ligne2">
-            <span class="ecurie"><?php echo $result['ecurie']?></span>
-            <span class="birthday"><?php echo $result['dateDeNaissance']?></span>
-        </div>
+        <div class=" case"><?php echo $result['email']?></div>
+        <div class=" case"><img src="../images/imagePageProfil/icons8-mâle-100.png"><?php echo $result['sexe']?></div>
+        <div class=" case"> <img src="../images/imagePageProfil/icons8-téléphone-96.png"><?php echo $result['phone']?></div>
+        <div class=" case"> <img src="../images/imagePageProfil/icons8-voiture-96.png"><?php echo $result['ecurie']?></div>
+        <div class=" case "> <img src="../images/imagePageProfil/icons8-anniversaire-96.png"> <?php echo $result['dateDeNaissance']?></div>
     </div>
-
-
-
-
-
-
-
 
 </body>
 </html>
