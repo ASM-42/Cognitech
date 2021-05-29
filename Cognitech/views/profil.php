@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(isset($_GET['id'])) {
+    $_SESSION['id'] = $_GET['id'];
+}
+
 if (!isset($_SESSION['email'])) {header ('Location: inscription_connexion/se_connecter.php');exit();}
 ?>
 
@@ -22,7 +26,7 @@ $result = $sql -> fetch();
 
 <div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
-        <a class="recherche" href="#">Mes statistiques</a>
+        <a class="recherche" href="StatistiquePilote.php">Mes statistiques</a>
     <?php elseif ($result['role'] == 'admin'): ?>
         <a class="recherche" href="accueil_admin.php">Accueil</a>
     <?php else: ?>
@@ -77,28 +81,28 @@ $result = $sql -> fetch();
         <div class="headerProfil"><img src="../images/imagePageProfil/icons8-utilisateur-96.png" id="imagecontact"> <?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div>
 
         <form action="../transition/profile_update.php" method="post">
-            <input type="email" class="boutonProfil" name="email" value="<?php echo htmlentities(trim($_SESSION['email'])); ?>">
+            <input type="email" class="boutonProfil case" name="email" value="<?php echo htmlentities(trim($_SESSION['email'])); ?>">
             <!--        <button class="boutonProfil">--><?php //echo htmlentities(trim($_SESSION['email'])); ?><!--</button>-->
-            <button class="boutonMDP">password</button>
-            <input type="text" class="boutonSexe" name="sexe" value="<?php echo $result['sexe']; ?>">
+            <button class="boutonMDP case">password</button>
+            <input type="text" class="boutonSexe case" name="sexe" value="<?php echo $result['sexe']; ?>">
             <!--        <button class="boutonSexe">--><?php //echo $result['sexe']; ?><!--</button>-->
-            <input type="text" class="boutonTelephone" name="phone" value="0<?php echo $result['phone']; ?>">
+            <input type="text" class="boutonTelephone case" name="phone" value="0<?php echo $result['phone']; ?>">
             <!--        <button class="boutonTelephone">0--><?php //echo $result['phone']; ?><!--</button>-->
 
             <?php if ($result['role'] != 'admin'): ?>
-                <input type="text" class="boutonEcurie" name="ecurie" value="<?php echo $result['ecurie']; ?>">
+                <input type="text" class="boutonEcurie case" name="ecurie" value="<?php echo $result['ecurie']; ?>">
             <?php else: ?>
             <?php endif; ?>
 
             <?php if ($result['role'] == 'gestionnaire'): ?>
             <?php else: ?>
-                <input type="text" class="boutonDocteur" name="medecin" value="<?php echo $result['medecin']; ?>">
+                <input type="text" class="boutonDocteur case" name="medecin" value="<?php echo $result['medecin']; ?>">
             <?php endif; ?>
 
             <!--        <button class="boutonDocteur">Dr.--><?php //echo $result['medecin']; ?><!--</button>-->
-            <input type="text" class="boutonAnniversaire" name="dateDeNaissance" value="<?php echo $result['dateDeNaissance']; ?>">
+            <input type="text" class="boutonAnniversaire case" name="dateDeNaissance" value="<?php echo $result['dateDeNaissance']; ?>">
             <!--        <button class="boutonAnniversaire">--><?php //echo $result['dateDeNaissance']; ?><!--</button>-->
-            <input type="submit" name="edit">
+            <input type="submit" name="edit" style="margin: auto auto auto 0;">
         </form>
     </div>
 </div>

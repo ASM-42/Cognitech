@@ -1,5 +1,6 @@
 <?php
 session_start();
+$id = $_SESSION['id'];
 
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
 $email = $_SESSION['email'];
@@ -21,7 +22,7 @@ $result = $sql -> fetch();
 
 <div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
-        <a class="recherche" href="#">Mes statistiques</a>
+        <a class="recherche" href="StatistiquePilote.php">Mes statistiques</a>
     <?php elseif ($result['role'] == 'admin'): ?>
         <a class="recherche" href="accueil_admin.php">Accueil</a>
     <?php else: ?>
@@ -33,11 +34,11 @@ $result = $sql -> fetch();
         <a class="compte" href="rechercher.php">Rechercher</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
-        <a class="compte" href="profil.php">Mon Compte</a>
+        <a class="compte" href="profil.php?<?php echo $id?>">Mon Compte</a>
     <?php elseif ($result['role'] == 'pilote'): ?>
-        <a class="compte" href="profil.php">Mon Compte</a>
+        <a class="compte" href="profil.php?<?php echo $id?>">Mon Compte</a>
     <?php else: ?>
-        <a class="troisieme" href="profil.php">Mon Compte</a>
+        <a class="troisieme" href="profil.php?<?php echo $id?>">Mon Compte</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
         <a class="FAQ " href="FAQ_admin.php">FAQ</a>

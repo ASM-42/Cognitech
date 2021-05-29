@@ -1,5 +1,6 @@
 <?php
 session_start();
+$id = $_SESSION['id'];
 
 include("../transition/connect.php");
 
@@ -42,11 +43,11 @@ $result = $sql2 -> fetch();
         <a class="compte" href="rechercher.php">Rechercher</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
-        <a class="compte" href="profil.php">Mon Compte</a>
+        <a class="compte" href="profil.php?<?php echo $id?>">Mon Compte</a>
     <?php elseif ($result['role'] == 'pilote'): ?>
-        <a class="compte" href="profil.php">Mon Compte</a>
+        <a class="compte" href="profil.php?<?php echo $id?>">Mon Compte</a>
     <?php else: ?>
-        <a class="troisieme" href="profil.php">Mon Compte</a>
+        <a class="troisieme" href="profil.php?<?php echo $id?>">Mon Compte</a>
     <?php endif; ?>
     <a class="FAQ colorActif" href="">FAQ</a>
     <a class="CGU" href="CGU.php">CGU</a>
@@ -58,7 +59,7 @@ $result = $sql2 -> fetch();
 
 
 <div class="center">
-    <h2>Conditions Générales d'Utilisation</h2>
+    <h2>FAQ</h2>
 <?php
 $numb = 0;
 echo "<div class='marginHaut'>";

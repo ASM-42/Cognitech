@@ -1,5 +1,5 @@
 <?php
-include("inscription_connexion/connect.php");
+include("connect.php");
 
 $email=$_POST['email'];
 $sexe=$_POST['sexe'];
@@ -26,7 +26,7 @@ WHERE email="'.$email.'"';
 
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";
-    header('Location:profil.php');
+    header('Location:../views/profil.php');
 } else {
     echo "Error updating record: " . mysqli_error($conn);
 }

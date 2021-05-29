@@ -1,0 +1,204 @@
+body {
+    font-family: "Roboto";
+    width: 100%;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 400%;
+    font-weight: bold;
+}
+
+main ._navbar>a:hover {
+    text-decoration: underline;
+}
+
+.colorJaune {
+    background: #fbf778;
+}
+
+.colorJaune2 {
+    color: #fbf778;
+}
+
+.colorBleu {
+    color: #5172df;
+}
+
+.container {}
+
+.titre {
+    margin-top: 60px;
+}
+
+.active {
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.resume {
+    width: 550px;
+    margin-bottom: 50px;
+}
+
+.bouton {
+    cursor: pointer;
+    border: 0;
+    padding: 20px 20px;
+    margin-right: 20px;
+    font-size: 15px;
+    text-align: center;
+    color: #5172df;
+    border-radius: 30px;
+    box-shadow: 0 7px 35px #00000016;
+    transition: transform 200ms ease;
+}
+
+.bouton:hover {
+    background-color: #e7e36d;
+    transition: 0.3s;
+    transform: scale(1.1);
+    transform: translateY(-2px);
+}
+
+.langue {
+    margin-top: 120px;
+}
+
+.drapeau img {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    transition: transform 200ms ease;
+}
+
+.drapeau img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+    transform: scale(1.1);
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 1em 2em;
+    margin-bottom: 5%;
+}
+
+#page-1 {
+    background-image: url("../images/infinite_blue.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-position-x: 80%;
+    background-size: 700px 690px;
+    padding: 60px;
+}
+
+#page-2 {
+    margin-top: 15%;
+}
+
+.reveal {
+    opacity: 1 !important;
+}
+
+.sous-titre {
+    font-size: 3em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.discover{
+    margin: auto;
+    width: 70%;
+}
+
+.discover-paragraphe {
+    text-align: justify;
+    text-align: center;
+    text-indent: 2em;
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.bannieref1{
+    border-radius: 50px;
+    position: relative;
+    margin: auto;
+}
+
+.logoinfinite{
+    width: 100px;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.contact-form {
+    margin: auto;
+    width: 60%;
+}
+
+.md-form>input,
+.md-form>textarea {
+    width: 100%;
+}
+
+
+.card-body {
+    margin: 1em;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+.card {
+    border-radius: 30px;
+}
+
+
+.card-img-top{
+    position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#page-3>h2,
+.bouton-send {
+    display: flex;
+    justify-content: center;
+}
+
+#page-4>h2,
+.bouton-send {
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: #5172DF;
+    color: white;
+    font-family: Roboto;
+    text-align: center;
+    margin: auto;
+    width:100%;
+    padding-top:50px;
+    height:50px;
+
+}
