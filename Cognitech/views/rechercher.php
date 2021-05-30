@@ -12,12 +12,13 @@ $recherche = isset($_POST['recherche']) ? $_POST['recherche'] : '';
 
 $email = $_SESSION['email'];
 
-$sql = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
-$result = $sql -> fetch();
+$sql1 = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
+$result = $sql1 -> fetch();
 $_SESSION['role'] = $result['role'];
+$ecurie = $_SESSION['ecurie'];
 $sql = $connexion->query(
-    "SELECT id, prenom, nom FROM users
-      WHERE role = 'pilote'
+    "SELECT id, prenom, nom, ecurie FROM users
+      WHERE (role = 'pilote' AND ecurie = '$ecurie')
       AND prenom LIKE '%$recherche%'
       OR nom LIKE '%$recherche%'
       LIMIT 10");

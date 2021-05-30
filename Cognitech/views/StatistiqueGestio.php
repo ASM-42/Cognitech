@@ -22,9 +22,14 @@ $role_utilisateur = $result8['role'];
 if ($role_utilisateur != 'gestionnaire') {header ('Location: erreur404.html');exit();}
 
 
+
 $sql = $bdd -> query('SELECT * FROM users WHERE id ="'.$id.'"');
 $result = $sql -> fetch();
 $mail = $result['email'];
+$ecuriepilote = $result['ecurie'];
+$ecuriegestionnaire = $result8['ecurie'];
+if ($ecuriepilote != $ecuriegestionnaire) {header ('Location: erreur404.html');exit();}
+
 
 $sql2 = $bdd -> query('SELECT date, freq, refl, temperature, testnumber FROM statistique   WHERE email="'.$mail.'"  ORDER BY testnumber DESC');
 $tableaudate = array();
