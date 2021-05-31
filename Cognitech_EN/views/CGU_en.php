@@ -12,7 +12,7 @@ $result = $sql -> fetch();
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Conditions Générales d'Utilisation</title>
+    <title>Terms and Conditions of Use</title>
     <link href="../css/CGU.css" rel="stylesheet"/>
     <link href="../css/Borderau_Bleu.css" rel="stylesheet"/>
 </head>
@@ -21,107 +21,105 @@ $result = $sql -> fetch();
 
 <div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
-        <a class="recherche" href="StatistiquePilote_en.php">Mes statistiques</a>
+        <a class="recherche" href="StatistiquePilote.php">My statistics</a>
     <?php elseif ($result['role'] == 'admin'): ?>
-        <a class="recherche" href="accueil_admin_en.php">Accueil</a>
+        <a class="recherche" href="accueil_admin.php">Home</a>
     <?php else: ?>
-        <a class="recherche" href="accueil_gestionnaire_en.php">Accueil</a>
+        <a class="recherche" href="accueil_gestionnaire.php">Home</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
     <?php elseif ($result['role'] == 'pilote'): ?>
     <?php else: ?>
-        <a class="compte" href="rechercher_en.php">Rechercher</a>
+        <a class="compte" href="rechercher.php">Search</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
-        <a class="compte" href="profil_en.php">Mon Compte</a>
+        <a class="compte" href="profil.php">My account</a>
     <?php elseif ($result['role'] == 'pilote'): ?>
-        <a class="compte" href="profil_en.php">Mon Compte</a>
+        <a class="compte" href="profil.php">My account</a>
     <?php else: ?>
-        <a class="troisieme" href="profil_en.php">Mon Compte</a>
+        <a class="troisieme" href="profil.php">My account</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
-        <a class="FAQ " href="FAQ_admin_en.php">FAQ</a>
+        <a class="FAQ " href="FAQ_admin.php">FAQ</a>
     <?php else: ?>
-        <a class="FAQ " href="FAQ_en.php">FAQ</a>
+        <a class="FAQ " href="FAQ.php">FAQ</a>
     <?php endif; ?>
-    <a class="CGU colorActif" href="">CGU</a>
-    <a class="MentionsLegales" href="MentionsLegales_en.php">Mentions Légales</a>
-    <a class="support" href="contact_en.php">Support</a>
-    <a class="deconnecter" href="../index_en.html">Se Deconnecter</a>
+    <a class="CGU colorActif" href="">T&Cs</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Legal Notice</a>
+    <a class="support" href="contact.php">Support</a>
+    <a class="deconnecter" href="../index.html">Log Out</a>
 
 </div>
 
 <div class="center">
-    <h2>Conditions Générales d'Utilisation</h2>
+    <h2>Terms and Conditions of Use</h2>
     <p>
-        Les présentes conditions générales régissent l'utilisation de ce site www.infinite-measures.fr
+        These terms and conditions govern the use of this site www.infinite-measures.fr
         <br/>
-        Ce site appartient et est géré par Infinite Measures.
+        This site is owned and operated by Infinite Measures.
         <br/>
-        En utilisant ce site, vous indiquez que vous avez lu et compris les conditions d'utilisation et que vous acceptez de les respecter en tout temps.
+        By using this site, you indicate that you have read and understood the Terms of Use and that you agree to abide by them at all times.        <br/>
         <br/>
-        <br/>
-        Type de site : médical
-
+        Type of website : medical
     </p>
 
-    <h3>Propriété intellectuelle</h3>
+    <h3>Intellectual Property</h3>
     <p>
-        Tout contenu publié et mis à disposition sur ce site est la propriété de Infinite Measures et de ses créateurs. Cela comprend, mais n'est pas limité aux images, textes, logos, documents, fichiers téléchargeables et tout ce qui contribue à la composition de ce site.
-    </p>
+        All content published and made available on this site is the property of Infinite Measures and its creators. This includes, but is not limited to, images, texts, logos, documents, downloadable files and everything that contributes to the composition of this site.    </p>
 
-    <h3>Utilisation acceptable</h3>
+    <h3>Acceptable use</h3>
     <p>
-        En tant qu'utilisateur, vous acceptez d'utiliser notre site légalement et de ne pas utiliser ce site pour des fins illicites, à savoir :
-
+        As a user, you agree to use our site lawfully and not to use this site for any unlawful purpose, namely:
     </p>
 
 
-    <li>Harceler ou maltraiter les autres utilisateurs du site</li>
-    <li>Violer les droits des autres utilisateurs du site</li>
-    <li>Pirater le compte d'un autre utilisateur du site</li>
-    <li>Agir de toute façon qui pourrait être considérée comme frauduleuse</li>
+    <li>Harassing or abusing other users of the site</li>
+    <li>Violate the rights of other site users</li>
+    <li>Hack another site user's account</li>
+    <li>Act in any way that could be considered fraudulent</li>
 
 
-    <p> Si nous estimons que vous utilisez ce site illégalement ou d'une manière qui viole les conditions d'utilisation acceptable ci-dessus, nous nous réservons le droit de limiter, suspendre ou résilier votre accès à ce site. Nous nous réservons également le droit de prendre toutes les mesures juridiques nécessaires pour vous empêcher d'accéder à notre site.
+    <p>If we believe that you are using this site illegally or in a manner that violates the above acceptable terms of use, we reserve the right to limit, suspend or terminate your access to this site. We also reserve the right to take any legal action necessary to prevent you from accessing our site.
     </p>
-    <h3>Comptes</h3>
+    <h3>Accounts</h3>
     <p>
-        Lorsque vous créez un compte sur notre site, vous acceptez ce qui suit :
+        When you create an account on our site, you agree to the following:
     </p>
+
     <ol start="1">
-        <li>que vous êtes seul responsable de votre compte et de la sécurité et la confidentialité de votre compte, y compris les mots de passe ou les renseignements de nature délicate joints à ce compte, et</li>
-        <li>que tous les renseignements personnels que vous nous fournissez par l'entremise de votre compte sont à jour, exacts et véridiques et que vous mettrez à jour vos renseignements personnels s'ils changent.</li>
+        <li>that you are solely responsible for your account and the security and privacy of your account, including any passwords or sensitive information attached to that account, and</li>
+        <li>that all personal information you provide to us through your account is current, accurate and truthful and that you will update your personal information if it changes.</li>
     </ol>
     <p>
-        Nous nous réservons le droit de suspendre ou de résilier votre compte si vous utilisez notre site illégalement ou si vous violez les conditions d'utilisation acceptable.
+        We reserve the right to suspend or terminate your account if you use our site illegally or violate the acceptable use policy.
     </p>
 
-    <h3>Limitation de responsabilit&eacute;</h3>
+    <h3>Limitation of Liability</h3>
     <p>
-        Infinite Measures ou l'un de ses employés sera tenu responsable de tout problème découlant de ce site. Néanmoins, Infinite Measures et ses employés ne seront pas tenus responsables de tout problème découlant de toute utilisation irrégulière de ce site.
+        Infinite Measures or any of its employees will be held liable for any problems arising from this site. Nevertheless, Infinite Measures and its employees will not be held liable for any problems arising from any improper use of this site.
     </p>
-    <h3>Indemnité</h3>
+    <h3>Indemnity</h3>
     <p>
-        En tant qu'utilisateur, vous indemnisez par les présentes Infinite Measures de toute responsabilité, de tout coût, de toute cause d'action, de tout dommage ou de toute dépense découlant de votre utilisation de ce site ou de votre violation de l'une des dispositions énoncées dans le présent document.
+        As a user, you hereby indemnify Infinite Measures from any and all liability, costs, causes of action, damages or expenses arising out of your use of this site or your violation of any of the provisions set forth herein.
 
     </p>
-    <h3>Lois applicables</h3>
+    <h3>Applicable Laws</h3>
     <p>
-        Ce document est soumis aux lois applicables en France et vise à se conformer à ses règles et règlements nécessaires. Cela inclut la réglementation à l'échelle de l'UE énoncée dans le RGPD.
+        This document is subject to the applicable laws in France and aims to comply with its necessary rules and regulations. This includes the EU-wide regulations set forth in the GDPR.
 
     </p>
-    <h3>Divisibilité</h3>
+    <h3>Divisibility</h3>
+
     <p>
-        Si, à tout moment, l'une des dispositions énoncées dans le présent document est jugée incompatible ou invalide en vertu des lois applicables, ces dispositions seront considérées comme nulles et seront retirées du présent document. Toutes les autres dispositions ne seront pas touchées par les lois et le reste du document sera toujours considéré comme valide.
+        If at any time any of the provisions set forth herein are determined to be inconsistent with or invalid under applicable law, such provisions shall be deemed void and shall be removed from this document. All other provisions will not be affected by the laws and the remainder of the document will still be considered valid.
     </p>
-    <h3>Modifications</h3>
+    <h3>Amendments</h3>
     <p>
-        Ces conditions générales peuvent être modifiées de temps à autre afin de maintenir le respect de la loi et de refléter tout changement à la façon dont nous gérons notre site et la façon dont nous nous attendons à ce que les utilisateurs se comportent sur notre site. Nous recommandons à nos utilisateurs de vérifier ces conditions générales de temps à autre pour s&rsquo;assurer qu'ils sont informés de toute mise à jour. Au besoin, nous informerons les utilisateurs par courriel des changements apportés à ces conditions ou nous afficherons un avis sur notre site.
+        These terms and conditions may be amended from time to time to maintain compliance with the law and to reflect any changes to the way we operate our site and the way we expect users to behave on our site. We recommend that our users check these terms and conditions from time to time to ensure that they are aware of any updates. If necessary, we will notify users by email of changes to these terms and conditions or post a notice on our site.
     </p>
     <h3>Contact</h3>
     <p>
-        Veuillez communiquer avec nous si vous avez des questions ou des préoccupations. Nos coordonnées sont les suivantes :
+        Please contact us if you have any questions or concerns. Our contact information is as follows:
         <br/>
         <br/>
         01 45 23 45 12
@@ -133,8 +131,8 @@ $result = $sql -> fetch();
         28 rue Notre Dame des Champs, 75006 Paris
     </p>
     <p style="text-align:Right;">
-        <span style="font-style:italic;font-weight:normal;">Date d'entrée en vigueur : </span>
-        le 27 juin 2021.</p>
+        <span style="font-style:italic;font-weight:normal;">Effective Date: </span>
+        June 27th 2021.</p>
 
 </div>
 </body>

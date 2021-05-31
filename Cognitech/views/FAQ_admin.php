@@ -25,33 +25,37 @@ $sql = $bdd->query('SELECT * FROM faq');
 
 
 <div class="navbarBleue">
-
-    <h1 class="colorBleu titre">FAQ</h1>
     <?php if ($result['role'] == 'pilote'): ?>
-        <a class="recherche" href="#">Mes statistiques</a>
+        <a class="recherche" href="StatistiquePilote.php">My statistics</a>
     <?php elseif ($result['role'] == 'admin'): ?>
-        <a class="recherche" href="accueil_admin.php">Accueil</a>
+        <a class="recherche" href="accueil_admin.php">Home</a>
     <?php else: ?>
-        <a class="recherche" href="accueil_gestionnaire.php">Accueil</a>
+        <a class="recherche" href="accueil_gestionnaire.php">Home</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
     <?php elseif ($result['role'] == 'pilote'): ?>
     <?php else: ?>
-        <a class="compte" href="rechercher.php">Rechercher</a>
+        <a class="compte" href="rechercher.php">Search</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
-        <a class="compte" href="profil.php">Mon Compte</a>
+        <a class="compte" href="profil.php">My account</a>
     <?php elseif ($result['role'] == 'pilote'): ?>
-        <a class="compte" href="profil.php">Mon Compte</a>
+        <a class="compte" href="profil.php">My account</a>
     <?php else: ?>
-        <a class="troisieme" href="profil.php">Mon Compte</a>
+        <a class="troisieme" href="profil.php">My account</a>
     <?php endif; ?>
-    <a class="FAQ colorActif" href="">FAQ</a>
-    <a class="CGU" href="CGU.php">CGU</a>
-    <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
+    <?php if ($result['role'] == 'admin'): ?>
+        <a class="FAQ " href="FAQ_admin.php">FAQ</a>
+    <?php else: ?>
+        <a class="FAQ " href="FAQ.php">FAQ</a>
+    <?php endif; ?>
+    <a class="CGU colorActif" href="">T&Cs</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Legal Notice</a>
     <a class="support" href="contact.php">Support</a>
-    <a class="deconnecter" href="../index.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../index.html">Log Out</a>
+
 </div>
+
 
 <div class="space">
     <ul>
@@ -59,17 +63,17 @@ $sql = $bdd->query('SELECT * FROM faq');
 echo "<table id='users'>
                           <tr>
                           <th>Question</th>
-                          <th>Réponse</th>
-                          <th>Editer</th> 
-                          <th>Supprimer</th>
+                          <th>Answer</th>
+                          <th>Edit</th> 
+                          <th>Delete</th>
                           </tr>";
 
 
 $id = '';
 echo "<tr>
 <form action='../transition/FAQ_validate.php?id=".$id."' method='post'>
-                        <td><input type='text' name='question' placeholder='Ajouter une question'/></td>
-                        <td><input type='text' name='reponse' placeholder='Ajouter une réponse'/></td>
+                        <td><input type='text' name='question' placeholder='Add a question'/></td>
+                        <td><input type='text' name='reponse' placeholder='Add an answer'/></td>
 <td>
 <input type='submit' value='Ajouter' name='add'>
 </td>

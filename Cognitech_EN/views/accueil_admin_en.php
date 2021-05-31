@@ -33,16 +33,16 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
 <body>
 <div class="navbarBleue">
 
-    <a class="recherche colorActif" href="">Accueil</a>
-    <a class="compte" href="profil_en.php">Mon Compte</a>
-    <a class="FAQ" href="FAQ_admin_en.php">FAQ</a>
-    <a class="CGU" href="CGU_en.php">CGU</a>
-    <a class="MentionsLegales" href="MentionsLegales_en.php">Mentions Légales</a>
-    <a class="support" href="contact_en.php">Support</a>
-    <a class="deconnecter" href="../index_en.html">Se Deconnecter</a>
+    <a class="recherche colorActif" href="">Home</a>
+    <a class="compte" href="profil.php">My account</a>
+    <a class="FAQ" href="FAQ_admin.php">FAQ</a>
+    <a class="CGU" href="CGU.php">T&Cs</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Legal Notice</a>
+    <a class="support" href="contact.php">Support</a>
+    <a class="deconnecter" href="../index.html">Log Out</a>
 
 </div>
-<h1 class="colorWhite">Panneau&nbsp;d'administration</h1>
+<h1 class="colorWhite">Administration Pannel</h1>
 <div class="espace">
     <ul>
         <?php /*while($m = $membres->fetch()) { */?><!--
@@ -59,18 +59,18 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
         <?php
         echo "<table id='users'>
             <tr>
-                          <th colspan='7'>Ajouter un utilisateur</th>
+                          <th colspan='7'>Add a User</th>
                           
                           </tr>";
 
         echo "<tr>
-<form action='../transition/admin_validate_en.php' method='post'>
-                        <td><input class='zone' type='text' name='prenom' placeholder='Prénom' required/></td>
-                        <td><input class='zone' type='text' name='nom' placeholder='Nom' required/></td>
+<form action='../transition/admin_validate.php' method='post'>
+                        <td><input class='zone' type='text' name='prenom' placeholder='First Name' required/></td>
+                        <td><input class='zone' type='text' name='nom' placeholder='Last Name' required/></td>
                         <td><input type='text' name='email' placeholder='Email' required/></td>
-                        <td><input class='zone' type='password' name='mdp1' placeholder='Mot de passe' required/></td>
-                        <td><input class='zone' type='text' name='ecurie' placeholder='Ecurie' required/></td>
-                        <td><input class='zone' type='text' name='role' placeholder='Rôle' required/></td>
+                        <td><input class='zone' type='password' name='mdp1' placeholder='Password' required/></td>
+                        <td><input class='zone' type='text' name='ecurie' placeholder='Team' required/></td>
+                        <td><input class='zone' type='text' name='role' placeholder='Role' required/></td>
                        
                         
 <td>
@@ -81,14 +81,14 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
 
         echo "<table id='users'>
                           <tr>
-                          <th>ID utilisateur</th>
-                          <th>Prénom</th>
-                          <th>Nom</th>
-                          <th>Ecurie</th>
+                          <th>User ID</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Team</th>
                           <th>Status</th>
-                          <th>Rôle</th>
-                          <th>Editer</th> 
-                          <th>Supprimer</th>
+                          <th>Role</th>
+                          <th>Edit</th> 
+                          <th>Delete</th>
                           </tr>";
 
 
@@ -134,9 +134,9 @@ ORDER BY FIELD (role, 'inconnu', 'gestionnaire', 'pilote')
                         <td>$nom</td>
                         <td>$ecurie</td>
                         <td class='$couleur'>$status</td>
-                        <td><input type='radio' name='role' value='inconnu' $check_inconnu/>Inconnu
-                        <input type='radio' name='role' value='gestionnaire' $check_gestionnaire/>Gestionnaire
-                        <input type='radio' name='role' value='pilote' $check_pilote/>Pilote
+                        <td><input type='radio' name='role' value='inconnu' $check_inconnu/>Unknown
+                        <input type='radio' name='role' value='gestionnaire' $check_gestionnaire/>Manager
+                        <input type='radio' name='role' value='pilote' $check_pilote/>Pilots
                         </td>
 <td>
 <input type='submit' value='$confirmer' name='edit'>

@@ -11,21 +11,21 @@
     <div>
         <i class="material-icons colorWhite" style="font-size: 900%; margin: -5.7% 0 -2.5% 0">person_outline</i>
         <div class="formulaire">
-            <form action="../transition/inscription_en.php" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Veuillez accepter les CGU'); return false; }">
-                <input type="text" class="container2" name="prenom" placeholder="Prénom" required><br>
-                <input type="text" class="container2" name="nom" placeholder="Nom" required><br>
-                <input type="date" class="container2" name="dateDeNaissance" placeholder="Date de Naissance" required><br>
+            <form action="../transition/inscription_en.php" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please accept the Terms and Conditions'); return false; }">
+                <input type="text" class="container2" name="prenom" placeholder="First Name" required><br>
+                <input type="text" class="container2" name="nom" placeholder="Last Name" required><br>
+                <input type="date" class="container2" name="dateDeNaissance" placeholder="Birthday" required><br>
                 <input type="email" class="container2" name="email" placeholder="Email" required><br>
-                <input type="text" class="container2" name="ecurie" placeholder="Ecurie" required><br>
-                <input type="password" class="container2" name="mdp1" placeholder="Mot de passe" required><br>
-                <input type="password" class="container2" name="mdp2" placeholder="Confirmer le mot de passe" required><br>
+                <input type="text" class="container2" name="ecurie" placeholder="Team" required><br>
+                <input type="password" class="container2" name="mdp1" placeholder="Password" required><br>
+                <input type="password" class="container2" name="mdp2" placeholder="Confirm Password" required><br>
 
                 <input type="checkbox" name="checkbox" class="checkbox" value="check" id="agree"/>
-                <p class="CGU">J'accepte les CGU</p>
+                <p class="CGU">I've read and accept the Terms and Conditions</p>
             </br>
-                <button type="submit" name='inscription' class="envoyer2" value="Inscription">S'inscrire</button>
+                <button type="submit" name='inscription' class="envoyer2" value="Inscription">Sign In</button>
             </form>
-            <a href="se_connecter_en.php" class="inscription2 colorWhite">Vous avez déjà un compte ? Connectez-vous <b>ici</b></a>
+            <a href="se_connecter_en.php" class="inscription2 colorWhite">Already have an account? Log in <b>here</b></a>
         </div>
     </div>
 

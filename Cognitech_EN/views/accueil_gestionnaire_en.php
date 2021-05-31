@@ -35,15 +35,15 @@ ORDER BY FIELD (role, 'inconnu', 'pilote')
 
 <body>
 <div class="navbarBleue">
-    <h1 class="colorBleu titre">Mes&nbsp;pilotes</h1>
-    <a class="recherche colorActif" href="">Accueil</a>
-    <a class="compte" href="rechercher_en.php">Rechercher</a>
-    <a class="troisieme" href="profil_en.php">Mon Compte</a>
-    <a class="FAQ" href="FAQ_en.php">FAQ</a>
-    <a class="CGU" href="CGU_en.php">CGU</a>
-    <a class="MentionsLegales" href="MentionsLegales_en.php">Mentions Légales</a>
-    <a class="support" href="contact_en.php">Support</a>
-    <a class="deconnecter" href="../index_en.html">Se Deconnecter</a>
+    <h1 class="colorBleu titre">Pilots</h1>
+    <a class="recherche colorActif" href="">Home</a>
+    <a class="compte" href="rechercher.php">Search</a>
+    <a class="compte" href="profil.php">My account</a>
+    <a class="FAQ" href="FAQ_admin.php">FAQ</a>
+    <a class="CGU" href="CGU.php">T&Cs</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Legal Notice</a>
+    <a class="support" href="contact.php">Support</a>
+    <a class="deconnecter" href="../index.html">Log Out</a>
 
 </div>
 
@@ -64,12 +64,12 @@ ORDER BY FIELD (role, 'inconnu', 'pilote')
         echo "<table id='users' class='table table-bordered'>
                           <tr>
                           <th>ID utilisateur</th>
-                          <th>Prénom</th>
-                          <th>Nom</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
                           <th>Status</th>
-                          <th>Rôle</th>
-                          <th>Editer</th> 
-                          <th>Supprimer</th>
+                          <th>Role</th>
+                          <th>Edit</th> 
+                          <th>Delete</th>
                           </tr>";
 
         while ($dbRow = $membres->fetch(PDO::FETCH_ASSOC)) {
@@ -111,8 +111,8 @@ ORDER BY FIELD (role, 'inconnu', 'pilote')
                         <td>$prenom</td>
                         <td>$nom</td>
                         <td class='$couleur'>$status</td>
-                        <td><input type='radio' name='role' value='inconnu' $check_inconnu/>Inconnu
-                        <input type='radio' name='role' value='pilote' $check_pilote/>Pilote
+                        <td><input type='radio' name='role' value='inconnu' $check_inconnu/>Unknown
+                        <input type='radio' name='role' value='pilote' $check_pilote/>Pilots
                         </td>
 <td>
 <input type='submit' value='$confirmer' name='edit'>

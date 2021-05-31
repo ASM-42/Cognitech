@@ -45,18 +45,18 @@ $size = count($tableaudate);
 
 <div class="container">
     <?php if ($_SESSION['role'] == 'admin'): ?>
-        <a class="recherche" href="accueil_admin_en.php">Accueil</a>
+        <a class="recherche" href="accueil_admin_en.php">Home</a>
     <?php elseif ($_SESSION['role'] == 'gestionnaire'): ?>
-        <a class="recherche" href="accueil_gestionnaire_en.php">Accueil</a>
+        <a class="recherche" href="accueil_gestionnaire_en.php">Home</a>
     <?php endif; ?>
-    <a class="compte colorActif" href="rechercher_en.php">Rechercher</a>
-    <a class="troisieme" href="profil_en.php">Mon Compte</a>
+    <a class="compte colorActif" href="rechercher_en.php">Search</a>
+    <a class="troisieme" href="profil_en.php">My Account</a>
     <!--<a class="statistique colorActif" href="Statistique.php">Statistique</a>-->
     <a class="FAQ " href="FAQ_en.php">FAQ</a>
-    <a class="CGU" href="CGU_en.php">CGU</a>
-    <a class="MentionsLegales" href="MentionsLegales_en.php">Mentions Légales</a>
+    <a class="CGU" href="CGU_en.php">T&Cs</a>
+    <a class="MentionsLegales" href="MentionsLegales_en.php">Legal Notice</a>
     <a class="support" href="contact_en.php">Support</a>
-    <a class="deconnecter" href="../index_en.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../index_en.html">Log Out</a>
 </div>
 
 <div class="main" >
@@ -69,7 +69,7 @@ $size = count($tableaudate);
         </div> -->
     </div>
     <div class="menu" >
-        <a href="StatistiqueGestio_en.php?id=<?php echo $_GET['id']?>" class="stat bouton ">Statistiques</a>
+        <a href="StatistiqueGestio_en.php?id=<?php echo $_GET['id']?>" class="stat bouton ">Statistics</a>
         <a href="StatistiqueGestioInfo_en.php?id=<?php echo $_GET['id']?>" class="info bouton colorJaune" >Informations</a>
     </div>
 

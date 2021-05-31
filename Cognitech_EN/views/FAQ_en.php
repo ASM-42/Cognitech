@@ -2,7 +2,7 @@
 session_start();
 $id = $_SESSION['id'];
 
-include("../transition/connect_en.php");
+include("../transition/connect.php");
 
 $connexion = mysqli_connect(SERVEUR,LOGIN, MDP, BDD);
 
@@ -31,61 +31,65 @@ $result = $sql2 -> fetch();
 
 <div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
-        <a class="recherche" href="StatistiquePilote_en.php">Mes statistiques</a>
+        <a class="recherche" href="StatistiquePilote.php">My statistics</a>
     <?php elseif ($result['role'] == 'admin'): ?>
-        <a class="recherche" href="accueil_admin_en.php">Accueil</a>
+        <a class="recherche" href="accueil_admin.php">Home</a>
     <?php else: ?>
-        <a class="recherche" href="accueil_gestionnaire_en.php">Accueil</a>
+        <a class="recherche" href="accueil_gestionnaire.php">Home</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
     <?php elseif ($result['role'] == 'pilote'): ?>
     <?php else: ?>
-        <a class="compte" href="rechercher_en.php">Rechercher</a>
+        <a class="compte" href="rechercher.php">Search</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
-        <a class="compte" href="profil_en.php?<?php echo $id?>">Mon Compte</a>
+        <a class="compte" href="profil.php">My account</a>
     <?php elseif ($result['role'] == 'pilote'): ?>
-        <a class="compte" href="profil_en.php?<?php echo $id?>">Mon Compte</a>
+        <a class="compte" href="profil.php">My account</a>
     <?php else: ?>
-        <a class="troisieme" href="profil_en.php?<?php echo $id?>">Mon Compte</a>
+        <a class="troisieme" href="profil.php">My account</a>
     <?php endif; ?>
-    <a class="FAQ colorActif" href="">FAQ</a>
-    <a class="CGU" href="CGU_en.php">CGU</a>
-    <a class="MentionsLegales" href="MentionsLegales_en.php">Mentions Légales</a>
-    <a class="support" href="contact_en.php">Support</a>
-    <a class="deconnecter" href="../index_en.html">Se Deconnecter</a>
+    <?php if ($result['role'] == 'admin'): ?>
+        <a class="FAQ " href="FAQ_admin.php">FAQ</a>
+    <?php else: ?>
+        <a class="FAQ " href="FAQ.php">FAQ</a>
+    <?php endif; ?>
+    <a class="CGU colorActif" href="">T&Cs</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Legal Notice</a>
+    <a class="support" href="contact.php">Support</a>
+    <a class="deconnecter" href="../index.html">Log Out</a>
 
 </div>
 
 
 <div class="center">
     <h2>FAQ</h2>
-<?php
-$numb = 0;
-echo "<div class='marginHaut'>";
+    <?php
+    $numb = 0;
+    echo "<div class='marginHaut'>";
 
-while( $r = mysqli_fetch_array($sql)) {
-    $question = $r['question'];
-    $reponse = $r['reponse'];
-    $numb++;
+    while( $r = mysqli_fetch_array($sql)) {
+        $question = $r['question'];
+        $reponse = $r['reponse'];
+        $numb++;
 
 
-    echo "<button class='boutonQuestions' onclick=\"on$numb()\">$question</button>";
-    echo "<div id='overlay$numb' class=\"overlay\">";
-    echo "<div class=\"popup\">";
-    echo "<h2>
+        echo "<button class='boutonQuestions' onclick=\"on$numb()\">$question</button>";
+        echo "<div id='overlay$numb' class=\"overlay\">";
+        echo "<div class=\"popup\">";
+        echo "<h2>
             $question
             <span class=\"btnClose\" onclick=\"off$numb()\">&times;</span>
         </h2>";
 
-    echo "<div>$reponse</div>";
+        echo "<div>$reponse</div>";
+        echo "</div>";
+        echo "</div>";
+    }
     echo "</div>";
-    echo "</div>";
-}
-echo "</div>";
-?>
+    ?>
 
-<!--<button class="boutonQuestion1" onclick="on1()"><?php /*$question*/?></button>
+    <!--<button class="boutonQuestion1" onclick="on1()"><?php /*$question*/?></button>
 <div id="overlay1" class="overlay">
     <div class="popup">
         <h2>

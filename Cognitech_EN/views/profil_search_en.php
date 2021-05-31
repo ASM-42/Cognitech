@@ -22,15 +22,15 @@ $result = $sql -> fetch();
 
 <div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
-        <a class="recherche colorActif" href="#">Mes statistiques</a>
+        <a class="recherche colorActif" href="#">My statisctics</a>
     <?php elseif ($result['role'] == 'admin'): ?>
-        <a class="recherche" href="accueil_admin_en.php">Accueil</a>
+        <a class="recherche" href="accueil_admin_en.php">Home</a>
     <?php else: ?>
-        <a class="recherche" href="rechercher_en.php">Rechercher</a>
+        <a class="recherche" href="rechercher_en.php">Search</a>
     <?php endif; ?>
-    <a class="compte" href="">Mon Compte</a>
+    <a class="compte" href="">My account</a>
     <a class="FAQ" href="FAQ_en.php">FAQ</a>
-    <a class="CGU" href="CGU_en.php">CGU</a>
+    <a class="CGU" href="CGU_en.php">T&Cs</a>
     <a class="support" href="contact_en.php">Support</a>
     <script>
         $('#LogoutButton').click(function() {
@@ -48,8 +48,9 @@ $result = $sql -> fetch();
             });
         });
     </script>
-    <a class="deconnecter" href="inscription_connexion/logout.php">Se Deconnecter</a>
+    <a class="deconnecter" href="inscription_connexion/logout.php">Log Out</a>
 </div>
+
 <div class="pageProfil">
     <div class = "profil">
         <div class="headerProfil"><img src="images/imagePageProfil/icons8-utilisateur-96.png" id="imagecontact"> <?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div>

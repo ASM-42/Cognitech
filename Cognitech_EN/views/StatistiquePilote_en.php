@@ -55,27 +55,27 @@ function vidertableau($input)
 
 <div class="container">
     <?php if ($_SESSION['role'] == 'pilote'): ?>
-        <a class="recherche colorActif" href="#">Mes statistiques</a>
+        <a class="recherche colorActif" href="#">My statistics</a>
     <?php elseif ($_SESSION['role'] == 'admin'): ?>
-        <a class="recherche" href="accueil_admin_en.php">Accueil</a>
+        <a class="recherche" href="accueil_admin_en.php">Home</a>
     <?php else: ?>
-        <a class="recherche" href="accueil_gestionnaire_en.php">Accueil</a>
+        <a class="recherche" href="accueil_gestionnaire_en.php">Home</a>
     <?php endif; ?>
     <?php if ($_SESSION['role'] == 'admin'): ?>
     <?php elseif ($_SESSION['role'] == 'pilote'): ?>
     <?php else: ?>
-        <a class="compte" href="rechercher_en.php">Rechercher</a>
+        <a class="compte" href="rechercher_en.php">Search</a>
     <?php endif; ?>
     <?php if ($_SESSION['role'] == 'admin'): ?>
-        <a class="compte colorActif" href="">Mon Compte</a>
+        <a class="compte colorActif" href="">My Account</a>
     <?php elseif ($_SESSION['role'] == 'pilote'): ?>
-        <a class="compte" href="profil_en.php?<?php echo $id?>">Mon Compte</a>
+        <a class="compte" href="profil_en.php?<?php echo $id?>">My Account</a>
     <?php else: ?>
-        <a class="troisieme colorActif" href="">Mon Compte</a>
+        <a class="troisieme colorActif" href="">My Account</a>
     <?php endif; ?>
     <a class="FAQ" href="FAQ_en.php">FAQ</a>
-    <a class="CGU" href="CGU_en.php">CGU</a>
-    <a class="MentionsLegales" href="MentionsLegales_en.php">Mentions Légales</a>
+    <a class="CGU" href="CGU_en.php">T&Cs</a>
+    <a class="MentionsLegales" href="MentionsLegales_en.php">Legal Notice</a>
     <a class="support" href="contact_en.php">Support</a>
     <script>
         $('#LogoutButton').click(function() {
@@ -93,17 +93,8 @@ function vidertableau($input)
             });
         });
     </script>
-    <a class="deconnecter" href="../index_en.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../index_en.html">Log out</a>
 
-    <!-- <div id="google_translate_element"></div>
-     <script type="text/javascript">
-         function googleTranslateElementInit() {
-             new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-         }
-     </script>
-
-     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- -->
 </div>
 
 <div class="main" >
@@ -116,10 +107,10 @@ function vidertableau($input)
         </div> -->
     </div>
     <form action="StatistiquePilote_en.php" method="post" >
-        <label for="debut">Date de début</label>
+        <label for="debut">Start Date</label>
         <input type="date" min = "<?php echo end($tableaudate)?>" max="<?php echo $tableaudate[0]?>" name="debut" value="<?php if(!isset($_POST['debut'])){echo end($tableaudate);} else { echo $_POST['debut']; }?>" >
 
-        <label for = "fin">Date de fin</label>
+        <label for = "fin">End Date</label>
         <input type="date" min = "<?php echo end($tableaudate)?>" max="<?php echo $tableaudate[0]?>" name="fin"  value="<?php if( !isset($_POST['fin'])){echo $tableaudate[0] ;} else { echo $_POST['fin']; }?>">
 
         <input type="submit" value = "valider" >
@@ -187,17 +178,17 @@ function vidertableau($input)
         const data = {
             labels:reversed2,
             datasets: [{
-                label: 'Evolution de la température en fonction du temps',
+                label: "Temperature's evolution as a function of time",
                 backgroundColor: 'rgb(286, 286, 286)',
                 borderColor: 'rgb(255, 99, 132)',
                 data: reversed4,
             },{
-                label: 'Evolution des réflexes en fonction du temps',
+                label: "Reflex's evolution as a function of time",
                 backgroundColor: 'rgb(120, 240, 78)',
                 borderColor: 'rgb(0, 166, 166)',
                 data: reversed3,
             },{
-                label: 'Evolution de la fréquence en fonction du temps',
+                label: "Heartbeat's evolution as a function of time",
                 backgroundColor: 'rgb(220, 240, 60)',
                 borderColor: 'rgb(128, 0, 64)',
                 data: reversed1,
@@ -223,12 +214,12 @@ function vidertableau($input)
 
     <div class="PartieDroite">
         <table>
-            <caption>Evolution des statistiques</caption>
+            <caption>Statistic's evolution </caption>
             <tr>
                 <th></th>
-                <th>Température <br> °C</th>
-                <th>Fréquence cardiaque <br> BPM</th>
-                <th>Réflexe <br> ms</th>
+                <th>Temperature <br> °C</th>
+                <th>Heartbeat<br> BPM</th>
+                <th>Reflex <br> ms</th>
             </tr>
             <?php
             for ($i = 0; $i < $size; $i++) {

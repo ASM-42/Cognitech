@@ -36,35 +36,26 @@ $sql = $connexion->query(
 <body>
 <div class="navbarBleue">
     <?php if ($result['role'] == 'admin'): ?>
-        <a class="recherche" href="accueil_admin_en.php">Accueil</a>
+        <a class="recherche" href="accueil_admin_en.php">Home</a>
     <?php elseif ($result['role'] == 'gestionnaire'): ?>
-        <a class="recherche" href="accueil_gestionnaire_en.php">Accueil</a>
+        <a class="recherche" href="accueil_gestionnaire_en.php">Home</a>
     <?php endif; ?>
-    <a class="compte colorActif" href="">Rechercher</a>
-    <a class="troisieme" href="profil_en.php">Mon Compte</a>
+    <a class="compte colorActif" href="">Search</a>
+    <a class="troisieme" href="profil_en.php">My Account</a>
     <a class="FAQ" href="FAQ_en.php">FAQ</a>
-    <a class="CGU" href="CGU_en.php">CGU</a>
-    <a class="MentionsLegales" href="MentionsLegales_en.php">Mentions Légales</a>
+    <a class="CGU" href="CGU_en.php">T&Cs</a>
+    <a class="MentionsLegales" href="MentionsLegales_en.php">Legal Notice</a>
     <a class="support" href="contact_en.php">Support</a>
-    <a class="deconnecter" href="../index_en.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../index_en.html">Log Out</a>
 
-    <!-- <div id="google_translate_element"></div>
-     <script type="text/javascript">
-         function googleTranslateElementInit() {
-             new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-         }
-     </script>
-
-     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- -->
 
 </div>
 
 <div class="space">
     <div class="formulaire">
         <form method="post">
-            <input type="text" class="objet" name="recherche" placeholder="Entrez le nom du pilote"><br>
-            <button type="submit" class="envoyer" >Envoyer</button>
+            <input type="text" class="objet" name="recherche" placeholder="Pilot's name"><br>
+            <button type="submit" class="envoyer" >Send</button>
         </form>
 
 

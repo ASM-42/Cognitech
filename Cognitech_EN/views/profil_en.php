@@ -11,7 +11,7 @@ if (!isset($_SESSION['email'])) {header ('Location: inscription_connexion/se_con
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mon profil</title>
+    <title>My Profile</title>
     <link href="../css/Borderau_Bleu.css" rel="stylesheet"/>
     <link href="../css/pageProfil.css" rel="stylesheet"/>
 </head>
@@ -26,28 +26,32 @@ $result = $sql -> fetch();
 
 <div class="navbarBleue">
     <?php if ($result['role'] == 'pilote'): ?>
-        <a class="recherche" href="StatistiquePilote_en.php">Mes statistiques</a>
+        <a class="recherche" href="StatistiquePilote.php">My statistics</a>
     <?php elseif ($result['role'] == 'admin'): ?>
-        <a class="recherche" href="accueil_admin_en.php">Accueil</a>
+        <a class="recherche" href="accueil_admin.php">Home</a>
     <?php else: ?>
-        <a class="recherche" href="accueil_gestionnaire_en.php">Accueil</a>
+        <a class="recherche" href="accueil_gestionnaire.php">Home</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
     <?php elseif ($result['role'] == 'pilote'): ?>
     <?php else: ?>
-        <a class="compte" href="rechercher_en.php">Rechercher</a>
+        <a class="compte" href="rechercher.php">Search</a>
     <?php endif; ?>
     <?php if ($result['role'] == 'admin'): ?>
-        <a class="compte colorActif" href="">Mon Compte</a>
+        <a class="compte" href="profil.php">My account</a>
     <?php elseif ($result['role'] == 'pilote'): ?>
-        <a class="compte colorActif" href="">Mon Compte</a>
+        <a class="compte" href="profil.php">My account</a>
     <?php else: ?>
-        <a class="troisieme colorActif" href="">Mon Compte</a>
+        <a class="troisieme" href="profil.php">My account</a>
     <?php endif; ?>
-    <a class="FAQ" href="FAQ_en.php">FAQ</a>
-    <a class="CGU" href="CGU_en.php">CGU</a>
-    <a class="MentionsLegales" href="MentionsLegales_en.php">Mentions Légales</a>
-    <a class="support" href="contact_en.php">Support</a>
+    <?php if ($result['role'] == 'admin'): ?>
+        <a class="FAQ " href="FAQ_admin.php">FAQ</a>
+    <?php else: ?>
+        <a class="FAQ " href="FAQ.php">FAQ</a>
+    <?php endif; ?>
+    <a class="CGU colorActif" href="">T&Cs</a>
+    <a class="MentionsLegales" href="MentionsLegales.php">Legal Notice</a>
+    <a class="support" href="contact.php">Support</a>
     <script>
         $('#LogoutButton').click(function() {
             var request = $.ajax({
@@ -64,17 +68,9 @@ $result = $sql -> fetch();
             });
         });
     </script>
-    <a class="deconnecter" href="../transition/logout_en.php">Se Deconnecter</a>
+    <a class="deconnecter" href="../transition/logout_en.php">Log Out</a>
 
-    <!-- <div id="google_translate_element"></div>
-     <script type="text/javascript">
-         function googleTranslateElementInit() {
-             new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-         }
-     </script>
 
-     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- -->
 </div>
 <div class="pageProfil">
     <div class = "profil">
