@@ -1,5 +1,5 @@
 <?php
-include("inscription_connexion/connect.php");
+include("connect.php");
 
 $role=$_POST['role'];
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
@@ -44,7 +44,7 @@ if (isset($_POST['delete'])) {
 
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";
-    header('Location:accueil_gestionnaire.php');
+    header('Location:../views/accueil_gestionnaire.php');
 } else {
     echo "Error updating record: " . mysqli_error($conn);
 }
