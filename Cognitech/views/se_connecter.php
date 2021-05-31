@@ -14,7 +14,7 @@
         <form action='../transition/connexion.php' method="post">
             <input type="email" class="container" name="email" placeholder="Email" required><br>
             <input type="password" class="container" name="pwd" placeholder="Mot de passe" required><br>
-            <a class="mdpOublie inscription" href="#">Mot de passe oublié ?</a></br>
+            <a class="mdpOublie inscription" href="../transition/Password_Recovery/forgot-password.php">Mot de passe oublié ?</a></br>
             <button type="submit" name='connexion' class="envoyer" value="Connexion">Se connecter</button>
         </form>
         <a href="sinscrire.php" class="inscription">Vous n'avez pas de compte ? Créez en un <b>ici</b></a>
