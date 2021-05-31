@@ -15,13 +15,13 @@ $email = $_SESSION['email'];
 $sql1 = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
 $result = $sql1 -> fetch();
 $_SESSION['role'] = $result['role'];
-$ecurie = $_SESSION['ecurie'];
-$sql = $connexion->query(
+$ecurie = $result['ecurie'];
+/*$sql = $connexion->query(
     "SELECT id, prenom, nom, ecurie FROM users
       WHERE (role = 'pilote' AND ecurie = '$ecurie')
       AND prenom LIKE '%$recherche%'
       OR nom LIKE '%$recherche%'
-      LIMIT 10");
+      LIMIT 10");*/
 ?>
 
 <html lang="fr">
@@ -67,9 +67,81 @@ $sql = $connexion->query(
             <button type="submit" class="envoyer" >Envoyer</button>
         </form>
 
+        <?php
+        function estvide($mot) {
+
+            $size = strlen($mot);
+            $vide = true;
+            for($i = 0; $i < $size; $i++ ) {
+                if ($mot[$i]){
+                    $vide  = false;
+                    break;
+                }
+            }
+
+            return $vide;
+        }
+
+        ?>
+        <?php
+
+        echo "<ul>\n";
+        if(isset($_POST['recherche'])) {
+
+            if(!estvide($_POST['recherche'])) {
+                $sql = $connexion->query(
+
+                    "SELECT id, prenom, nom, ecurie FROM users
+                        WHERE (role = 'pilote' AND ecurie = '$ecurie')
+                        AND prenom LIKE '%$recherche%'
+                        OR nom LIKE '%$recherche%'
+                        LIMIT 10");
+            } else {
+                $sql = $connexion->query(
+                    "SELECT id, prenom, nom, ecurie FROM users
+                    WHERE (role = 'pilote' AND ecurie = '$ecurie')
+                    ");
+            }
+        } else  {
+            $sql = $connexion->query(
+                "SELECT id, prenom, nom, ecurie FROM users
+                    WHERE (role = 'pilote' AND ecurie = '$ecurie')
+                    ");
+
+        }
+        while ($r = mysqli_fetch_array($sql)) {
+
+            $user_id = $r['id'];
+            echo "<a href='StatistiqueGestio.php?id=$user_id'>";
+            echo "<li>";
+            echo "<div class=\"cont\">";
+            echo "<div class=\"cont1\">";
+            echo "<img src='../images/imagePageProfil/icons8-utilisateur-96.png' class=\"userimg\">";
+            echo "</div>";
+            echo "<div class=\"sidebox\">";
+            echo "<span>" . $r['prenom'] . ' ' . '<b>' . $r['nom'] . "</span>\n";
+            echo "<br>";
+        }
+
+        ?>
 
         <?php
-        echo "<ul>\n";
+/*        echo "<ul>\n";
+        if(isset($_POST['recherche'])) {
+            $sql = $connexion->query(
+                    "SELECT id, prenom, nom, ecurie FROM users
+WHERE (role = 'pilote' AND ecurie = '$ecurie')
+AND prenom LIKE '%$recherche%'
+OR nom LIKE '%$recherche%'
+LIMIT 10"
+            );
+        } else {
+            $sql = $connexion->query(
+                    "SELECT id, prenom, nom, ecurie FROM users
+WHERE (role = 'pilote' AND ecurie = '$ecurie')"
+            );
+        }
+
         while( $r = mysqli_fetch_array($sql)) {
             $user_id = $r['id'];
             echo "<a href='StatistiqueGestio.php?id=$user_id'>";
@@ -82,7 +154,7 @@ $sql = $connexion->query(
             echo "<span>" .$r['prenom'] . ' ' . '<b>' . $r['nom'] ."</span>\n";
             echo "<br>";
         }
-        ?>
+        */?>
 
 
 
