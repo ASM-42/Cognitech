@@ -67,7 +67,7 @@ $ecurie = $result['ecurie'];
             $size = strlen($mot);
             $vide = true;
             for($i = 0; $i < $size; $i++ ) {
-                if ($mot[$i]){
+                if ($mot[$i] != ' '){
                     $vide  = false;
                     break;
                 }
