@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-header('Location: se_connecter.php');
+header('Location: ../views/se_connecter.php');
 ?>
