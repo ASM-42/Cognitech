@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['email'])) {header ('Location: ../inscription_connexion/se_connecter.php');exit();}
+if (!isset($_SESSION['email'])) {header ('Location: se_connecter.php');exit();}
 
 include("../transition/connect.php");
 
@@ -16,12 +16,6 @@ $sql1 = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
 $result = $sql1 -> fetch();
 $_SESSION['role'] = $result['role'];
 $ecurie = $result['ecurie'];
-/*$sql = $connexion->query(
-    "SELECT id, prenom, nom, ecurie FROM users
-      WHERE (role = 'pilote' AND ecurie = '$ecurie')
-      AND prenom LIKE '%$recherche%'
-      OR nom LIKE '%$recherche%'
-      LIMIT 10");*/
 ?>
 
 <html lang="fr">
