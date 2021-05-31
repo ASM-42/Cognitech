@@ -1,0 +1,135 @@
+Body{
+    font-family: "Roboto";
+    background-image: url("../images/formula.png");
+}
+
+.colorBleu {
+    color: #5172DF;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.colorYellow {
+    color: #FBF778;
+}
+
+.formulaire{
+    width: 80%;
+    margin: 2% auto;
+}
+
+
+.container{
+    width: 30%;
+    height: 8%;
+    margin: 20px 0 20px 0;
+    font-family: Roboto;
+    color: #5172DF;
+    padding: 0 20px 0 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: 5px solid #5172DF;
+}
+
+.container2{
+    width: 30%;
+    height: 7%;
+    margin: 0.5% 0 0.5% 0;
+    font-family: Roboto;
+    color: #5172DF;
+    padding: 0 20px 0 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: 3px solid #5172DF;
+}
+
+.envoyer{
+    width: 20%;
+    height: 8%;
+    margin-top: 30px;
+    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: none;
+}
+
+.envoyer2{
+    width: 20%;
+    height: 8%;
+    margin-top: -1%;
+    margin-bottom: -0.5%;
+    background-color: #FBF778;
+    font-family: Roboto;
+    color: #5172DF;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 23px 0 rgba(119, 119, 119, 0.34);
+    border: none;
+}
+
+.inscription{
+    width: 20%;
+    margin-top: 40px;
+    text-decoration: none;
+    font-family: Roboto;
+    color: white;
+}
+
+.inscription2{
+    width: 20%;
+    margin-top: -5%;
+    text-decoration: none;
+    font-family: Roboto;
+}
+
+.CGU {
+    text-decoration: none;
+    font-family: Roboto;
+    color: white;
+}
+
+.checkbox {
+    margin-top: 0.5%;
+}
+
+.main {
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+::placeholder {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #5172DF;
+    text-align: center;
+}
+
+input {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    color: #5172DF;
+    text-align: center;
+}
+
+.topleft {
+    border: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.mdpOublie {
+    margin: 20px 0 0 0;
+}

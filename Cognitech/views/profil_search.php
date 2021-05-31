@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['email'])) {header ('Location: inscription_connexion/se_connecter.php');exit();}
+if (!isset($_SESSION['email'])) {header ('Location: inscription_connexion/se_connecter_en.php');exit();}
 ?>
 <html lang="fr">
 <head>

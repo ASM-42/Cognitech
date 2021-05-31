@@ -36,12 +36,12 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 
 
             if ($result['role'] == 'pilote') {
-                header('Location:../views/profil.php?id='.$user_id);
+                header('Location:../views/profil_en.php?id='.$user_id);
             } else if  ($result['role'] == 'gestionnaire'){
-                header('Location:../views/accueil_gestionnaire.php');
+                header('Location:../views/accueil_gestionnaire_en.php');
             }
             elseif ($result['role'] == 'admin') {
-                header('Location:../views/accueil_admin.php');
+                header('Location:../views/accueil_admin_en.php');
             }
             else {
                 $erreur = "Votre inscription n'a pas encore été validée";echo $erreur;

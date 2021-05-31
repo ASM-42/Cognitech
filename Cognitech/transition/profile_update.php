@@ -26,7 +26,7 @@ WHERE email="'.$email.'"';
 
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";
-    header('Location:../views/profil.php');
+    header('Location:../views/profil_en.php');
 } else {
     echo "Error updating record: " . mysqli_error($conn);
 }

@@ -48,7 +48,7 @@ if (isset($_POST['add'])) {
 
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";
-    header('Location:../views/accueil_admin.php');
+    header('Location:../views/accueil_admin_en.php');
 } else {
     echo "Error updating record: " . mysqli_error($conn);
 }

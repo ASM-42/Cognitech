@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Infinite Measures</title>
+    <link href="css/indexstyle.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" defer></script>
+
+</head>
+
+<body>
+<main class="container">
+
+    <section id="page-1">
+
+        <div class="_navbar">
+            <a class="active colorBleu" href="#tests" onclick="scrollToOurTests()">Our tests</a>
+            <a class="active colorBleu" href="#contact" onclick="scrollToContactUs()">Contact Us</a>
+        </div>
+        <h1 class="colorBleu titre">INFINITE MEASURES</h1>
+        <p class="resume colorBleu">Welcome to our COGNISTAT site, from Cognitech, where you will have
+            access to all your psychotechnical test results.
+            <br>
+            Access your profile by clicking on "Log In" or "Discover" our activity via the "Discover" tab
+        </p>
+
+        <button class="bouton colorJaune" onclick="scrollToDiscover()">Discover</button>
+        <a href="views/se_connecter_en.php"><button class="bouton colorJaune"> Log In </button></a>
+
+        <div class="langue">
+            <a class="drapeau" href="../Cognitech/index.html" id="FR"> <img src="images/france.png"></a>
+            <a class="drapeau" href="../Cognitech_EN/index_en.html" id="EN"> <img src="images/royaume-uni.png"></a>
+        </div>
+    </section>
+
+    <section id="page-2">
+        <div class="discover">
+            <h2 class="sous-titre colorBleu text-center">About Us</h2>
+            <img class="bannieref1 bouton-send" src="images/f1banniere2.png" alt="">
+            <div class="left-right-container">
+                <div class="left">
+                    <p class="discover-paragraphe colorBleu">
+                        Infinite Measures is a company specialized in the installation of "turnkey" solutions for psychotechnical assessment centers.
+                        <br>It seeks to design its own systems to assess the psychotechnical capabilities of Formula 1 pilots.
+                        <br>The product that Infinite Measures offers you is an attractive, cheap, flexible product whose data is easily accessible via this website.
+                        <br>To start viewing your test data, click "Log in".
+                    </p>
+                </div>
+                <img class="logoinfinite bouton-send" src="images/infinite_blue.png">
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="page-3">
+        <div class="our-tests"></div>
+        <h2 class="sous-titre colorBleu text-center">Our Tests</h2>
+        <div class="card-container">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="images/Freq%20cardiaque.png" alt="Card image cap">
+                <div class="card-body">
+                    <span class="card-title">Stress measurement</span>
+                    <p class="card-text">We will assess the patient’s stress by measuring heart rate and skin temperature.</p>
+                    <a href="views/se_connecter_en.php" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="images/eye2%20(1).png" alt="Card image cap">
+                <div class="card-body">
+                    <span class="card-title">Visual Acuity</span>
+                    <p class="card-text">We will study the reaction of a subject to a light. To do this, we will measure the reaction time to a visual stimulus.</p>
+                    <a href="views/se_connecter_en.php" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="images/sound%20wave2%20(1).png" alt="Card image cap">
+                <div class="card-body">
+                    <span class="card-title">Hearing Acuity</span>
+                    <p class="card-text">We will measure the quality of sound recognition, the response time to a sound stimulus, and the extent of a patient’s auditory perception.</p>
+                    <a href="views/se_connecter_en.php" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-4" class="mb-4">
+        <h2 class="sous-titre colorBleu text-center mx-auto">Nous contacter</h2>
+        <div class="contact-form">
+
+            <div class="row mx-auto">
+                <div class="col-md-9 mb-md-0 mb-5">
+                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="name" name="name" class="form-control" autocomplete="chrome-off">
+                                    <label for="name" class="">Nom</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="email" name="email" class="form-control" autocomplete="chrome-off">
+                                    <label for="email" class="">Adresse</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="subject" name="subject" class="form-control" autocomplete="chrome-off">
+                                    <label for="subject" class="">Sujet</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="d-flex justify-content-center text-center bouton-send">
+                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Envoyer</a>
+                    </div>
+                    <div class="status"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <footer>
+    <div>
+        Copyright &#169; <script type='text/javascript'>var year = new Date();document.write(year.getFullYear());</script> <a href='index_en.html' class="colorJaune2">Infinite Measures</a><a> | Conçu par Cognitech</a>
+    </div>
+    </footer>
+
+
+</main>
+</body>
+
+
+<script type="text/javascript" defer>
+    function autoScroll(el) {
+        window.scrollTo({
+            top: el.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }
+
+    function scrollToDiscover() {
+        return autoScroll(document.querySelector('#page-2'))
+    }
+
+    function scrollToOurTests() {
+        return autoScroll(document.querySelector('#page-3'))
+    }
+
+    function scrollToContactUs() {
+        return autoScroll(document.querySelector('#page-4'))
+    }
+
+    let observer = new IntersectionObserver(entry => (entry.length && entry[0].intersectionRatio) ? document.querySelector('#page-2').classList.add('reveal') : null, {
+        rootMargin: '0px',
+        threshold: 1.0
+    })
+    observer.observe(document.querySelector('.discover'))
+</script>
+
+
+
+
+
+</html>

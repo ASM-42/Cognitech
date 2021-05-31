@@ -1,6 +1,6 @@
 <?php
 session_start();
-//if ($_SESSION['role'] == 'admin') {header ('Location: inscription_connexion/se_connecter.php');exit();}
+//if ($_SESSION['role'] == 'admin') {header ('Location: inscription_connexion/se_connecter_en.php');exit();}
 
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
 
@@ -9,7 +9,7 @@ $email = $_SESSION['email'];
 $sql = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
 $result = $sql -> fetch();
 $role_utilisateur = $result['role'];
-if ($role_utilisateur != 'admin') {header ('Location: erreur404.html');exit();}
+if ($role_utilisateur != 'admin') {header ('Location: erreur404_en.html');exit();}
 
 
 $membres = $bdd->query("

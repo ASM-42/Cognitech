@@ -19,7 +19,7 @@ $email = $_SESSION['email'];
 $sql8 = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
 $result8 = $sql8 -> fetch();
 $role_utilisateur = $result8['role'];
-if ($role_utilisateur != 'gestionnaire') {header ('Location: erreur404.html');exit();}
+if ($role_utilisateur != 'gestionnaire') {header ('Location: erreur404_en.html');exit();}
 
 
 
@@ -28,7 +28,7 @@ $result = $sql -> fetch();
 $mail = $result['email'];
 $ecuriepilote = $result['ecurie'];
 $ecuriegestionnaire = $result8['ecurie'];
-if ($ecuriepilote != $ecuriegestionnaire) {header ('Location: erreur404.html');exit();}
+if ($ecuriepilote != $ecuriegestionnaire) {header ('Location: erreur404_en.html');exit();}
 
 
 $sql2 = $bdd -> query('SELECT date, freq, refl, temperature, testnumber FROM statistique   WHERE email="'.$mail.'"  ORDER BY testnumber DESC');

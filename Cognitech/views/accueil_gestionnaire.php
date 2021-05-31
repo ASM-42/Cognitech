@@ -11,7 +11,7 @@ $ecurie = $result['ecurie'];
 
 $role_utilisateur = $result['role'];
 
-if ($role_utilisateur != 'gestionnaire') {header ('Location: erreur404.html');exit();}
+if ($role_utilisateur != 'gestionnaire') {header ('Location: erreur404_en.html');exit();}
 
 $membres = $bdd->query("
 SELECT * FROM users

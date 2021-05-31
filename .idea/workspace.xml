@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a9e9221-8e68-47d2-9688-446d0d2c8d97" name="Default Changelist" comment="statistique gestio page">
+    <list default="true" id="3a9e9221-8e68-47d2-9688-446d0d2c8d97" name="Default Changelist" comment="MDP redone">
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/MentionsLégales_en.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/Password_Recovery/Model/Member.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/Password_Recovery/Model/PasswordReset.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/Password_Recovery/forgot-password_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/Password_Recovery/reset-password_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/Borderau_Bleu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/CGU.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/FAQ.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/StatStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/administration.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/connexion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/erreur404.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/indexstyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/nous-contacter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/pageProfil.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/rechercher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/models/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/models/connexion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/models/deconnexion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/models/send_tweet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/models/verification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/views/accueil.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/views/all.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/views/espace-membre.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/views/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/views/inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/views/question1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/views/question2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/views/question5.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/exoBDDPHP/views/tweet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/index_en.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/inscription_connexion/sinscrire_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/javascript/FAQ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/out/admin_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/out/contact_en.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/out/page_profil_en.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/transition/FAQ_validate_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/transition/admin_validate_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/transition/connect_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/transition/connexion_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/transition/gestionnaire_validate_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/transition/inscription_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/transition/logout_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/transition/profile_update_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/CGU_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/FAQ_admin_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/FAQ_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/MentionsLegales_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/StatistiqueGestioInfo_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/StatistiqueGestio_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/StatistiquePilote_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/accueil_admin_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/accueil_gestionnaire_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/contact_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/erreur404_en.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/profil_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/profil_search_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/rechercher_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/se_connecter_en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cognitech_EN/views/sinscrire_en.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cognitech/Mdp_oublié.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/Mdp_oublié.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cognitech/Password_Recovery/forgot-password.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/Password_Recovery/forgot-password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cognitech/Presentation/bouton.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cognitech/Presentation/style_button.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cognitech/css/connexion.css" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/css/connexion.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cognitech/views/se_connecter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/views/se_connecter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/Mdp_oublié.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech_EN/Password_Recovery_en.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/Password_Recovery/Model/Member.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/Password_Recovery/Model/Member.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/css/Borderau_Bleu.css" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/css/Borderau_Bleu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/css/StatStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/css/StatStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/transition/FAQ_validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/transition/FAQ_validate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/transition/admin_validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/transition/admin_validate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/transition/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/transition/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/transition/gestionnaire_validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/transition/gestionnaire_validate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/transition/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/transition/inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/transition/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/transition/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/transition/profile_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/transition/profile_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/views/StatistiqueGestio.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/views/StatistiqueGestio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/views/StatistiquePilote.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/views/StatistiquePilote.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/views/accueil_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/views/accueil_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/views/accueil_gestionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/views/accueil_gestionnaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/views/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/views/profil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/views/profil_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/views/profil_search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/views/rechercher.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/views/rechercher.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +119,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Cognitech/index.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Cognitech/Mdp_oublié.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cognitech/css/connexion.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cognitech/Password_Recovery/forgot-password.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
@@ -65,7 +138,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Co_EN" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -74,9 +147,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASM\PhpstormProjects\Cognitech\Co_EN" />
+      <recent name="C:\Users\ASM\PhpstormProjects\Cognitech\Cognitech\Co_EN" />
       <recent name="C:\Users\Louis\PhpstormProjects\Cognitech\Cognitech\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASM\PhpstormProjects\Cognitech" />
+      <recent name="C:\Users\ASM\PhpstormProjects\Cognitech\Cognitech" />
+      <recent name="C:\Users\ASM\PhpstormProjects\Cognitech\Co_EN" />
       <recent name="C:\Users\Louis\PhpstormProjects\Cognitech\Cognitech\images\imagePageProfil" />
     </key>
   </component>
@@ -193,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621862110690</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="MDP redone">
+      <created>1622477015467</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622477015467</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +300,7 @@
     <MESSAGE value="page_profil" />
     <MESSAGE value="FAQ" />
     <MESSAGE value="statistique gestio page" />
-    <option name="LAST_COMMIT_MESSAGE" value="statistique gestio page" />
+    <MESSAGE value="MDP redone" />
+    <option name="LAST_COMMIT_MESSAGE" value="MDP redone" />
   </component>
 </project>

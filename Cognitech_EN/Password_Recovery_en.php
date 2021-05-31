@@ -3,8 +3,8 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="../css/connexion.css">
-    <title>MDP</title>
+    <link rel="stylesheet" type="text/css" href="connexion.css">
+    <title>Connexion</title>
 </head>
 <body>
 <main class="main">
@@ -22,7 +22,7 @@
     </div>
 </main>
 <div class="topleft">
-    <a href="../index.html"><i class="material-icons colorBleu" style="font-size: 3em;">home</i></a>
+    <a href="../../Cognitech/index.html"><i class="material-icons colorBleu" style="font-size: 3em;">home</i></a>
 </div>
 
 <!--<div id="google_translate_element"></div>
@@ -36,3 +36,4 @@
 
 </body>
 </html>
+
