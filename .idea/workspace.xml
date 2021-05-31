@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9e9221-8e68-47d2-9688-446d0d2c8d97" name="Default Changelist" comment="statistique gestio page">
-      <change beforePath="$PROJECT_DIR$/Cognitech/rechercher.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/rechercher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/Mdp_oublié.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/Mdp_oublié.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/Password_Recovery/forgot-password.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/Password_Recovery/forgot-password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/Presentation/bouton.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/Presentation/style_button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/css/connexion.css" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/css/connexion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cognitech/views/se_connecter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cognitech/views/se_connecter.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="page_profil" />
+        <entry key="$PROJECT_DIR$" value="Refractor_Connexion/Inscription_Safia" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,6 +43,17 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Cognitech/index.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cognitech/Mdp_oublié.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cognitech/css/connexion.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cognitech/Password_Recovery/forgot-password.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/Cognitech" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1pT7ZQ4nPnCwBJUeymNb74FwtFj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,9 +64,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -58,6 +79,17 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Louis\PhpstormProjects\Cognitech\Cognitech\images\imagePageProfil" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Cognitech/Cognitech/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

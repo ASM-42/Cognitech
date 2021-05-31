@@ -8,8 +8,12 @@ if (! empty($_POST["forgot-btn"])) {
 }
 ?>
 <HTML>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css" href="../css/connexion.css">
 <HEAD>
-    <TITLE>Forgot Password</TITLE>
+    <i class="material-icons colorWhite" style="font-size: 10em; padding-left: 44.7%; padding-top: 4.5%">person_outline</i>
+    <title>Forgot Password</title>
     <link href="assets/css/phppot-style.css" type="text/css"
           rel="stylesheet" />
     <link href="assets/css/user-registration.css" type="text/css"
@@ -17,12 +21,12 @@ if (! empty($_POST["forgot-btn"])) {
     <script src="vendor/jquery/jquery-3.3.1.js" type="text/javascript"></script>
 </HEAD>
 <BODY>
-<div class="phppot-container">
+<div class="phppot-container" style="margin-left: 44.7%; padding-top: 1%">
     <div class="sign-up-container">
         <div class="signup-align">
             <form name="login" action="" method="post"
                   onsubmit="return loginValidation()">
-                <div class="signup-heading">Forgot Password</div>
+                <div class="signup-heading" style="margin-left: -8%; color: white; font-size: 2em; font-family: 'Roboto'">Mot de Passe oublié</div>
                 <?php
                 if (! empty($displayMessage["status"])) {
                     if ($displayMessage["status"] == "error") {
@@ -36,18 +40,18 @@ if (! empty($_POST["forgot-btn"])) {
                     }
                 }
                 ?>
-                <div class="row">
-                    <div class="inline-block">
+                <div class="row" style="margin-left: -6%; padding-top: 2%;">
+                    <br class="inline-block">
                         <div class="form-label">
-                            Username<span class="required error" id="username-info"></span>
+                            <span class="required error" id="username-info"></span>
                         </div>
-                        <input class="input-box-330" type="text" name="username"
-                               id="username">
+                        <input type="username" class="container" name="username" id="username" placeholder="Username" required><br> </br>
                     </div>
                 </div>
                 <div class="row">
-                    <input class="btn" type="submit" name="forgot-btn" id="forgot-btn"
-                           value="Forgot Password">
+                    <input
+                    <button type="submit" name="forgot-btn" class="envoyer" id="forgot-btn" value="Réinitialiser"></button>
+
                 </div>
             </form>
         </div>
@@ -73,5 +77,9 @@ if (! empty($_POST["forgot-btn"])) {
         return valid;
     }
 </script>
+
+<div class="topleft">
+    <a href="../index.html"><i class="material-icons colorYellow" style="font-size: 3em;">home</i></a>
+</div>
 </BODY>
 </HTML>
