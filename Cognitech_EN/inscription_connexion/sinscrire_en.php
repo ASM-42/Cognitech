@@ -11,12 +11,12 @@
     <div>
         <i class="material-icons colorBleu" style="font-size: 900%; margin: -5.7% 0 -2.5% 0">person_outline</i>
         <div class="formulaire">
-            <form action="inscription.php" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Veuillez accepter les CGU'); return false; }">
-                <input type="text" class="container" name="prenom" placeholder="Prénom" required><br>
-                <input type="text" class="container" name="nom" placeholder="Nom" required><br>
-                <input type="date" class="container" name="dateDeNaissance" placeholder="Date de Naissance" required><br>
+            <form action="inscription.php" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please accept the Terms and Conditions'); return false; }">
+                <input type="text" class="container" name="prenom" placeholder="First Name" required><br>
+                <input type="text" class="container" name="nom" placeholder="Last Name" required><br>
+                <input type="date" class="container" name="dateDeNaissance" placeholder="Date of Birth" required><br>
                 <input type="email" class="container" name="email" placeholder="Email" required><br>
-                <input type="text" class="container" name="ecurie" placeholder="Ecurie" required><br>
+                <input type="text" class="container" name="ecurie" placeholder="Team" required><br>
                 <input type="password" class="container" name="mdp1" placeholder="Mot de passe" required><br>
                 <input type="password" class="container" name="mdp2" placeholder="Confirmer le mot de passe" required><br>
 

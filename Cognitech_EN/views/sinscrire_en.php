@@ -14,7 +14,7 @@
             <form action="../transition/inscription_en.php" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please accept the Terms and Conditions'); return false; }">
                 <input type="text" class="container2" name="prenom" placeholder="First Name" required><br>
                 <input type="text" class="container2" name="nom" placeholder="Last Name" required><br>
-                <input type="date" class="container2" name="dateDeNaissance" placeholder="Birthday" required><br>
+                <input type="date" class="container2" name="dateDeNaissance" placeholder="Date of Birth" required><br>
                 <input type="email" class="container2" name="email" placeholder="Email" required><br>
                 <input type="text" class="container2" name="ecurie" placeholder="Team" required><br>
                 <input type="password" class="container2" name="mdp1" placeholder="Password" required><br>
