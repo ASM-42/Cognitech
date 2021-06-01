@@ -15,7 +15,7 @@
             <input type="email" class="container" name="email" placeholder="Email" required><br>
             <input type="password" class="container" id="myInput" name="pwd" placeholder="Mot de passe" required><br>
             <input type="checkbox" onclick="myFunction()">Voir le mot de passe
-            <a class="mdpOublie inscription" href="../transition/Password_Recovery/forgot-password.php">Mot de passe oublié ?</a></br>
+            <a class="inscription" href="../transition/Password_Recovery/forgot-password.php">Mot de passe oublié ?</a></br>
             <button type="submit" name='connexion' class="envoyer" value="Connexion">Se connecter</button>
         </form>
         <a href="sinscrire.php" class="inscription">Vous n'avez pas de compte ? Créez en un <b>ici</b></a>
