@@ -11,6 +11,12 @@
 <div>
     <i class="material-icons colorWhite" style="font-size: 10em;">person_outline</i>
     <div class="formulaire">
+        <?php
+        if (isset($_GET['message']) && $_GET['message']== '1')
+        {
+            ?>
+            <p> Login ou mot de passe erroné</p>
+        <?php } ?>
         <form action='../transition/connexion.php' method="post">
             <input type="email" class="container" name="email" placeholder="Email" required><br>
             <input type="password" class="container" id="myInput" name="pwd" placeholder="Mot de passe" required><br>
