@@ -64,7 +64,7 @@ $result = $sql -> fetch();
                 </form>
 
                 <?php
-                $AdresseMail = "bandiougou.ndiaye@eleve.isep.fr";
+                $AdresseMail = "app20202021g9c@gmail.com";
 
                 if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['mail']) && isset($_POST['numero']) && isset($_POST['Objet'])) {
                     // entête , toujours comme ça
