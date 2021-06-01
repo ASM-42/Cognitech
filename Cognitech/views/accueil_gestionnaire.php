@@ -61,7 +61,29 @@ ORDER BY FIELD (role, 'inconnu', 'pilote')
 
 
         <?php
-        echo "<table id='users' class='table table-bordered'>
+        echo "<table id='users'>
+            <tr>
+                          <th colspan='7'>Ajouter un utilisateur</th>
+                          
+                          </tr>";
+
+        echo "<tr>
+<form action='../transition/admin_validate.php' method='post'>
+                        <td><input class='zone' type='text' name='prenom' placeholder='Prénom' required/></td>
+                        <td><input class='zone' type='text' name='nom' placeholder='Nom' required/></td>
+                        <td><input type='text' name='email' placeholder='Email' required/></td>
+                        <td><input class='zone' type='password' name='mdp1' placeholder='Mot de passe' required/></td>
+                        <td><input class='zone' type='text' name='ecurie' placeholder='Ecurie' required/></td>
+                        <td><input class='zone' type='text' name='role' placeholder='Rôle' required/></td>
+                       
+                        
+<td>
+<input type='submit' value='Ajouter' name='add'>
+</td>
+</form>
+                      </tr>";
+
+        echo "<table id='users'>
                           <tr>
                           <th>ID utilisateur</th>
                           <th>Prénom</th>
