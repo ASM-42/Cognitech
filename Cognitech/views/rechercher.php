@@ -48,6 +48,7 @@ $ecurie = $result['ecurie'];
              new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
          }
      </script>
+
      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
  -->
 
@@ -119,34 +120,35 @@ $ecurie = $result['ecurie'];
         ?>
 
         <?php
-        /*        echo "<ul>\n";
-                if(isset($_POST['recherche'])) {
-                    $sql = $connexion->query(
-                            "SELECT id, prenom, nom, ecurie FROM users
-        WHERE (role = 'pilote' AND ecurie = '$ecurie')
-        AND prenom LIKE '%$recherche%'
-        OR nom LIKE '%$recherche%'
-        LIMIT 10"
-                    );
-                } else {
-                    $sql = $connexion->query(
-                            "SELECT id, prenom, nom, ecurie FROM users
-        WHERE (role = 'pilote' AND ecurie = '$ecurie')"
-                    );
-                }
-                while( $r = mysqli_fetch_array($sql)) {
-                    $user_id = $r['id'];
-                    echo "<a href='StatistiqueGestio.php?id=$user_id'>";
-                    echo "<li>";
-                    echo "<div class=\"cont\">";
-                    echo "<div class=\"cont1\">";
-                    echo "<img src='../images/imagePageProfil/icons8-utilisateur-96.png' class=\"userimg\">";
-                    echo "</div>";
-                    echo "<div class=\"sidebox\">";
-                    echo "<span>" .$r['prenom'] . ' ' . '<b>' . $r['nom'] ."</span>\n";
-                    echo "<br>";
-                }
-                */?>
+/*        echo "<ul>\n";
+        if(isset($_POST['recherche'])) {
+            $sql = $connexion->query(
+                    "SELECT id, prenom, nom, ecurie FROM users
+WHERE (role = 'pilote' AND ecurie = '$ecurie')
+AND prenom LIKE '%$recherche%'
+OR nom LIKE '%$recherche%'
+LIMIT 10"
+            );
+        } else {
+            $sql = $connexion->query(
+                    "SELECT id, prenom, nom, ecurie FROM users
+WHERE (role = 'pilote' AND ecurie = '$ecurie')"
+            );
+        }
+
+        while( $r = mysqli_fetch_array($sql)) {
+            $user_id = $r['id'];
+            echo "<a href='StatistiqueGestio.php?id=$user_id'>";
+            echo "<li>";
+            echo "<div class=\"cont\">";
+            echo "<div class=\"cont1\">";
+            echo "<img src='../images/imagePageProfil/icons8-utilisateur-96.png' class=\"userimg\">";
+            echo "</div>";
+            echo "<div class=\"sidebox\">";
+            echo "<span>" .$r['prenom'] . ' ' . '<b>' . $r['nom'] ."</span>\n";
+            echo "<br>";
+        }
+        */?>
 
 
 
@@ -156,3 +158,4 @@ $ecurie = $result['ecurie'];
 
 </body>
 </html>
+
