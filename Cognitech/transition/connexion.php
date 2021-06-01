@@ -44,8 +44,8 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
                 header('Location:../views/accueil_admin.php');
             }
             else {
-                $erreur = "Votre inscription n'a pas encore été validée";echo $erreur;
-                echo ">Retourner à l'accueil</a>";exit();
+                $erreur = 2;
+                Header("location:../views/se_connecter.php?message=".$erreur);
             }
 
             exit();}
@@ -59,13 +59,13 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 
         // Sinon --> autre problème
         else {
-            $erreur = 'Plusieurs membres ont<br/>les memes login et mot de passe';echo $erreur;
-            echo ">Accueil</a>";exit();}}
+            $erreur = 3;
+            Header("location:../views/se_connecter.php?message=".$erreur);}}
 
 
     // Si l'un des champs est vide --> erreur
     else {
-        $erreur = 'Errreur de saisie !<br/>Au moins un des champs est vide'; echo $erreur;
-        echo ">Accueil</a>";exit();}}
+        $erreur = 3;
+        Header("location:../views/se_connecter.php?message=".$erreur);}}
 ?>
 

@@ -15,8 +15,21 @@
         if (isset($_GET['message']) && $_GET['message']== '1')
         {
             ?>
-            <p> Login ou mot de passe erroné</p>
-        <?php } ?>
+            <p>Email ou mot de passe erroné</p>
+        <?php } elseif (isset($_GET['message']) && $_GET['message']== '2') {
+            ?>
+            <p>Votre inscription n'a pas encore été validée.</p>
+        <?php }
+        elseif (isset($_GET['message']) && $_GET['message']== '3') {
+            ?>
+            <p>Plusieurs membres ont<br/>les memes login et mot de passe.</p>
+        <?php }
+        elseif (isset($_GET['message']) && $_GET['message']== '4') {
+            ?>
+            <p>Errreur de saisie !<br/>Au moins un des champs est vide.</p>
+        <?php }
+
+        ?>
         <form action='../transition/connexion.php' method="post">
             <input type="email" class="container" name="email" placeholder="Email" required><br>
             <input type="password" class="container" id="myInput" name="pwd" placeholder="Mot de passe" required><br>
@@ -29,7 +42,7 @@
 </div>
 </main>
 <div class="topleft">
-    <a href="../index.html"><i class="material-icons colorYellow" style="font-size: 3em;">home</i></a>
+    <a href="../index.php"><i class="material-icons colorYellow" style="font-size: 3em;">home</i></a>
 </div>
 
 <script>

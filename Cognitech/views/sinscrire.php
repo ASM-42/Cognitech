@@ -11,6 +11,26 @@
     <div>
         <i class="material-icons colorWhite" style="font-size: 900%; margin: -5.7% 0 -2.5% 0">person_outline</i>
         <div class="formulaire">
+            <?php
+            if (isset($_GET['message']) && $_GET['message']== '1') {
+                ?>
+                <p>Votre inscription a été prise en compte ! </br> Le gestionnaire de votre écurie doit valider votre compte avant que vous puissiez vous connecter.</p>
+            <?php }
+            elseif (isset($_GET['message']) && $_GET['message']== '2') {
+                ?>
+                <p>Echec de l'inscription !<br/>Login déjà utilisé.</p>
+            <?php }
+            elseif (isset($_GET['message']) && $_GET['message']== '3') {
+                ?>
+                <p>Echec de l'inscription !<br/>Au moins un des champs est vide<br/>OU<br/>Le mot de passe doit contenir au minimum 7 caractères, dont un spécial.</p>
+            <?php }
+            elseif (isset($_GET['message']) && $_GET['message']== '4') {
+                ?>
+                <p>Les deux mots de passe sont différents.</p>
+            <?php }
+
+            ?>
+
             <form action="../transition/inscription.php" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Veuillez accepter les CGU'); return false; }">
                 <input type="text" class="container2" name="prenom" placeholder="Prénom" required><br>
                 <input type="text" class="container2" name="nom" placeholder="Nom" required><br>
@@ -32,7 +52,7 @@
 
 </main>
 <div class="topleft">
-    <a href="../index.html"><i class="material-icons colorYellow" style="font-size: 3em;">home</i></a>
+    <a href="../index.php"><i class="material-icons colorYellow" style="font-size: 3em;">home</i></a>
 </div>M
 </body>
 </html>

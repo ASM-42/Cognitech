@@ -186,7 +186,7 @@
     </section>
     <footer>
         <div>
-            Copyright &#169; <script type='text/javascript'>var year = new Date();document.write(year.getFullYear());</script> <a href='index.html' class="colorJaune2">Infinite Measures</a><a> | Conçu par Cognitech</a>
+            Copyright &#169; <script type='text/javascript'>var year = new Date();document.write(year.getFullYear());</script> <a href='index.php' class="colorJaune2">Infinite Measures</a><a> | Conçu par Cognitech</a>
         </div>
     </footer>
 

@@ -12,8 +12,8 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
 
         // On regarde si les 2 mdp sont similaires
         if ($_POST['mdp1'] != $_POST['mdp2']) {
-            $erreur = 'Les 2 mdp sont differents.';echo $erreur;
-            echo "<a href='../views/se_connecter.php'>Accueil</a>";exit();}
+            $erreur = 4;
+            Header("location:../views/sinscrire.php?message=".$erreur);}
 
         else {
             // Si les mdp correspondent, connexion à la BDD
@@ -40,25 +40,20 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {
                 )';
                 mysqli_query($connexion, $sql) or die('Erreur SQL !'.$sql.'<br />'.mysqli_error($connexion));
 
-                $erreur = 'Votre inscription a été prise en compte ! </br> Le gestionnaire de votre écurie doit valider votre compte avant que vous puissiez vous connecter';
-                echo $erreur;
-                echo "<a href='../views/se_connecter.php'>Accueil</a>";exit();
-
-
+                $confirmation = 1;
+                Header("location:../views/sinscrire.php?message=".$confirmation);
             }
 
             //Sinon on n'inscrit pas l'utilisateur
             else {
-                $erreur = 'Echec de l\'inscription !<br/>Login déjà utilisé';
-                echo $erreur;
-                echo "<a href='../views/se_connecter.php'>Accueil</a>";exit();
+                $erreur = 2;
+                Header("location:../views/sinscrire.php?message=".$erreur);
             }}}
 
     //Si au moins un des champs est vide --> erreur
     else {
-        $erreur = 'Echec de l\'inscription !<br/>Au moins un des champs est vide<br/>OU<br/>Le mot de passe doit contenir au minimum 7 caractères, dont un spécial';
-        echo $erreur;
-        echo "<a href='../views/se_connecter.php'>Accueil</a>";exit();
+        $erreur = 3;
+        Header("location:../views/sinscrire.php?message=".$erreur);
     }}
 ?>
 
