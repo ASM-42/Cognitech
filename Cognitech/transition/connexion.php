@@ -52,8 +52,10 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
 
         // Si le visiteur a saisi un mauvais login ou mot de passe --> erreur
         elseif ($data[0] == 0) {
-            $erreur = 'Login ou mot de passe erroné';echo $erreur;
-            echo ">Accueil</a>";exit();}
+            $erreur1 = 1;
+
+            Header("location:../views/se_connecter.php?message=".$erreur1);
+        }
 
         // Sinon --> autre problème
         else {
