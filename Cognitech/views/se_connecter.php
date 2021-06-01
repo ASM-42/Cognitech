@@ -13,7 +13,8 @@
     <div class="formulaire">
         <form action='../transition/connexion.php' method="post">
             <input type="email" class="container" name="email" placeholder="Email" required><br>
-            <input type="password" class="container" name="pwd" placeholder="Mot de passe" required><br>
+            <input type="password" class="container" id="myInput" name="pwd" placeholder="Mot de passe" required><br>
+            <input type="checkbox" onclick="myFunction()">Voir le mot de passe
             <a class="mdpOublie inscription" href="../transition/Password_Recovery/forgot-password.php">Mot de passe oublié ?</a></br>
             <button type="submit" name='connexion' class="envoyer" value="Connexion">Se connecter</button>
         </form>
@@ -25,14 +26,16 @@
     <a href="../index.html"><i class="material-icons colorYellow" style="font-size: 3em;">home</i></a>
 </div>
 
-<!--<div id="google_translate_element"></div>
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
     }
 </script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
 
 </body>
 </html>
