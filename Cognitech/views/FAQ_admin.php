@@ -8,6 +8,9 @@ $email = $_SESSION['email'];
 $sql2 = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
 $result = $sql2 -> fetch();
 
+$role_utilisateur = $result['role'];
+if ($role_utilisateur != 'admin') {header ('Location: erreur404.html');exit();}
+
 $sql = $bdd->query('SELECT * FROM faq');
 ?>
 
