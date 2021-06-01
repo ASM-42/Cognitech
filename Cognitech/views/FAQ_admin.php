@@ -25,8 +25,6 @@ $sql = $bdd->query('SELECT * FROM faq');
 
 
 <div class="navbarBleue">
-
-    <h1 class="colorBleu titre">FAQ</h1>
     <?php if ($result['role'] == 'pilote'): ?>
         <a class="recherche" href="#">Mes statistiques</a>
     <?php elseif ($result['role'] == 'admin'): ?>
@@ -50,10 +48,11 @@ $sql = $bdd->query('SELECT * FROM faq');
     <a class="CGU" href="CGU.php">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
-    <a class="deconnecter" href="../index.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../transition/logout.php">Se Deconnecter</a>
 </div>
-
-<div class="space">
+<div class="center">
+    <h2>FAQ</h2>
+    <div class="space">
     <ul>
 <?php
 echo "<table id='users'>
@@ -84,7 +83,7 @@ while ($dbRow = $sql->fetch(PDO::FETCH_ASSOC)) {
 
 
     { echo "<tr>
-<form action='../FAQ_validate.php?id=".$id."' method='post'>
+<form action='../transition/FAQ_validate.php?id=".$id."' method='post'>
                         <td><input type='textarea' name='question' value='$question'/></td>
                         <td><input type='textarea' name='reponse' value='$reponse'/></td>
 <td>
@@ -92,17 +91,17 @@ while ($dbRow = $sql->fetch(PDO::FETCH_ASSOC)) {
 </td>
 
 <td>
-<input type='submit' value='&#10006;' class='center' name='delete'>
+<input type='submit' value='&#10006;'  name='delete'>
 </td>
 </form>
                       </tr>";}
 }
 ?>
     </ul>
+
+
+
+    </div>
 </div>
-
-
-
-
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-include("inscription_connexion/connect.php");
+include("connect.php");
 
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
 
@@ -39,7 +39,7 @@ if (isset($_POST['add'])) {
 
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";
-    header('Location:views/FAQ_admin.php');
+    header('Location:../views/FAQ_admin.php');
 } else {
     echo "Error updating record: " . mysqli_error($conn);
 }

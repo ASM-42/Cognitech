@@ -38,14 +38,19 @@ $result = $sql -> fetch();
             <?php else: ?>
                 <a class="troisieme" href="profil.php">Mon Compte</a>
             <?php endif; ?>
-            <a class="FAQ " href="FAQ.php">FAQ</a>
+            <?php if ($result['role'] == 'admin'): ?>
+                <a class="FAQ " href="FAQ_admin.php">FAQ</a>
+            <?php else: ?>
+                <a class="FAQ " href="FAQ.php">FAQ</a>
+            <?php endif; ?>
             <a class="CGU" href="CGU.php">CGU</a>
             <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
             <a class="support colorActif" href="">Support</a>
-            <a class="deconnecter" href="../index.html">Se Deconnecter</a>
+            <a class="deconnecter" href="../transition/logout.php">Se Deconnecter</a>
         </div>
 
-        <h1 class="colorBleu">NOUS CONTACTER</h1>
+        <div class="center">
+            <h2>NOUS CONTACTER</h2>
         <div class="space">
             <div class="formulaire">
                 <form method="post">
@@ -59,7 +64,7 @@ $result = $sql -> fetch();
                 </form>
 
                 <?php
-                $AdresseMail = "bandiougou.ndiaye@eleve.isep.fr"; // inventer un mail support plustard...
+                $AdresseMail = "bandiougou.ndiaye@eleve.isep.fr";
 
                 if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['mail']) && isset($_POST['numero']) && isset($_POST['Objet'])) {
                     // entête , toujours comme ça
@@ -92,13 +97,11 @@ $result = $sql -> fetch();
                     }else {
                         echo "Une erreur est survenue, le mail n'a pas été envoyé";
                     }
-                } else{
-                    echo 'Tous les champs ne sont pas remplis!';
                 }
 
                 ?>
             </div>
         </div>
-
+        </div>
     </body>
 </html>

@@ -77,7 +77,7 @@ function vidertableau($input)
     <a class="CGU" href="CGU.php">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
-    <script>
+    <!--<script>
         $('#LogoutButton').click(function() {
             var request = $.ajax({
                 url: "/inscription_connexion/logout.php",
@@ -92,28 +92,13 @@ function vidertableau($input)
                 alert("Error on Logging Out");
             });
         });
-    </script>
-    <a class="deconnecter" href="../index.html">Se Deconnecter</a>
-
-    <!-- <div id="google_translate_element"></div>
-     <script type="text/javascript">
-         function googleTranslateElementInit() {
-             new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-         }
-     </script>
-
-     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- -->
+    </script>-->
+    <a class="deconnecter" href="../transition/logout.php">Se Deconnecter</a>
 </div>
 
 <div class="main" >
     <div class="header">
         <div class="headerProfil"><img src="../images/imagePageProfil/icons8-contacts-256.png" id="imagecontact"> <?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div>
-
-        <!-- <div class="supprimer">
-
-            <img src="images/poubelle.png">
-        </div> -->
     </div>
     <form action="StatistiquePilote.php" method="post" >
         <label for="debut">Date de début</label>
@@ -124,8 +109,6 @@ function vidertableau($input)
 
         <input type="submit" value = "valider" >
     </form>
-
-
 
     <?php
     if(isset($_POST['debut']) && isset($_POST['fin'])) {
@@ -148,20 +131,14 @@ function vidertableau($input)
             $tableautemp[$i] = $result3['temperature'];
             $tableaunombre[$i] = $result3['testnumber'];
             $i++;
-
         }
 
         $size = count($tableaudate);
-
-
     }
-
-
-
     ?>
 
 
-    <div id="graph"  >
+    <div id="graph">
         <canvas id="myChart" style="width: 80%"></canvas>
     </div>
 
@@ -241,17 +218,10 @@ function vidertableau($input)
                 </tr>
                 <?php
             }
-
-
             ?>
 
         </table>
     </div>
-
-
-
-
-
 
 </body>
 </html>

@@ -44,11 +44,15 @@ $result = $sql -> fetch();
     <?php else: ?>
         <a class="troisieme colorActif" href="">Mon Compte</a>
     <?php endif; ?>
-    <a class="FAQ" href="FAQ.php">FAQ</a>
+    <?php if ($result['role'] == 'admin'): ?>
+        <a class="FAQ " href="FAQ_admin.php">FAQ</a>
+    <?php else: ?>
+        <a class="FAQ " href="FAQ.php">FAQ</a>
+    <?php endif; ?>
     <a class="CGU" href="CGU.php">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
-    <script>
+    <!--<script>
         $('#LogoutButton').click(function() {
             var request = $.ajax({
                 url: "/inscription_connexion/logout.php",
@@ -63,22 +67,13 @@ $result = $sql -> fetch();
                 alert("Error on Logging Out");
             });
         });
-    </script>
+    </script>-->
     <a class="deconnecter" href="../transition/logout.php">Se Deconnecter</a>
 
-    <!-- <div id="google_translate_element"></div>
-     <script type="text/javascript">
-         function googleTranslateElementInit() {
-             new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-         }
-     </script>
-
-     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- -->
 </div>
 <div class="pageProfil">
     <div class = "profil">
-        <div class="headerProfil"><img src="../images/imagePageProfil/icons8-utilisateur-96.png" id="imagecontact"> <?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div>
+        <div class="headerProfil"><img src="../images/imagePageProfil/icons8-utilisateur-96.png" id="imagecontact"> <div><?php echo $result['prenom'] . ' ' .  '<b>' . $result['nom'];?></div></div>
 
         <form action="../transition/profile_update.php" method="post">
             <input type="email" class="boutonProfil case" name="email" value="<?php echo htmlentities(trim($_SESSION['email'])); ?>">

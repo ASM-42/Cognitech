@@ -32,7 +32,7 @@ $result = $sql -> fetch();
     <a class="FAQ" href="FAQ.php">FAQ</a>
     <a class="CGU" href="CGU.php">CGU</a>
     <a class="support" href="contact.php">Support</a>
-    <script>
+    <!--<script>
         $('#LogoutButton').click(function() {
             var request = $.ajax({
                 url: "/inscription_connexion/logout.php",
@@ -47,8 +47,8 @@ $result = $sql -> fetch();
                 alert("Error on Logging Out");
             });
         });
-    </script>
-    <a class="deconnecter" href="inscription_connexion/logout.php">Se Deconnecter</a>
+    </script>-->
+    <a class="deconnecter" href="../transition/logout.php">Se Deconnecter</a>
 </div>
 <div class="pageProfil">
     <div class = "profil">

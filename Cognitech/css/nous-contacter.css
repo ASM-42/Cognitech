@@ -3,11 +3,27 @@ body {
     overflow: hidden;
 }
 
+.center {
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-right: 10%;
+    text-align: left;
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    top: 20px; left: 300px;
+    color:#5172DF;
+}
+
 .space{
     width: 80%;
     height: 100%;
     position: absolute;
     right: 0;
+    top: 0;
 }
 
 .formulaire{

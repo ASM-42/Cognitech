@@ -47,7 +47,7 @@ $result = $sql -> fetch();
     <a class="CGU colorActif" href="">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
-    <a class="deconnecter" href="../index.html">Se Deconnecter</a>
+    <a class="deconnecter" href="../transition/logout.php">Se Deconnecter</a>
 
 </div>
 

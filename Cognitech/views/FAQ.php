@@ -1,6 +1,5 @@
 <?php
 session_start();
-$id = $_SESSION['id'];
 
 include("../transition/connect.php");
 
@@ -53,8 +52,7 @@ $result = $sql2 -> fetch();
     <a class="CGU" href="CGU.php">CGU</a>
     <a class="MentionsLegales" href="MentionsLegales.php">Mentions Légales</a>
     <a class="support" href="contact.php">Support</a>
-    <a class="deconnecter" href="../index.html">Se Deconnecter</a>
-
+    <a class="deconnecter" href="../transition/logout.php">Se Deconnecter</a>
 </div>
 
 
