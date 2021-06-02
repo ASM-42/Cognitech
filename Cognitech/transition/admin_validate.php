@@ -1,8 +1,17 @@
 <?php
+session_start();
 include("connect.php");
 
 $role=$_POST['role'];
+
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
+
+$email = $_SESSION['email'];
+$sql = $bdd -> query('SELECT * FROM users WHERE email="'.$email.'"');
+$result = $sql -> fetch();
+$role_utilisateur = $result['role'];
+
+
 
 $membres = $bdd->query('
 SELECT * FROM users
@@ -48,7 +57,12 @@ if (isset($_POST['add'])) {
 
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";
-    header('Location:../views/accueil_admin.php');
+    if ($role_utilisateur == 'admin') {
+        header('Location:../views/accueil_admin.php');
+    } else {
+        header('Location:../views/accueil_gestionnaire.php');
+    }
+
 } else {
     echo "Error updating record: " . mysqli_error($conn);
 }
