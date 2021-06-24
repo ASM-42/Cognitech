@@ -1,4 +1,6 @@
-<?php session_start();
+<?php
+session_start();
+include "log.php";
 
 $bdd = new PDO("mysql:host=localhost;dbname=cognitech", "root", "");
 $id = $_SESSION['id'];
